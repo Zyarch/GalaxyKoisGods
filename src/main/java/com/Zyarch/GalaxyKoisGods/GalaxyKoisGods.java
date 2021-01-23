@@ -1,7 +1,9 @@
 package com.Zyarch.GalaxyKoisGods;
 
-import com.Zyarch.GalaxyKoisGods.util.ModBlocks;
-import com.Zyarch.GalaxyKoisGods.util.ModItems;
+import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
+import com.Zyarch.GalaxyKoisGods.setup.ModItems;
+import com.Zyarch.GalaxyKoisGods.setup.Registration;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,7 +15,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("galasgods")
+@Mod(GalaxyKoisGods.MOD_ID)
 public class GalaxyKoisGods
 {
     // Directly reference a log4j logger.
@@ -24,8 +26,7 @@ public class GalaxyKoisGods
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        ModBlocks.register();
-        ModItems.register();
+        Registration.register();
 
         MinecraftForge.EVENT_BUS.register(this);
     }
