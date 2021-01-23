@@ -1,7 +1,8 @@
 {
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:taiga": "2021-01-22 22:43:22 -0500"
+      "minecraft:taiga": "2021-01-22 22:43:22 -0500",
+      "minecraft:taiga_hills": "2021-01-23 02:26:49 -0500"
     },
     "done": false
   },
