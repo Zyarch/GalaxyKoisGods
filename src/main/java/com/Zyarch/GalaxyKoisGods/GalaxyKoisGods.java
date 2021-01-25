@@ -64,8 +64,6 @@ public class GalaxyKoisGods
 
     public static final ItemGroup TAB = new ItemGroup("galaxykoisgodstab") {
         @Override
-        public ItemStack createIcon() {
-            return null;
-        }
+        public ItemStack createIcon() { return new ItemStack(ModBlocks.ALTAR.get()); }
     };
 }

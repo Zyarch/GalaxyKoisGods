@@ -21,7 +21,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVER_BLOCK = register("silver_block", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
-    public static final RegistryObject<Altar> ALTAR = register("altar", () -> new Altar());
+    public static final RegistryObject<Altar> ALTAR = registerStack1("altar", () -> new Altar());
 
     static void register() { }
 
@@ -32,6 +32,14 @@ public class ModBlocks {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> ret = registerNoItem(name, block);
         Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties().group(GalaxyKoisGods.TAB)));
+        return ret;
+    }
+
+    private static <T extends Block> RegistryObject<T> registerStack1(String name, Supplier<T> block) {
+        RegistryObject<T> ret = registerNoItem(name, block);
+        Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties()
+                .group(GalaxyKoisGods.TAB)
+                .maxStackSize(1)));
         return ret;
     }
 }
