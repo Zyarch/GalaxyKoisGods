@@ -13,6 +13,14 @@ public class ModTags {
         public static final ITag.INamedTag<Block> ORES_SILVER = forge("ores/silver");
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_SILVER = forge("storage_blocks/silver");
 
+        public static final ITag.INamedTag<Block> ORES_THUNDER_STONE = forge("ores/thunder_stone");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_THUNDER_STONE = forge("storage_blocks/thunder_stone");
+
+        public static final ITag.INamedTag<Block> ORES_AMETHYST = forge("ores/amethyst");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_AMETHYST = forge("storage_blocks/amethyst");
+
+        public static final ITag.INamedTag<Block> ORES_SELENIUM = forge("ores/selenium");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_SELENIUM = forge("storage_blocks/selenium");
 
         private static ITag.INamedTag<Block> forge(String path) {
             return BlockTags.makeWrapperTag(new ResourceLocation("forge", path).toString());
@@ -27,6 +35,18 @@ public class ModTags {
         public static final ITag.INamedTag<Item> ORES_SILVER = forge("ores/silver");
         public static final ITag.INamedTag<Item> STORAGE_BLOCKS_SILVER = forge("storage_blocks/silver");
         public static final ITag.INamedTag<Item> INGOTS_SILVER = forge("ingots/silver");
+
+        public static final ITag.INamedTag<Item> ORES_THUNDER_STONE = forge("ores/thunder_stone");
+        public static final ITag.INamedTag<Item> STORAGE_BLOCKS_THUNDER_STONE = forge("storage_blocks/thunder_stone");
+        public static final ITag.INamedTag<Item> GEMS_THUNDER_STONE = forge("gems/thunder_stone");
+
+        public static final ITag.INamedTag<Item> ORES_AMETHYST = forge("ores/amethyst");
+        public static final ITag.INamedTag<Item> STORAGE_BLOCKS_AMETHYST = forge("storage_blocks/amethyst");
+        public static final ITag.INamedTag<Item> GEMS_AMETHYST = forge("gems/amethyst");
+
+        public static final ITag.INamedTag<Item> ORES_SELENIUM = forge("ores/selenium");
+        public static final ITag.INamedTag<Item> STORAGE_BLOCKS_SELENIUM = forge("storage_blocks/selenium");
+        public static final ITag.INamedTag<Item> GEMS_SELENIUM = forge("gems/selenium");
 
         private static ITag.INamedTag<Item> forge(String path) {
             return ItemTags.makeWrapperTag(new ResourceLocation("forge", path).toString());

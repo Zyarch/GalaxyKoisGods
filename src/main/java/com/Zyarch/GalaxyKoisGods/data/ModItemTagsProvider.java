@@ -18,6 +18,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     }
 
     protected void registerTags() {
+        //Silver
         copy(ModTags.Blocks.ORES_SILVER, ModTags.Items.ORES_SILVER);
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
@@ -26,5 +27,35 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         getOrCreateBuilder(ModTags.Items.INGOTS_SILVER).add(ModItems.SILVER_INGOT.get());
         getOrCreateBuilder(Tags.Items.INGOTS).addTag(ModTags.Items.INGOTS_SILVER);
+
+        //Thunder Stone
+        copy(ModTags.Blocks.ORES_THUNDER_STONE, ModTags.Items.ORES_THUNDER_STONE);
+        copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
+        copy(ModTags.Blocks.STORAGE_BLOCKS_THUNDER_STONE, ModTags.Items.STORAGE_BLOCKS_THUNDER_STONE);
+        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
+
+        getOrCreateBuilder(ModTags.Items.GEMS_THUNDER_STONE).add(ModItems.THUNDER_STONE.get());
+        getOrCreateBuilder(Tags.Items.GEMS).addTag(ModTags.Items.GEMS_THUNDER_STONE);
+
+        //Amethyst
+        copy(ModTags.Blocks.ORES_AMETHYST, ModTags.Items.ORES_AMETHYST);
+        copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
+        copy(ModTags.Blocks.STORAGE_BLOCKS_AMETHYST, ModTags.Items.STORAGE_BLOCKS_AMETHYST);
+        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
+
+        getOrCreateBuilder(ModTags.Items.GEMS_AMETHYST).add(ModItems.AMETHYST.get());
+        getOrCreateBuilder(Tags.Items.GEMS).addTag(ModTags.Items.GEMS_AMETHYST);
+
+        //Selenium
+        copy(ModTags.Blocks.ORES_SELENIUM, ModTags.Items.ORES_SELENIUM);
+        copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
+        copy(ModTags.Blocks.STORAGE_BLOCKS_SELENIUM, ModTags.Items.STORAGE_BLOCKS_SELENIUM);
+        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
+
+        getOrCreateBuilder(ModTags.Items.GEMS_SELENIUM).add(ModItems.SELENIUM.get());
+        getOrCreateBuilder(Tags.Items.GEMS).addTag(ModTags.Items.GEMS_SELENIUM);
     }
 }
