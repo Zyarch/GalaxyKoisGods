@@ -22,5 +22,6 @@ public class Registration {
 
         ModItems.register();
         ModBlocks.register();
+        ModContainers.register();
     }
 }
