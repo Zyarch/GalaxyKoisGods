@@ -1,5 +1,6 @@
 package com.Zyarch.GalaxyKoisGods.screens;
 
+import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -7,6 +8,8 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Slot;
+import net.minecraft.util.IWorldPosCallable;
+import net.minecraft.util.math.BlockPos;
 
 import javax.annotation.Nullable;
 
@@ -14,14 +17,8 @@ public class AltarContainer extends Container
 {
     //private final IInventory altarInventory;
 
-    public AltarContainer(int id, PlayerInventory playerInventoryIn) {
-        this(ModContainers.ALTAR, id, playerInventoryIn);
-    }
-
-    public AltarContainer(@Nullable ContainerType<?> type, int id, PlayerInventory playerInventoryIn) {
-        super(type, id);
-        //this.altarInventory = p_i50092_4_;
-        //p_i50092_4_.openInventory(playerInventoryIn.player);
+    public AltarContainer(int windowId, PlayerInventory playerInventoryIn) {
+        super(ModContainers.ALTAR_CONTAINER.get(), windowId);
 
         int i = (9 - 4) * 18;
 
@@ -40,6 +37,6 @@ public class AltarContainer extends Container
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
-        return false;
+        return isWithinUsableDistance(IWorldPosCallable.DUMMY, playerIn, ModBlocks.ALTAR.get());
     }
 }

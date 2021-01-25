@@ -3,5 +3,6 @@
   "block.galasgods.silver_ore": "Silver Ore",
   "block.galasgods.silver_block": "Silver Block",
   "block.galasgods.altar": "Altar",
+  "container.galasgods.altar": "Altar",
   "itemGroup.galaxykoisgodstab": "Gala's Gods"
 }

@@ -10,10 +10,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import java.awt.event.ItemEvent;
 
 @Mod.EventBusSubscriber(modid = GalaxyKoisGods.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class ModClientEvents {
@@ -33,7 +32,6 @@ public class ModClientEvents {
     @SubscribeEvent
     public static void onItemUse(PlayerInteractEvent.RightClickBlock event)
     {
-
         /*
         ItemEntity item = event.getEntityItem();
         String itemName = item.getName().getString();

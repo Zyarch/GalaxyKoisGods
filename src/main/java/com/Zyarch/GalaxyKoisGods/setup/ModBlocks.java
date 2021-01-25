@@ -21,7 +21,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVER_BLOCK = register("silver_block", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
-    public static final RegistryObject<Altar> ALTAR = registerStack1("altar", () -> new Altar());
+    public static final RegistryObject<Altar> ALTAR = registerStack1("altar", Altar::new);
 
     static void register() { }
 
