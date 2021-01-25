@@ -1,6 +1,8 @@
 {
-    "variants":
-    {
-        "": {"model":  "galasgods:block/altar"}
+    "variants": {
+        "facing=north": { "model":  "galasgods:block/altar" },
+        "facing=south": { "model":  "galasgods:block/altar", "y": 180 },
+        "facing=west": { "model":  "galasgods:block/altar", "y": 270 },
+        "facing=east": { "model":  "galasgods:block/altar", "y": 90 }
     }
 }

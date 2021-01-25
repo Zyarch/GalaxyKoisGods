@@ -2,6 +2,7 @@ package com.Zyarch.GalaxyKoisGods.data.client;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import net.minecraft.data.DataGenerator;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -16,14 +17,13 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         withExistingParent("silver_block", modLoc("block/silver_block"));
         withExistingParent("silver_ore", modLoc("block/silver_ore"));
-        withExistingParent("altar", modLoc("block/altar"));
 
-        ModelFile itemGeneratrated = getExistingFile(mcLoc("item/generated"));
+        ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
 
-        builder(itemGeneratrated, "silver_ingot");
+        builder(itemGenerated, "silver_ingot");
     }
 
-    private void builder(ModelFile itemGeneratrated, String name) {
-        getBuilder(name).parent(itemGeneratrated).texture("layer0","item/" + name);
+    private ItemModelBuilder builder(ModelFile itemGenerated, String name) {
+        return getBuilder(name).parent(itemGenerated).texture("layer0","item/" + name);
     }
 }

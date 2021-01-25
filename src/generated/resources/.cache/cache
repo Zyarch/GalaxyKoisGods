@@ -1,0 +1,17 @@
+348ad0203f66063d67199c7148b410341291b164 assets/galasgods/blockstates/silver_block.json
+fa5b1b3beabf0fadb80f787f5893acfe0d5c3b21 assets/galasgods/blockstates/silver_ore.json
+75f8a127897a51d7d784d9fdddc95454f7816df2 assets/galasgods/models/block/silver_block.json
+1ab69dd962ecce75ba6010455bc0e6e9f6b8e233 assets/galasgods/models/block/silver_ore.json
+fdd90f2c38e4715a935774aadceb5adf40056026 assets/galasgods/models/item/silver_block.json
+e02c07ea240338348eb72c2f016117a39190c18d assets/galasgods/models/item/silver_ingot.json
+eddb91b38a9a344db0e5917f12ec277fead1623d assets/galasgods/models/item/silver_ore.json
+0d1d401bdc2282349b66f841d5febee4c074cabb data/forge/tags/blocks/ores.json
+d3d01e02d08c3b0628756f16f58072f6b199105d data/forge/tags/blocks/ores/silver.json
+a68c6de6ef36f81f3f3b18740c79b09583ed31f1 data/forge/tags/blocks/storage_blocks.json
+0139303f866bb83bae64c40d17d3763e5d0f3331 data/forge/tags/blocks/storage_blocks/silver.json
+6aca82e8ad81198ae376ca71b9429dcaa8ebf33b data/forge/tags/items/ingots.json
+9a9108006bf58b3a0a05f03da5d9e4e1a1775804 data/forge/tags/items/ingots/silver.json
+0d1d401bdc2282349b66f841d5febee4c074cabb data/forge/tags/items/ores.json
+d3d01e02d08c3b0628756f16f58072f6b199105d data/forge/tags/items/ores/silver.json
+a68c6de6ef36f81f3f3b18740c79b09583ed31f1 data/forge/tags/items/storage_blocks.json
+0139303f866bb83bae64c40d17d3763e5d0f3331 data/forge/tags/items/storage_blocks/silver.json

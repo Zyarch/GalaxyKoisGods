@@ -2,5 +2,6 @@
   "item.galasgods.silver_ingot": "Silver Ingot",
   "block.galasgods.silver_ore": "Silver Ore",
   "block.galasgods.silver_block": "Silver Block",
-  "block.galasgods.altar": "Altar"
+  "block.galasgods.altar": "Altar",
+  "itemGroup.galaxykoisgodstab": "Gala's Gods"
 }

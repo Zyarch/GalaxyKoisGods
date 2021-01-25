@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 public class AltarContainer extends Container
 {
-    private final IInventory altarInventory;
+    //private final IInventory altarInventory;
 
     public AltarContainer(int id, PlayerInventory playerInventoryIn) {
         this(ModContainers.ALTAR, id, playerInventoryIn);
     }
 
-    public AltarContainer(@Nullable ContainerType<?> type, int id, PlayerInventory playerInventoryIn, IInventory p_i50092_4_) {
+    public AltarContainer(@Nullable ContainerType<?> type, int id, PlayerInventory playerInventoryIn) {
         super(type, id);
-        this.altarInventory = p_i50092_4_;
-        p_i50092_4_.openInventory(playerInventoryIn.player);
+        //this.altarInventory = p_i50092_4_;
+        //p_i50092_4_.openInventory(playerInventoryIn.player);
 
         int i = (9 - 4) * 18;
 
@@ -40,6 +40,6 @@ public class AltarContainer extends Container
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
-        return this.altarInventory.isUsableByPlayer(playerIn);
+        return false;
     }
 }

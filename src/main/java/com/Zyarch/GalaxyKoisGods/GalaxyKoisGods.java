@@ -1,5 +1,6 @@
 package com.Zyarch.GalaxyKoisGods;
 
+import com.Zyarch.GalaxyKoisGods.data.DataGenerators;
 import com.Zyarch.GalaxyKoisGods.data.GGod;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModItems;
@@ -38,6 +39,7 @@ public class GalaxyKoisGods
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         Registration.register();
+
 
         MinecraftForge.EVENT_BUS.register(this);
 
