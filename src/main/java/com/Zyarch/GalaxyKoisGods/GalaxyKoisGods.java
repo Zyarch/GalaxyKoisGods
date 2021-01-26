@@ -1,6 +1,7 @@
 package com.Zyarch.GalaxyKoisGods;
 
 import com.Zyarch.GalaxyKoisGods.data.GGod;
+import com.Zyarch.GalaxyKoisGods.data.loot.BlockLootTableProvider;
 import com.Zyarch.GalaxyKoisGods.screens.AltarScreen;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;

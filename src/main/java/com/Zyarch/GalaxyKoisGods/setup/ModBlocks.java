@@ -39,7 +39,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SELENIUM_BLOCK = register("selenium_block", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
-    public static final RegistryObject<Altar> ALTAR = registerStack1("altar", () -> new Altar());
+    public static final RegistryObject<Block> ALTAR = registerStack1("altar", () -> new Altar());
 
     static void register() { }
 
@@ -59,5 +59,10 @@ public class ModBlocks {
                 .group(GalaxyKoisGods.TAB)
                 .maxStackSize(1)));
         return ret;
+    }
+
+    public static Block getBlock(RegistryObject<Block> blockRegistryObject)
+    {
+        return blockRegistryObject.get();
     }
 }
