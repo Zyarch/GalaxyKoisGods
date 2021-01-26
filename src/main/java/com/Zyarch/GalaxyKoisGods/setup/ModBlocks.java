@@ -43,7 +43,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> RUBY_BLOCK = register("ruby_block", RubyBlock::new);
     public static final RegistryObject<Block> RUBY_ORE = register("ruby_ore", RubyOre::new);
 
-    public static final RegistryObject<Altar> ALTAR = registerStack1("altar", () -> new Altar());
+    public static final RegistryObject<Block> ALTAR = registerStack1("altar", () -> new Altar());
 
     static void register() { }
 
@@ -63,5 +63,10 @@ public class ModBlocks {
                 .group(GalaxyKoisGods.TAB)
                 .maxStackSize(1)));
         return ret;
+    }
+
+    public static Block getBlock(RegistryObject<Block> blockRegistryObject)
+    {
+        return blockRegistryObject.get();
     }
 }
