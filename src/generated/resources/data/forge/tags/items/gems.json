@@ -3,6 +3,7 @@
   "values": [
     "#forge:gems/thunder_stone",
     "#forge:gems/amethyst",
-    "#forge:gems/selenium"
+    "#forge:gems/selenium",
+    "#forge:gems/ruby"
   ]
 }
