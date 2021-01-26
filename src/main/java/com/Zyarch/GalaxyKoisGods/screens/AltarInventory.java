@@ -46,9 +46,6 @@ public class AltarInventory implements IInventory {
             this.markDirty();
         }
 
-        System.out.println(itemstack.getCount());
-        System.out.println(this.stackList.get(0).getCount());
-
         return itemstack;
     }
 
