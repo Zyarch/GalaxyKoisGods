@@ -23,6 +23,24 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_SILVER).add(ModBlocks.SILVER_BLOCK.get());
         getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_SILVER);
 
+        getOrCreateBuilder(ModTags.Blocks.ORES_THUNDER_STONE).add(ModBlocks.THUNDER_STONE_ORE.get());
+        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_THUNDER_STONE);
+
+        getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_THUNDER_STONE).add(ModBlocks.THUNDER_STONE_BLOCK.get());
+        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_THUNDER_STONE);
+
+        getOrCreateBuilder(ModTags.Blocks.ORES_AMETHYST).add(ModBlocks.AMETHYST_ORE.get());
+        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_AMETHYST);
+
+        getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_AMETHYST).add(ModBlocks.AMETHYST_BLOCK.get());
+        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_AMETHYST);
+
+        getOrCreateBuilder(ModTags.Blocks.ORES_SELENIUM).add(ModBlocks.SELENIUM_ORE.get());
+        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_SELENIUM);
+
+        getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_SELENIUM).add(ModBlocks.SELENIUM_BLOCK.get());
+        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_SELENIUM);
+
     }
 }
 

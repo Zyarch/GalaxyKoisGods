@@ -21,7 +21,25 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVER_BLOCK = register("silver_block", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
-    public static final RegistryObject<Altar> ALTAR = registerStack1("altar", Altar::new);
+    public static final RegistryObject<Block> THUNDER_STONE_ORE = register("thunder_stone_ore", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> THUNDER_STONE_BLOCK = register("thunder_stone_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> AMETHYST_ORE = register("amethyst_ore", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> AMETHYST_BLOCK = register("amethyst_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> SELENIUM_ORE = register("selenium_ore", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> SELENIUM_BLOCK = register("selenium_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Altar> ALTAR = registerStack1("altar", () -> new Altar());
 
     static void register() { }
 

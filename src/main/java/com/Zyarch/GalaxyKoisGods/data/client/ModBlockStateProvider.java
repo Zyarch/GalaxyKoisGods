@@ -16,5 +16,14 @@ public class ModBlockStateProvider  extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(ModBlocks.SILVER_BLOCK.get());
         simpleBlock(ModBlocks.SILVER_ORE.get());
+
+        simpleBlock(ModBlocks.THUNDER_STONE_BLOCK.get());
+        simpleBlock(ModBlocks.THUNDER_STONE_ORE.get());
+
+        simpleBlock(ModBlocks.AMETHYST_BLOCK.get());
+        simpleBlock(ModBlocks.AMETHYST_ORE.get());
+
+        simpleBlock(ModBlocks.SELENIUM_BLOCK.get());
+        simpleBlock(ModBlocks.SELENIUM_ORE.get());
     }
 }
