@@ -57,5 +57,15 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         getOrCreateBuilder(ModTags.Items.GEMS_SELENIUM).add(ModItems.SELENIUM.get());
         getOrCreateBuilder(Tags.Items.GEMS).addTag(ModTags.Items.GEMS_SELENIUM);
+
+        //Ruby
+        copy(ModTags.Blocks.ORES_RUBY, ModTags.Items.ORES_RUBY);
+        copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
+        copy(ModTags.Blocks.STORAGE_BLOCKS_RUBY, ModTags.Items.STORAGE_BLOCKS_RUBY);
+        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
+
+        getOrCreateBuilder(ModTags.Items.GEMS_RUBY).add(ModItems.RUBY.get());
+        getOrCreateBuilder(Tags.Items.GEMS).addTag(ModTags.Items.GEMS_RUBY);
     }
 }

@@ -23,6 +23,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("amethyst_ore", modLoc("block/amethyst_ore"));
         withExistingParent("selenium_block", modLoc("block/selenium_block"));
         withExistingParent("selenium_ore", modLoc("block/selenium_ore"));
+        withExistingParent("ruby_block", modLoc("block/ruby_block"));
+        withExistingParent("ruby_ore", modLoc("block/ruby_ore"));
 
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
 
@@ -30,6 +32,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "thunder_stone");
         builder(itemGenerated, "amethyst");
         builder(itemGenerated, "selenium");
+        builder(itemGenerated, "ruby");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {

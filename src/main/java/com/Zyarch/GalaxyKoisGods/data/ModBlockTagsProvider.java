@@ -41,6 +41,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_SELENIUM).add(ModBlocks.SELENIUM_BLOCK.get());
         getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_SELENIUM);
 
+        getOrCreateBuilder(ModTags.Blocks.ORES_RUBY).add(ModBlocks.RUBY_ORE.get());
+        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_RUBY);
+
+        getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_RUBY).add(ModBlocks.RUBY_BLOCK.get());
+        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_RUBY);
     }
 }
 

@@ -11,6 +11,9 @@
   "item.galasgods.selenium": "Selenium",
   "block.galasgods.selenium_ore": "Selenium Ore",
   "block.galasgods.selenium_block": "Selenium Block",
+  "item.galasgods.ruby": "Ruby",
+  "block.galasgods.ruby_ore": "Ruby Ore",
+  "block.galasgods.ruby_block": "Ruby Block",
   "block.galasgods.altar": "Altar",
   "container.galasgods.altar": "Altar",
   "itemGroup.galaxykoisgodstab": "Gala's Gods"

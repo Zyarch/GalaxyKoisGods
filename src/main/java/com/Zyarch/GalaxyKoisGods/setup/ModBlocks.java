@@ -2,6 +2,8 @@ package com.Zyarch.GalaxyKoisGods.setup;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import com.Zyarch.GalaxyKoisGods.block.Altar;
+import com.Zyarch.GalaxyKoisGods.block.RubyBlock;
+import com.Zyarch.GalaxyKoisGods.block.RubyOre;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -38,6 +40,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SELENIUM_BLOCK = register("selenium_block", () ->
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+    public static final RegistryObject<Block> RUBY_BLOCK = register("ruby_block", RubyBlock::new);
+    public static final RegistryObject<Block> RUBY_ORE = register("ruby_ore", RubyOre::new);
 
     public static final RegistryObject<Altar> ALTAR = registerStack1("altar", () -> new Altar());
 

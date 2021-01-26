@@ -25,5 +25,8 @@ public class ModBlockStateProvider  extends BlockStateProvider {
 
         simpleBlock(ModBlocks.SELENIUM_BLOCK.get());
         simpleBlock(ModBlocks.SELENIUM_ORE.get());
+
+        simpleBlock(ModBlocks.RUBY_BLOCK.get());
+        simpleBlock(ModBlocks.RUBY_ORE.get());
     }
 }
