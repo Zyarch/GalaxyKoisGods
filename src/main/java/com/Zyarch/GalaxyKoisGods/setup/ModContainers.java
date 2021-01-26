@@ -10,11 +10,7 @@ import java.util.function.Supplier;
 public class ModContainers
 {
     public static final RegistryObject<ContainerType<AltarContainer>> ALTAR_CONTAINER = register("altar_container",
-            () -> IForgeContainerType.create(
-                    (windowId, inv, pos) -> {
-                        return new AltarContainer(windowId, inv);
-                    }
-            ));
+            () -> IForgeContainerType.create(AltarContainer::new));
 
     static void register() { }
 

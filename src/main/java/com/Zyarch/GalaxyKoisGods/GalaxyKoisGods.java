@@ -1,6 +1,7 @@
 package com.Zyarch.GalaxyKoisGods;
 
 import com.Zyarch.GalaxyKoisGods.data.GGod;
+import com.Zyarch.GalaxyKoisGods.data.client.GalasGodsPacketHandler;
 import com.Zyarch.GalaxyKoisGods.screens.AltarScreen;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;
@@ -26,6 +27,7 @@ public class GalaxyKoisGods
     public static final String MOD_ID = "galasgods";
     public static GGod godAmara;
     public static GGod godKelDerash;
+    public static GalasGodsPacketHandler packetHandler;
 
     public GalaxyKoisGods() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -34,6 +36,8 @@ public class GalaxyKoisGods
         Registration.register();
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        packetHandler = new GalasGodsPacketHandler();
 
         godAmara = new GGod("Amara").
                     setOfferItemList(Items.TOTEM_OF_UNDYING, Items.BONE_MEAL).

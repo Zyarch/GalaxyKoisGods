@@ -4,39 +4,43 @@ import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Slot;
+import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.IWorldPosCallable;
-import net.minecraft.util.math.BlockPos;
-
-import javax.annotation.Nullable;
 
 public class AltarContainer extends Container
 {
-    //private final IInventory altarInventory;
+    private final AltarInventory altarInventory = new AltarInventory(this, 1);
 
     public AltarContainer(int windowId, PlayerInventory playerInventoryIn) {
         super(ModContainers.ALTAR_CONTAINER.get(), windowId);
 
-        int i = (9 - 4) * 18;
+            this.addSlot(new Slot(this.altarInventory, 0, 115, 32));
 
-        //Adds slots for player inventory
-        for(int l = 0; l < 3; ++l) {
-            for(int j1 = 0; j1 < 9; ++j1) {
-                this.addSlot(new Slot(playerInventoryIn, j1 + l * 9 + 9, 8 + j1 * 18, 103 + l * 18 + i));
+            //Adds slots for player inventory
+            for (int i = 0; i < 3; ++i) {
+                for (int j = 0; j < 9; ++j) {
+                    this.addSlot(new Slot(playerInventoryIn, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+                }
             }
-        }
 
-        //Adds slots for player hotbar
-        for(int i1 = 0; i1 < 9; ++i1) {
-            this.addSlot(new Slot(playerInventoryIn, i1, 8 + i1 * 18, 161 + i));
-        }
+            //Adds slots for player hot bar
+            for (int k = 0; k < 9; ++k) {
+                this.addSlot(new Slot(playerInventoryIn, k, 8 + k * 18, 142));
+            }
     }
 
-    @Override
+    public AltarContainer(final int windowID, final PlayerInventory playerInv, final PacketBuffer data) {
+        this(windowID, playerInv);
+    }
+
+        @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
         return isWithinUsableDistance(IWorldPosCallable.DUMMY, playerIn, ModBlocks.ALTAR.get());
+    }
+
+    public void shrinkInventory(int amount) {
+        this.altarInventory.die(amount);
     }
 }
