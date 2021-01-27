@@ -1,8 +1,9 @@
 package com.Zyarch.GalaxyKoisGods.screens;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
-import com.Zyarch.GalaxyKoisGods.data.GGod;
 import com.Zyarch.GalaxyKoisGods.data.client.PacketUpdateContainer;
+import com.Zyarch.GalaxyKoisGods.gods.GGod;
+import com.Zyarch.GalaxyKoisGods.gods.God;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -31,7 +32,6 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
         this.guiTop = (this.height - this.ySize) / 2;
         this.addButton(new Button(this.guiLeft + 78, this.guiTop + 58, 90, 20, new StringTextComponent("Offer"), (button) -> {
             ItemStack itemStack = this.container.getSlot(0).getStack();
-            GGod _amara = GalaxyKoisGods.godAmara;
             PlayerEntity player = this.playerInventory.player;
             String itemName = itemStack.getDisplayName().getString();
             boolean isRemote = player.getEntityWorld().isRemote;
@@ -41,18 +41,17 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
                 //send packet to server
                 GalaxyKoisGods.packetHandler.sendToServer(new PacketUpdateContainer((short)this.container.windowId, (short)1));
 
+                //figure out which god is being offered to, set it here.
+                GGod god = God.Amara;
                 //Assuming Amara
                 if(isRemote)
                 {
-                    if (_amara.isInOfferList(itemStack)) {
-                            String msg = itemName + " is lovely!";
-                            player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
-                    } else if (_amara.isInBadList(itemStack)) {
-                            String msg = itemName + " is terrible!";
-                            player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
+                    if (god.isInOfferList(itemStack)) {
+                            player.sendMessage(new StringTextComponent(god.goodOffer(itemStack)), player.getUniqueID());
+                    } else if (god.isInBadList(itemStack)) {
+                            player.sendMessage(new StringTextComponent(god.badOffer(itemStack)), player.getUniqueID());
                     } else {
-                        String msg = itemName + " is acceptable!";
-                        player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
+                        player.sendMessage(new StringTextComponent(god.neutralOffer(itemStack)), player.getUniqueID());
                     }
                 }
             }

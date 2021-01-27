@@ -1,16 +1,12 @@
 package com.Zyarch.GalaxyKoisGods.events;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
-import com.Zyarch.GalaxyKoisGods.data.GGod;
-import net.minecraft.entity.item.ItemEntity;
+import com.Zyarch.GalaxyKoisGods.gods.God;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -24,7 +20,7 @@ public class ModClientEvents {
 
             if (!event.getPlayer().getEntityWorld().isRemote)
             {
-                String msg = GalaxyKoisGods.godAmara.getName();
+                String msg = God.Amara.getName();
                 player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
             }
         }
