@@ -5,6 +5,7 @@ import com.Zyarch.GalaxyKoisGods.screens.AltarScreen;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;
 import com.Zyarch.GalaxyKoisGods.setup.Registration;
+import com.Zyarch.GalaxyKoisGods.world.gen.ModOreGen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -37,6 +38,7 @@ public class GalaxyKoisGods
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        ModOreGen.registerOre();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
