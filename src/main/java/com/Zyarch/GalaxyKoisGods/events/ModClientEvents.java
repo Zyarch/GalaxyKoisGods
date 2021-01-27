@@ -1,6 +1,7 @@
 package com.Zyarch.GalaxyKoisGods.events;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
+import com.Zyarch.GalaxyKoisGods.gods.God;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
@@ -19,7 +20,7 @@ public class ModClientEvents {
 
             if (!event.getPlayer().getEntityWorld().isRemote)
             {
-                String msg = GalaxyKoisGods.godAmara.getName();
+                String msg = God.Amara.getName();
                 player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
             }
         }
