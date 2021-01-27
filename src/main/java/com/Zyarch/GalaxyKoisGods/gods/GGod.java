@@ -67,9 +67,9 @@ public class GGod
 
     public String[] getBadOfferResponse() { return badOfferResponse; }
 
-    public String goodOffer (ItemStack item) { return name+": "+goodOfferResponse[0] + item.toString() + goodOfferResponse[1];}
+    public String goodOffer (ItemStack item) { return name+": "+goodOfferResponse[0] + item.getDisplayName() + goodOfferResponse[1];}
 
-    public String badOffer (ItemStack item) { return name+": "+badOfferResponse[0] + item.toString() + badOfferResponse[1];}
+    public String badOffer (ItemStack item) { return name+": "+badOfferResponse[0] + item.getDisplayName() + badOfferResponse[1];}
 
-    public String neutralOffer (ItemStack item) { return name+": "+neutralOfferResponse[0] + item.toString() + neutralOfferResponse[1];}
+    public String neutralOffer (ItemStack item) { return name+": "+neutralOfferResponse[0] + item.getDisplayName() + neutralOfferResponse[1];}
 }
