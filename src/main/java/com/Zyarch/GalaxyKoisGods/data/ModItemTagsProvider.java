@@ -25,7 +25,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         //Silver
         registerOre(ModTags.Blocks.ORES_SILVER, ModTags.Items.ORES_SILVER);
         registerStorageBlock(ModTags.Blocks.STORAGE_BLOCKS_SILVER, ModTags.Items.STORAGE_BLOCKS_SILVER);
-        registerGem(ModTags.Items.INGOTS_SILVER, ModItems.SILVER_INGOT.get());
+        registerIngot(ModTags.Items.INGOTS_SILVER, ModItems.SILVER_INGOT.get());
 
         //Thunder Stone
         registerOre(ModTags.Blocks.ORES_THUNDER_STONE, ModTags.Items.ORES_THUNDER_STONE);
@@ -51,23 +51,30 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         registerOre(ModTags.Blocks.ORES_SAPPHIRE, ModTags.Items.ORES_SAPPHIRE);
         registerStorageBlock(ModTags.Blocks.STORAGE_BLOCKS_SAPPHIRE, ModTags.Items.STORAGE_BLOCKS_SAPPHIRE);
         registerGem(ModTags.Items.GEMS_SAPPHIRE, ModItems.SAPPHIRE.get());
+
+        copy(Tags.Blocks.ORES, Tags.Items.ORES);
+        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
     }
 
     private void registerOre(ITag.INamedTag<Block> tagBlock, ITag.INamedTag<Item> tagItem)
     {
         copy(tagBlock, tagItem);
-        copy(Tags.Blocks.ORES, Tags.Items.ORES);
     }
 
     private void registerStorageBlock(ITag.INamedTag<Block> tagBlock, ITag.INamedTag<Item> tagItem)
     {
         copy(tagBlock, tagItem);
-        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
     }
 
     private void registerGem(ITag.INamedTag<Item> tag, Item block)
     {
         getOrCreateBuilder(tag).add(block);
         getOrCreateBuilder(Tags.Items.GEMS).addTag(tag);
+    }
+
+    private void registerIngot(ITag.INamedTag<Item> tag, Item block)
+    {
+        getOrCreateBuilder(tag).add(block);
+        getOrCreateBuilder(Tags.Items.INGOTS).addTag(tag);
     }
 }
