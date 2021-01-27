@@ -15,7 +15,7 @@ public class ModClientEvents {
     @SubscribeEvent
     public static void onDamageSpeakAmara(AttackEntityEvent event)
     {
-        if (event.getTarget().isAlive()) {
+        /*if (event.getTarget().isAlive()) {
             PlayerEntity player = event.getPlayer();
 
             if (!event.getPlayer().getEntityWorld().isRemote)
@@ -23,7 +23,7 @@ public class ModClientEvents {
                 String msg = God.Amara.getName();
                 player.sendMessage(new StringTextComponent(msg), player.getUniqueID());
             }
-        }
+        }*/
     }
     @SubscribeEvent
     public static void onItemUse(PlayerInteractEvent.RightClickBlock event)

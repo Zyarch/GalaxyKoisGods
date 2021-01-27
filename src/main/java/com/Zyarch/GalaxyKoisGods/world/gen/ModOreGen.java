@@ -2,6 +2,7 @@ package com.Zyarch.GalaxyKoisGods.world.gen;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
+import com.Zyarch.GalaxyKoisGods.setup.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.registry.Registry;
@@ -26,13 +27,12 @@ public class ModOreGen
     private static final ArrayList<ConfiguredFeature<?, ?>> endOres = new ArrayList<ConfiguredFeature<?, ?>>();
     //FOR BIOME SPECIFIC ORE!!!! MAKE A NEW LIST FOR THAT BIOME AND ADD THEM TO IT
     private static final BlockMatchRuleTest END_STONE = new BlockMatchRuleTest(Blocks.END_STONE);
-
     public static void registerOre(){
-        addGenericOverWorldOreGen("silver_ore"          , ModBlocks.SILVER_ORE.get()        , 6, 70, 16);
-        addGenericOverWorldOreGen("thunder_stone_ore"   , ModBlocks.THUNDER_STONE_ORE.get() , 6, 70, 16);
-        addGenericOverWorldOreGen("ruby_ore"            , ModBlocks.RUBY_ORE.get()          , 6, 70, 16);
-        addGenericEndOreGen("amethyst_ore"        , ModBlocks.AMETHYST_ORE.get()      , 6, 70, 16);
-        addGenericEndOreGen("selenium_ore"        , ModBlocks.SELENIUM_ORE.get()      , 6, 70, 16);
+        addGenericOverWorldOreGen("silver_ore"          , ModBlocks.SILVER_ORE.get()        , 3, 45, 8);
+        addGenericOverWorldOreGen("thunder_stone_ore"   , ModBlocks.THUNDER_STONE_ORE.get() , 3, 60, 6);
+        addGenericOverWorldOreGen("ruby_ore"            , ModBlocks.RUBY_ORE.get()          , 3, 50, 8);
+        addGenericEndOreGen("amethyst_ore"        , ModBlocks.AMETHYST_ORE.get()      , 4, 70, 10);
+        addGenericEndOreGen("selenium_ore"        , ModBlocks.SELENIUM_ORE.get()      , 4, 70, 10);
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)

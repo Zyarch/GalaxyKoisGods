@@ -33,7 +33,6 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
         this.addButton(new Button(this.guiLeft + 78, this.guiTop + 58, 90, 20, new StringTextComponent("Offer"), (button) -> {
             ItemStack itemStack = this.container.getSlot(0).getStack();
             PlayerEntity player = this.playerInventory.player;
-            String itemName = itemStack.getDisplayName().getString();
             boolean isRemote = player.getEntityWorld().isRemote;
 
             if(!itemStack.isEmpty())
