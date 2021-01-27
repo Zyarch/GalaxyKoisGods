@@ -24,5 +24,8 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY = Registration.ITEMS.register("ruby", () ->
             new Item(new Item.Properties().group(GalaxyKoisGods.TAB)));
 
+    public static final RegistryObject<Item> SAPPHIRE = Registration.ITEMS.register("sapphire", () ->
+            new Item(new Item.Properties().group(GalaxyKoisGods.TAB)));
+
     static void register() { }
 }

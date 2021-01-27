@@ -43,6 +43,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> RUBY_BLOCK = register("ruby_block", RubyBlock::new);
     public static final RegistryObject<Block> RUBY_ORE = register("ruby_ore", RubyOre::new);
 
+    public static final RegistryObject<Block> SAPPHIRE_ORE = register("sapphire_ore", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> SAPPHIRE_BLOCK = register("sapphire_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
+
     public static final RegistryObject<Block> ALTAR = registerStack1("altar", () -> new Altar());
 
     static void register() { }

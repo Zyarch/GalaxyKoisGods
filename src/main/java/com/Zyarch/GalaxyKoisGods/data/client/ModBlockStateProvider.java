@@ -28,5 +28,8 @@ public class ModBlockStateProvider  extends BlockStateProvider {
 
         simpleBlock(ModBlocks.RUBY_BLOCK.get());
         simpleBlock(ModBlocks.RUBY_ORE.get());
+
+        simpleBlock(ModBlocks.SAPPHIRE_BLOCK.get());
+        simpleBlock(ModBlocks.SAPPHIRE_ORE.get());
     }
 }

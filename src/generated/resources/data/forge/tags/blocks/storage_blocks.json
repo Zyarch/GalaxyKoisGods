@@ -5,6 +5,7 @@
     "#forge:storage_blocks/thunder_stone",
     "#forge:storage_blocks/amethyst",
     "#forge:storage_blocks/selenium",
-    "#forge:storage_blocks/ruby"
+    "#forge:storage_blocks/ruby",
+    "#forge:storage_blocks/sapphire"
   ]
 }

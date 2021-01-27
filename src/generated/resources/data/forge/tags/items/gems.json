@@ -1,9 +1,11 @@
 {
   "replace": false,
   "values": [
+    "#forge:ingots/silver",
     "#forge:gems/thunder_stone",
     "#forge:gems/amethyst",
     "#forge:gems/selenium",
-    "#forge:gems/ruby"
+    "#forge:gems/ruby",
+    "#forge:gems/sapphire"
   ]
 }

@@ -25,6 +25,9 @@ public class ModTags {
         public static final ITag.INamedTag<Block> ORES_RUBY = forge("ores/ruby");
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_RUBY = forge("storage_blocks/ruby");
 
+        public static final ITag.INamedTag<Block> ORES_SAPPHIRE = forge("ores/sapphire");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_SAPPHIRE = forge("storage_blocks/sapphire");
+
         private static ITag.INamedTag<Block> forge(String path) {
             return BlockTags.makeWrapperTag(new ResourceLocation("forge", path).toString());
         }
@@ -54,6 +57,10 @@ public class ModTags {
         public static final ITag.INamedTag<Item> ORES_RUBY = forge("ores/ruby");
         public static final ITag.INamedTag<Item> STORAGE_BLOCKS_RUBY = forge("storage_blocks/ruby");
         public static final ITag.INamedTag<Item> GEMS_RUBY = forge("gems/ruby");
+
+        public static final ITag.INamedTag<Item> ORES_SAPPHIRE = forge("ores/sapphire");
+        public static final ITag.INamedTag<Item> STORAGE_BLOCKS_SAPPHIRE = forge("storage_blocks/sapphire");
+        public static final ITag.INamedTag<Item> GEMS_SAPPHIRE = forge("gems/sapphire");
 
         private static ITag.INamedTag<Item> forge(String path) {
             return ItemTags.makeWrapperTag(new ResourceLocation("forge", path).toString());

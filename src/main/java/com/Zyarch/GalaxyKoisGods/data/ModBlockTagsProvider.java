@@ -3,8 +3,11 @@ package com.Zyarch.GalaxyKoisGods.data;
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModTags;
+import net.minecraft.block.Block;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.item.Item;
+import net.minecraft.tags.ITag;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -17,35 +20,35 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void registerTags() {
-        getOrCreateBuilder(ModTags.Blocks.ORES_SILVER).add(ModBlocks.SILVER_ORE.get());
-        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_SILVER);
+        registerOre(ModTags.Blocks.ORES_SILVER, ModBlocks.SILVER_ORE.get());
+        registerStorageBlock(ModTags.Blocks.STORAGE_BLOCKS_SILVER, ModBlocks.SILVER_BLOCK.get());
 
-        getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_SILVER).add(ModBlocks.SILVER_BLOCK.get());
-        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_SILVER);
+        registerOre(ModTags.Blocks.ORES_THUNDER_STONE, ModBlocks.THUNDER_STONE_ORE.get());
+        registerStorageBlock(ModTags.Blocks.STORAGE_BLOCKS_THUNDER_STONE, ModBlocks.THUNDER_STONE_BLOCK.get());
 
-        getOrCreateBuilder(ModTags.Blocks.ORES_THUNDER_STONE).add(ModBlocks.THUNDER_STONE_ORE.get());
-        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_THUNDER_STONE);
+        registerOre(ModTags.Blocks.ORES_AMETHYST, ModBlocks.AMETHYST_ORE.get());
+        registerStorageBlock(ModTags.Blocks.STORAGE_BLOCKS_AMETHYST, ModBlocks.AMETHYST_BLOCK.get());
 
-        getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_THUNDER_STONE).add(ModBlocks.THUNDER_STONE_BLOCK.get());
-        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_THUNDER_STONE);
+        registerOre(ModTags.Blocks.ORES_SELENIUM, ModBlocks.SELENIUM_ORE.get());
+        registerStorageBlock(ModTags.Blocks.STORAGE_BLOCKS_SELENIUM, ModBlocks.SELENIUM_BLOCK.get());
 
-        getOrCreateBuilder(ModTags.Blocks.ORES_AMETHYST).add(ModBlocks.AMETHYST_ORE.get());
-        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_AMETHYST);
+        registerOre(ModTags.Blocks.ORES_RUBY, ModBlocks.RUBY_ORE.get());
+        registerStorageBlock(ModTags.Blocks.STORAGE_BLOCKS_RUBY, ModBlocks.RUBY_BLOCK.get());
 
-        getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_AMETHYST).add(ModBlocks.AMETHYST_BLOCK.get());
-        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_AMETHYST);
+        registerOre(ModTags.Blocks.ORES_SAPPHIRE, ModBlocks.SAPPHIRE_ORE.get());
+        registerStorageBlock(ModTags.Blocks.STORAGE_BLOCKS_SAPPHIRE, ModBlocks.SAPPHIRE_BLOCK.get());
+    }
 
-        getOrCreateBuilder(ModTags.Blocks.ORES_SELENIUM).add(ModBlocks.SELENIUM_ORE.get());
-        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_SELENIUM);
+    private void registerOre(ITag.INamedTag<Block> tagBlock, Block block)
+    {
+        getOrCreateBuilder(tagBlock).add(block);
+        getOrCreateBuilder(Tags.Blocks.ORES).addTag(tagBlock);
+    }
 
-        getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_SELENIUM).add(ModBlocks.SELENIUM_BLOCK.get());
-        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_SELENIUM);
-
-        getOrCreateBuilder(ModTags.Blocks.ORES_RUBY).add(ModBlocks.RUBY_ORE.get());
-        getOrCreateBuilder(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_RUBY);
-
-        getOrCreateBuilder(ModTags.Blocks.STORAGE_BLOCKS_RUBY).add(ModBlocks.RUBY_BLOCK.get());
-        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_RUBY);
+    private void registerStorageBlock(ITag.INamedTag<Block> tagBlock, Block block)
+    {
+        getOrCreateBuilder(tagBlock).add(block);
+        getOrCreateBuilder(Tags.Blocks.STORAGE_BLOCKS).addTag(tagBlock);
     }
 }
 
