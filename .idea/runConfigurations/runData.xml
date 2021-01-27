@@ -3,11 +3,11 @@
   <configuration default="false" factoryName="Application" name="runData" singleton="false" type="Application">
     <option name="MAIN_CLASS_NAME" value="net.minecraftforge.userdev.LaunchTesting"/>
     <option name="VM_PARAMETERS" value="-Dforge.logging.console.level=debug -Dforge.logging.markers=SCAN,REGISTRIES,REGISTRYDUMP"/>
-    <option name="PROGRAM_PARAMETERS" value="--mod examplemod --all --output &quot;C:\Users\IanLL\Documents\MC Mods\GalaxyKoisGods\src\generated\resources&quot; --existing &quot;C:\Users\IanLL\Documents\MC Mods\GalaxyKoisGods\src\main\resources&quot;"/>
+    <option name="PROGRAM_PARAMETERS" value="--mod galasgods --all --existing G:\MinecraftModding\GalaxyKoisGods\src\main\resources --existing G:\MinecraftModding\GalaxyKoisGods\src\generated\resources --output G:\MinecraftModding\GalaxyKoisGods\src\generated\resources"/>
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$\run"/>
     <module name="GalaxyKoisGods.main"/>
     <envs>
-      <env name="MOD_CLASSES" value="examplemod%%$PROJECT_DIR$\build\resources\main;examplemod%%$PROJECT_DIR$\build\classes\java\main"/>
+      <env name="MOD_CLASSES" value="galasgods%%$PROJECT_DIR$\build\resources\main;galasgods%%$PROJECT_DIR$\build\classes\java\main"/>
       <env name="MCP_MAPPINGS" value="snapshot_20201028-1.16.3"/>
       <env name="MCP_VERSION" value="20201102.104115"/>
       <env name="FORGE_VERSION" value="35.1.4"/>
