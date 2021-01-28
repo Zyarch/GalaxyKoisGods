@@ -1,6 +1,7 @@
 package com.Zyarch.GalaxyKoisGods;
 
-import com.Zyarch.GalaxyKoisGods.data.client.GalasGodsPacketHandler;
+import com.Zyarch.GalaxyKoisGods.network.GalasGodsPacketHandler;
+import com.Zyarch.GalaxyKoisGods.gods.God;
 import com.Zyarch.GalaxyKoisGods.screens.AltarScreen;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;
@@ -43,6 +44,7 @@ public class GalaxyKoisGods
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         ScreenManager.registerFactory(ModContainers.ALTAR_CONTAINER.get(), AltarScreen::new);
+        God.populateGodList();
     }
 
     public static final ItemGroup TAB = new ItemGroup("galaxykoisgodstab") {

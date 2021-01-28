@@ -1,7 +1,7 @@
 package com.Zyarch.GalaxyKoisGods.screens;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
-import com.Zyarch.GalaxyKoisGods.data.client.PacketUpdateContainer;
+import com.Zyarch.GalaxyKoisGods.network.PacketUpdateContainer;
 import com.Zyarch.GalaxyKoisGods.gods.GGod;
 import com.Zyarch.GalaxyKoisGods.gods.God;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -42,13 +42,14 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
 
                 //figure out which god is being offered to, set it here.
                 GGod god = God.Amara;
+
                 //Assuming Amara
                 if(isRemote)
                 {
                     if (god.isInOfferList(itemStack)) {
-                            player.sendMessage(new StringTextComponent(god.goodOffer(itemStack)), player.getUniqueID());
+                        player.sendMessage(new StringTextComponent(god.goodOffer(itemStack)), player.getUniqueID());
                     } else if (god.isInBadList(itemStack)) {
-                            player.sendMessage(new StringTextComponent(god.badOffer(itemStack)), player.getUniqueID());
+                        player.sendMessage(new StringTextComponent(god.badOffer(itemStack)), player.getUniqueID());
                     } else {
                         player.sendMessage(new StringTextComponent(god.neutralOffer(itemStack)), player.getUniqueID());
                     }

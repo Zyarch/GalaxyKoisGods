@@ -1,4 +1,4 @@
-package com.Zyarch.GalaxyKoisGods.data.client;
+package com.Zyarch.GalaxyKoisGods.network;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import net.minecraft.util.ResourceLocation;

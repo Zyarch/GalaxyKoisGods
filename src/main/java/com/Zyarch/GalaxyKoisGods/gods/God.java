@@ -4,8 +4,11 @@ import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModItems;
 import net.minecraft.item.Items;
 
+import java.util.ArrayList;
+
 public class God {
 
+    private static ArrayList<GGod> godList = new ArrayList<GGod>();
     //Major Gods aka Old Gods
 
     public static GGod Amara = new GGod("Amara")
@@ -99,6 +102,28 @@ public class God {
             .setGoodOfferResponse(new String[]{"Haha! Thanks for the ","!"})
             .setNeutralOfferResponse(new String[]{"","? Maybe something shiny or tasty next time?"})
             .setBadOfferResponse(new String[]{"How dare you! Giving me "," is just rude!"});
+
+    public static void populateGodList() {
+        godList.add(Amara);
+        godList.add(KelDerash);
+        godList.add(Lithaga);
+        godList.add(Ygthravil);
+        godList.add(Lovahn);
+        godList.add(Eldus);
+        godList.add(Tyrin);
+        godList.add(Xyrthas);
+        godList.add(Reptak);
+        godList.add(Jaspren);
+    }
+
+    public static GGod getGod(int index)
+    {
+        return godList.get(index);
+    }
+
+    public static int getGodListSize() {
+        return godList.size();
+    }
 }
 
 //God Template
