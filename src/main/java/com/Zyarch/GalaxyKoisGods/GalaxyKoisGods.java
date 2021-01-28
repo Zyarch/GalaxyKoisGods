@@ -1,6 +1,7 @@
 package com.Zyarch.GalaxyKoisGods;
 
 import com.Zyarch.GalaxyKoisGods.data.client.GalasGodsPacketHandler;
+import com.Zyarch.GalaxyKoisGods.gods.God;
 import com.Zyarch.GalaxyKoisGods.screens.AltarScreen;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;
@@ -22,14 +23,13 @@ import org.apache.logging.log4j.Logger;
 public class GalaxyKoisGods
 {
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "galasgods";
     public static GalasGodsPacketHandler packetHandler;
 
     public GalaxyKoisGods() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
         Registration.register();
 
         MinecraftForge.EVENT_BUS.register(this);
