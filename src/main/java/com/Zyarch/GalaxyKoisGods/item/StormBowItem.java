@@ -1,7 +1,7 @@
 package com.Zyarch.GalaxyKoisGods.item;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
-import com.Zyarch.entity.StormBowBolt;
+import com.Zyarch.entity.projectiles.StormBowBoltEntity;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
@@ -44,16 +44,13 @@ public class StormBowItem extends BowItem {
             i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(stack, worldIn, playerentity, i, !itemstack.isEmpty() || flag);
             if (i < 0) return;
 
-            System.out.println(stack.getDamage());
-
-            if (true) {
+            if (stack.getDamage() < stack.getMaxDamage() - 1) {
 
                 float f = getArrowVelocity(i);
                 if (!((double)f < 0.1D)) {
                     //boolean flag1 = playerentity.abilities.isCreativeMode || (itemstack.getItem() instanceof ArrowItem && ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, stack, playerentity));
                     if (!worldIn.isRemote) {
-                        //ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
-                        StormBowBolt bolt = new StormBowBolt(worldIn, playerentity);
+                        StormBowBoltEntity bolt = new StormBowBoltEntity(worldIn, playerentity);
 
                         AbstractArrowEntity abstractarrowentity = bolt;
                         abstractarrowentity = customArrow(abstractarrowentity);
