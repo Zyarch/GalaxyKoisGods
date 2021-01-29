@@ -1,6 +1,7 @@
 {
-    "parent": "minecraft:item/generated",
+    "parent": "item/bow",
     "textures": {
         "layer0": "galasgods:item/storm_bow_pulling_1"
-    }
+    },
+    "overrides": []
 }
