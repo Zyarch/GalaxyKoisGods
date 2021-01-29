@@ -21,6 +21,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class AltarScreen extends ContainerScreen<AltarContainer>
 {
     public final ResourceLocation ALTAR_BACKGROUND = new ResourceLocation("galasgods:textures/gui/altar_screen.png");
+    private GGod god = God.Amara;
 
     public AltarScreen(AltarContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
@@ -41,7 +42,7 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
                 GalaxyKoisGods.packetHandler.sendToServer(new PacketUpdateContainer((short)this.container.windowId, (short)1));
 
                 //figure out which god is being offered to, set it here.
-                GGod god = God.Amara;
+                //GGod god = God.Amara;
 
                 //Assuming Amara
                 if(isRemote)
@@ -54,6 +55,15 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
                         player.sendMessage(new StringTextComponent(god.neutralOffer(itemStack)), player.getUniqueID());
                     }
                 }
+            }
+        }));
+        this.addButton(new Button(this.guiLeft + 11, this.guiTop + 11, 60, 20, new StringTextComponent("Cycle God"), (button) -> {
+            PlayerEntity player = this.playerInventory.player;
+            boolean isRemote = player.getEntityWorld().isRemote;
+
+            god = God.cycleGod(god);
+            if(isRemote) {
+                player.sendMessage(new StringTextComponent("God selected: " + god.getName()), player.getUniqueID());
             }
         }));
     }

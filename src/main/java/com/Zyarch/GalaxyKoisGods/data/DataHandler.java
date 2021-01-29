@@ -33,12 +33,12 @@ public class DataHandler {
             String[] data;
 
             if(God.getGodListSize() != list.size())
-                throw new Exception("error while loading god favor data: some sata is missing!");
+                throw new Exception("error while loading god favor data: some data is missing!");
 
             for(int i = 0; i < list.size(); i++)
             {
                 data = list.getString(i).split(":");
-                pData.add(data[0], Integer.parseInt(data[1]));
+                pData.add(data[0], Float.parseFloat(data[1]));
             }
         }
     }

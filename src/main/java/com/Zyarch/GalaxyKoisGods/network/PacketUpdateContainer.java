@@ -38,11 +38,7 @@ public class PacketUpdateContainer
 
                 altarContainer.shrinkInventory(msg.property);
 
-                if (god.isInOfferList(item))
-                    playerData.addFavor(god.getName(), 2);
-                else if (god.isInBadList(item))
-                    playerData.addFavor(god.getName(), -1);
-                else playerData.addFavor(god.getName(), 1);
+                playerData.addFavor(god.getName(), god.getValue(item));
 
                 try {
                     DataHandler.store(sender.getUniqueID(), new CompoundNBT(), playerData);

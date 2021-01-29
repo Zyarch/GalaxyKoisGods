@@ -44,7 +44,7 @@ public class God {
             .setBadItemList(new Item[]{Items.WATER_BUCKET, Items.ICE, Items.BLUE_ICE, Items.PACKED_ICE},
                     new Float[]{-1f, -1f, -1f, -1f})
             .setGoodOfferResponse(new String[]{"", ". This pleases me."})
-            .setNeutralOfferResponse(new String[]{"I suppose you won't mind if I burn", "?"})
+            .setNeutralOfferResponse(new String[]{"I suppose you won't mind if I burn ", "?"})
             .setBadOfferResponse(new String[]{"", ". Mistake."});
 
     public static GGod Ygthravil = new GGod("Ygthravil")
@@ -150,6 +150,13 @@ public class God {
 
     public static int getGodListSize() {
         return godList.size();
+    }
+
+    public static GGod cycleGod(GGod god) {
+        int _index = godList.indexOf(god) + 1;
+        if(_index >= godList.size())
+            _index = 0;
+        return godList.get(_index);
     }
 }
 

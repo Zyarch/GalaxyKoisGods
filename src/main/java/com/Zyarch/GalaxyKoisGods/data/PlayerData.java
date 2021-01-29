@@ -6,28 +6,28 @@ import java.util.HashMap;
 
 public class PlayerData
 {
-    private HashMap<String, Integer> playerFavor = new HashMap<String, Integer>();
+    private HashMap<String, Float> playerFavor = new HashMap<String, Float>();
 
     public PlayerData()
     {
         for(int i = 0; i < God.getGodListSize(); i++)
         {
-            this.playerFavor.put(God.getGod(i).getName(), 0);
+            this.playerFavor.put(God.getGod(i).getName(), 0f);
         }
     }
 
-    public void addFavor(String name, int value){
-        int originalFavor = getFavor(name);
+    public void addFavor(String name, float value){
+        float originalFavor = getFavor(name);
 
-        this.playerFavor.replace(name, Math.max(-100, Math.min(originalFavor + value, 100)));
+        this.playerFavor.replace(name, Math.max(-100f, Math.min((originalFavor + value), 100f)));
     }
 
-    public int getFavor(String name)
+    public float getFavor(String name)
     {
         return this.playerFavor.get(name);
     }
 
-    public int getFavor(GGod god)
+    public float getFavor(GGod god)
     {
         return this.playerFavor.get(god.getName());
     }
@@ -37,8 +37,9 @@ public class PlayerData
         this.playerFavor.clear();
     }
 
-    public void add(String string, Integer integer)
+    public void add(String string, float _float)
     {
-        this.playerFavor.put(string, integer);
+        this.playerFavor.put(string, _float);
     }
+
 }
