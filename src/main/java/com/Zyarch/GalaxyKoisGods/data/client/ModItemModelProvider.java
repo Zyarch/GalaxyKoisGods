@@ -28,6 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("sapphire_block", modLoc("block/sapphire_block"));
         withExistingParent("sapphire_ore", modLoc("block/sapphire_ore"));
 
+        //for normal items
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
 
         builder(itemGenerated, "silver_ingot");
@@ -36,8 +37,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "selenium");
         builder(itemGenerated, "ruby");
         builder(itemGenerated, "sapphire");
-        builder(itemGenerated, "silver_dagger");
-        builder(itemGenerated, "void_dagger");
+
+        //for items likes tools
+        ModelFile handheldGenerated = getExistingFile(mcLoc("item/handheld"));
+
+        builder(handheldGenerated, "silver_dagger");
+        builder(handheldGenerated, "void_dagger");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {
