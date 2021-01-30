@@ -36,6 +36,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "selenium");
         builder(itemGenerated, "ruby");
         builder(itemGenerated, "sapphire");
+        builder(itemGenerated, "silver_dagger");
+        builder(itemGenerated, "void_dagger");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {
