@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 public class StormBowItem extends BowItem {
 
     public StormBowItem() {
-        super(new Item.Properties().maxDamage(480).group(GalaxyKoisGods.TAB));
+        super(new Item.Properties().maxDamage(10).group(GalaxyKoisGods.TAB));
     }
 
     @Override

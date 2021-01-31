@@ -35,11 +35,13 @@ ae363f7a65ff738f7737f410240e4f8e965bb316 assets/galasgods/models/item/ruby_ore.j
 d56252c12563ed217a03880be4f36e4e9d636e3c assets/galasgods/models/item/selenium_block.json
 46f4e4471cb9cced0360ebc56ad1b5f9bdc556fb assets/galasgods/models/item/selenium_ore.json
 fdd90f2c38e4715a935774aadceb5adf40056026 assets/galasgods/models/item/silver_block.json
+5d8b72ca63f2ebd2a2cb4c0f54a0b54a246d5266 assets/galasgods/models/item/silver_dagger.json
 e02c07ea240338348eb72c2f016117a39190c18d assets/galasgods/models/item/silver_ingot.json
 eddb91b38a9a344db0e5917f12ec277fead1623d assets/galasgods/models/item/silver_ore.json
 197398ad483667e70232f87c483843cedb9a27a6 assets/galasgods/models/item/thunder_stone.json
 a882141c0da3f0323336a137d5be5940b58c2c5c assets/galasgods/models/item/thunder_stone_block.json
 0acb15dca92e94c3ccf8ff02f5f2991628adf632 assets/galasgods/models/item/thunder_stone_ore.json
+abcbe3b9ef85a20b7974ca5db670854790ebc7dc assets/galasgods/models/item/void_dagger.json
 952d05edb87b0c4a4b4c528d04f4848f93c889a2 data/forge/tags/blocks/ores.json
 c9eeb7370be66a2fa66aff7a7d8e08cc4239f414 data/forge/tags/blocks/ores/amethyst.json
 86af983e9d15ace92c6239db0efbddac3940b85b data/forge/tags/blocks/ores/ruby.json
