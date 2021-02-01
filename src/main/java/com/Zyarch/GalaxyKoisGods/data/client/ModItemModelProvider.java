@@ -38,6 +38,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "ruby");
         builder(itemGenerated, "sapphire");
         builder(itemGenerated, "offer_amalgum");
+        builder(itemGenerated, "healing_token");
+        builder(itemGenerated, "lucky_coin");
         builder(itemGenerated, "storm_caller");
 
         //for items like tools
