@@ -40,7 +40,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "offer_amalgum");
         builder(itemGenerated, "storm_caller");
 
-        //for items likes tools
+        //for items like tools
         ModelFile handheldGenerated = getExistingFile(mcLoc("item/handheld"));
 
         builder(handheldGenerated, "silver_dagger");
