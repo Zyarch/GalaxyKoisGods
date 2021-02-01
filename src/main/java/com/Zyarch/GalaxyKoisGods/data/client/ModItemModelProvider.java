@@ -37,6 +37,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "selenium");
         builder(itemGenerated, "ruby");
         builder(itemGenerated, "sapphire");
+        builder(itemGenerated, "offer_amalgum");
+        builder(itemGenerated, "storm_caller");
 
         //for items likes tools
         ModelFile handheldGenerated = getExistingFile(mcLoc("item/handheld"));

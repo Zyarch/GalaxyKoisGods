@@ -1,5 +1,7 @@
 package com.Zyarch.GalaxyKoisGods.screens;
 
+import com.Zyarch.GalaxyKoisGods.gods.GGod;
+import com.Zyarch.GalaxyKoisGods.gods.God;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,6 +15,7 @@ import net.minecraft.util.IWorldPosCallable;
 public class AltarContainer extends Container
 {
     private final AltarInventory altarInventory = new AltarInventory(this, 1);
+    public GGod god = God.Amara;
 
     public AltarContainer(int windowId, PlayerInventory playerInventoryIn) {
         super(ModContainers.ALTAR_CONTAINER.get(), windowId);
@@ -74,4 +77,6 @@ public class AltarContainer extends Container
     public void shrinkInventory(int amount) {
         this.altarInventory.die(amount);
     }
+
+    public void setGod(GGod newGod) { god = newGod; }
 }

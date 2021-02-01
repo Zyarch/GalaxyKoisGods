@@ -6,6 +6,7 @@ import com.Zyarch.GalaxyKoisGods.data.PlayerData;
 import com.Zyarch.GalaxyKoisGods.gods.GGod;
 import com.Zyarch.GalaxyKoisGods.gods.God;
 import com.Zyarch.GalaxyKoisGods.screens.AltarContainer;
+import com.Zyarch.GalaxyKoisGods.screens.AltarScreen;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -31,8 +32,8 @@ public class PacketUpdateContainer
             // Work that needs to be threadsafe (most work)
             PlayerEntity sender = ctx.get().getSender(); // the client that sent this packet
             if(sender != null && sender.openContainer instanceof AltarContainer) {
-                GGod god = God.Amara;
                 AltarContainer altarContainer = (AltarContainer) sender.openContainer;
+                GGod god = altarContainer.god;
                 ItemStack item = altarContainer.getInventory().get(0);
                 PlayerData playerData = DataHandler.playerDataList.get(sender.getUniqueID());
 
