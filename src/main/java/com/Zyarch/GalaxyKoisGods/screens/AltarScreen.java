@@ -21,10 +21,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class AltarScreen extends ContainerScreen<AltarContainer>
 {
     public final ResourceLocation ALTAR_BACKGROUND = new ResourceLocation("galasgods:textures/gui/altar_screen.png");
-    private GGod god = God.Amara;
 
     public AltarScreen(AltarContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
+        container.god = God.Amara;
     }
 
     protected void init() {
@@ -39,20 +39,19 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
             if(!itemStack.isEmpty())
             {
                 //send packet to server
-                GalaxyKoisGods.packetHandler.sendToServer(new PacketUpdateContainer((short)this.container.windowId, (short)1));
+                GalaxyKoisGods.packetHandler.sendToServer(new PacketUpdateContainer((short)this.container.windowId, (short)1, container.god.getGodE().ordinal()));
 
                 //figure out which god is being offered to, set it here.
-                //GGod god = God.Amara;
+                GGod currentGod = container.god;
 
-                //Assuming Amara
                 if(isRemote)
                 {
-                    if (god.isInOfferList(itemStack)) {
-                        player.sendMessage(new StringTextComponent(god.goodOffer(itemStack)), player.getUniqueID());
-                    } else if (god.isInBadList(itemStack)) {
-                        player.sendMessage(new StringTextComponent(god.badOffer(itemStack)), player.getUniqueID());
+                    if (currentGod.isInOfferList(itemStack)) {
+                        player.sendMessage(new StringTextComponent(currentGod.goodOffer(itemStack)), player.getUniqueID());
+                    } else if (currentGod.isInBadList(itemStack)) {
+                        player.sendMessage(new StringTextComponent(currentGod.badOffer(itemStack)), player.getUniqueID());
                     } else {
-                        player.sendMessage(new StringTextComponent(god.neutralOffer(itemStack)), player.getUniqueID());
+                        player.sendMessage(new StringTextComponent(currentGod.neutralOffer(itemStack)), player.getUniqueID());
                     }
                 }
             }
@@ -61,9 +60,9 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
             PlayerEntity player = this.playerInventory.player;
             boolean isRemote = player.getEntityWorld().isRemote;
 
-            god = God.cycleGod(god);
+            container.setGod(God.cycleGod(container.god));
             if(isRemote) {
-                player.sendMessage(new StringTextComponent("God selected: " + god.getName()), player.getUniqueID());
+                player.sendMessage(new StringTextComponent("God selected: " + container.god.getName()), player.getUniqueID());
             }
         }));
     }

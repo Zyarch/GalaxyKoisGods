@@ -13,7 +13,6 @@ public class AltarInventory implements IInventory {
 
     public AltarInventory(Container eventHandlerIn, int size)
     {
-        System.out.println("HAI");
         this.stackList = NonNullList.withSize(size, ItemStack.EMPTY);
         this.eventHandler = eventHandlerIn;
     }

@@ -13,10 +13,12 @@ public class PacketUpdateFavor
 {
     protected final String name;
     protected final short value;
+    protected final int gEnum;
 
-    public PacketUpdateFavor(String name, short value) {
+    public PacketUpdateFavor(String name, short value, int gEnum) {
         this.name = name;
         this.value = value;
+        this.gEnum = gEnum;
     }
 
     public static void handle(PacketUpdateFavor msg, Supplier<Context> ctx) {
@@ -32,11 +34,13 @@ public class PacketUpdateFavor
 
     public static void encode(PacketUpdateFavor pkt, PacketBuffer buffer) {
         buffer.writeShort(pkt.value);
+        buffer.writeInt(pkt.gEnum);
     }
 
     public static PacketUpdateFavor decode(PacketBuffer buffer) {
         String name = buffer.readString();
         short value = buffer.readShort();
-        return new PacketUpdateFavor(name, value);
+        int gEnum = buffer.readInt();
+        return new PacketUpdateFavor(name, value, gEnum);
     }
 }

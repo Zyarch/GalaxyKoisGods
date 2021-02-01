@@ -13,17 +13,20 @@ public class God {
     //Major Gods aka Old Gods
 
     public static GGod Amara = new GGod("Amara")
-            .setOfferItemList(new Item[]{Items.TOTEM_OF_UNDYING, Items.BONE_MEAL},
-                    new Float[]{2f, .1f})
+            .setOfferItemList(new Item[]{Items.TOTEM_OF_UNDYING, Items.BONE_MEAL, Items.EMERALD, Items.EMERALD_BLOCK,
+                    Items.EMERALD_ORE},
+                    new Float[]{2f, .1f, .5f, 4.5f, 1.5f})
             .setBadItemList(new Item[]{Items.WITHER_ROSE},
                     new Float[]{-1f})
             .setGoodOfferResponse(new String[]{"", " is lovely!"})
             .setNeutralOfferResponse(new String[]{"I guess ", " is acceptable."})
-            .setBadOfferResponse(new String[]{"How could you! I hate ", "!"});
+            .setBadOfferResponse(new String[]{"How could you! I hate ", "!"})
+            .setGodE(GodEnum.Amara);
 
     public static GGod KelDerash = new GGod("Kel-derash")
-            .setOfferItemList(new Item[]{Items.TNT, Items.GUNPOWDER, Items.CACTUS, Items.DEAD_BUSH, Items.MELON, Items.MELON_SLICE},
-                    new Float[]{1f, .2f, .2f, .1f, .01f, .01f})
+            .setOfferItemList(new Item[]{Items.TNT, Items.GUNPOWDER, Items.CACTUS, Items.DEAD_BUSH, Items.MELON, Items.MELON_SLICE,
+                            ModItems.SILVER_INGOT.get(), ModBlocks.SILVER_BLOCK.get().asItem(), ModBlocks.SILVER_ORE.get().asItem()},
+                    new Float[]{1f, .2f, .2f, .1f, .01f, .01f, .5f, 4.5f, 1f})
             .setBadItemList(
                     new Item[]{Items.WHEAT_SEEDS, Items.PUMPKIN_SEEDS, Items.BEETROOT_SEEDS, Items.MELON_SEEDS,
                             Items.WHEAT, Items.PUMPKIN,
@@ -35,7 +38,8 @@ public class God {
                             -.5f, -.5f, -.5f, -.5f, -.5f, -.5f, -.5f, -.5f})
             .setGoodOfferResponse(new String[]{"Hmmmm... this '", "' is acceptable."})
             .setNeutralOfferResponse(new String[]{"I care not for ", "."})
-            .setBadOfferResponse(new String[]{"...... ", ". Unacceptable."});
+            .setBadOfferResponse(new String[]{"...... ", ". Unacceptable."})
+            .setGodE(GodEnum.KelDerash);
 
     public static GGod Lithaga = new GGod("Lithaga")
             .setOfferItemList(new Item[]{Items.QUARTZ, Items.QUARTZ_BLOCK, Items.NETHER_BRICK, Items.NETHER_STAR, Items.BREWING_STAND,
@@ -45,7 +49,8 @@ public class God {
                     new Float[]{-1f, -1f, -1f, -1f})
             .setGoodOfferResponse(new String[]{"", ". This pleases me."})
             .setNeutralOfferResponse(new String[]{"I suppose you won't mind if I burn ", "?"})
-            .setBadOfferResponse(new String[]{"", ". Mistake."});
+            .setBadOfferResponse(new String[]{"", ". Mistake."})
+            .setGodE(GodEnum.Lithaga);
 
     public static GGod Ygthravil = new GGod("Ygthravil")
             .setOfferItemList(new Item[]{ModItems.AMETHYST.get(), ModBlocks.AMETHYST_BLOCK.get().asItem(), ModBlocks.AMETHYST_ORE.get().asItem(),
@@ -56,7 +61,8 @@ public class God {
                     new Float[]{-1f, -3f, -2f, -1f, -.5f, -.5f})
             .setGoodOfferResponse(new String[]{"", ". A worthy offering."})
             .setNeutralOfferResponse(new String[]{"", "? I suppose I could use it...."})
-            .setBadOfferResponse(new String[]{"", ". You disappoint me."});
+            .setBadOfferResponse(new String[]{"", ". You disappoint me."})
+            .setGodE(GodEnum.Ygthravil);
 
     //Lesser Gods
 
@@ -73,7 +79,8 @@ public class God {
                 new Float[] {-.1f, -.5f})
             .setGoodOfferResponse(new String[]{"A ","? I mean, I guess I'll take it...."})
             .setNeutralOfferResponse(new String[]{"A ","? Meh. I have many."})
-            .setBadOfferResponse(new String[]{"A ","? Ye dare disrepect Ygthravil's daughter?"});
+            .setBadOfferResponse(new String[]{"A ","? Ye dare disrepect Ygthravil's daughter?"})
+            .setGodE(GodEnum.Lovahn);
 
     public static GGod Eldus = new GGod("Eldus")
             .setOfferItemList(new Item[] {Items.LAPIS_LAZULI, Items.LAPIS_BLOCK, Items.PRISMARINE, Items.WATER_BUCKET, Items.NAUTILUS_SHELL,
@@ -84,7 +91,8 @@ public class God {
         new Float[] {-3f})
             .setGoodOfferResponse(new String[]{"","! Wonderful!"})
             .setNeutralOfferResponse(new String[]{"",". A trinket of little worth."})
-            .setBadOfferResponse(new String[]{"A ","! Awful."});
+            .setBadOfferResponse(new String[]{"A ","! Awful."})
+            .setGodE(GodEnum.Eldus);
 
     public static GGod Tyrin = new GGod("Tyrin")
             .setOfferItemList(new Item[] {ModItems.THUNDER_STONE.get(), ModBlocks.THUNDER_STONE_BLOCK.get().asItem(),
@@ -94,7 +102,8 @@ public class God {
         new Float[] {1f, 1f})
             .setGoodOfferResponse(new String[]{"Ah, perfect! A ","! My thanks."})
             .setNeutralOfferResponse(new String[]{"",". Of little value, but of value all the same."})
-            .setBadOfferResponse(new String[]{"I have no use for ","! Begone!"});
+            .setBadOfferResponse(new String[]{"I have no use for ","! Begone!"})
+            .setGodE(GodEnum.Tyrin);
 
     public static GGod Xyrthas = new GGod("Xyarthas")
             .setOfferItemList(new Item[] {Items.REDSTONE, Items.REDSTONE_BLOCK, Items.REDSTONE_ORE, Items.IRON_AXE,
@@ -105,7 +114,8 @@ public class God {
         new Float[] {-1f, -.5f})
             .setGoodOfferResponse(new String[]{"","? A fine addition to my collection!"})
             .setNeutralOfferResponse(new String[]{"?"," Just throw it on the pile, I guess."})
-            .setBadOfferResponse(new String[]{"","! Terrible. Leave me!"});
+            .setBadOfferResponse(new String[]{"","! Terrible. Leave me!"})
+            .setGodE(GodEnum.Xyrthas);
 
     public static GGod Reptak = new GGod("Reptak")
             .setOfferItemList(new Item[] {Items.COAL, Items.COAL_BLOCK, Items.COAL_ORE, Items.OBSIDIAN, Items.ROTTEN_FLESH,
@@ -113,9 +123,10 @@ public class God {
         new Float[] {.3f, 2.7f, .9f, .4f, .25f, .2f, .6f})
             .setBadItemList(new Item[] {Items.WATER_BUCKET, Items.ICE, Items.PACKED_ICE, Items.BLUE_ICE},
         new Float[] {-1f, -1f, -1f, -1f})
-            .setGoodOfferResponse(new String[]{"Good. ",". The flames accept your offering"})
+            .setGoodOfferResponse(new String[]{"Good. ",". The flames accept your offering."})
             .setNeutralOfferResponse(new String[]{"",".... as long as it burns."})
-            .setBadOfferResponse(new String[]{"Gah! "," Trying to douse the flames?"});
+            .setBadOfferResponse(new String[]{"Gah! "," Trying to douse the flames?"})
+            .setGodE(GodEnum.Reptak);
 
     public static GGod Jaspren = new GGod("Jaspren")
             .setOfferItemList(new Item[] {Items.MOSSY_STONE_BRICKS, Items.GOLD_BLOCK, Items.GOLD_INGOT, Items.GOLD_NUGGET,
@@ -128,7 +139,8 @@ public class God {
         new Float[] {-1f, -2f, -1f, -1f, -.2f, -1f})
             .setGoodOfferResponse(new String[]{"Haha! Thanks for the ","!"})
             .setNeutralOfferResponse(new String[]{"","? Maybe something shiny or tasty next time?"})
-            .setBadOfferResponse(new String[]{"How dare you! Giving me "," is just rude!"});
+            .setBadOfferResponse(new String[]{"How dare you! Giving me "," is just rude!"})
+            .setGodE(GodEnum.Jaspren);
 
     public static void populateGodList() {
         godList.add(Amara);
@@ -158,6 +170,8 @@ public class God {
             _index = 0;
         return godList.get(_index);
     }
+
+    public static GodEnum getGodEnum(GGod god) { return god.getGodE(); }
 }
 
 //God Template

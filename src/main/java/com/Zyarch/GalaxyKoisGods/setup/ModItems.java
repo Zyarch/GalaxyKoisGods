@@ -2,6 +2,7 @@ package com.Zyarch.GalaxyKoisGods.setup;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import com.Zyarch.GalaxyKoisGods.item.StormBowItem;
+import com.Zyarch.GalaxyKoisGods.item.StormCaller;
 import com.Zyarch.GalaxyKoisGods.item.VoidDaggerItem;
 import net.minecraft.client.renderer.model.Model;
 import net.minecraft.item.Item;
@@ -40,7 +41,12 @@ public class ModItems {
             new SwordItem(ItemTier.IRON, 3, -2f, new Item.Properties().maxDamage(251)
                     .group(GalaxyKoisGods.TAB)));
 
+    public static final RegistryObject<Item> OFFER_AMALGUM = Registration.ITEMS.register("offer_amalgum", () ->
+            new Item(new Item.Properties().group(GalaxyKoisGods.TAB)));
+
     public static final RegistryObject<Item> STORM_BOW = Registration.ITEMS.register("storm_bow", StormBowItem::new);
+
+    public static final RegistryObject<Item> STORM_CALLER = Registration.ITEMS.register("storm_caller", StormCaller::new);
 
     public static final RegistryObject<Item> VOID_DAGGER = Registration.ITEMS.register("void_dagger", VoidDaggerItem::new);
 
