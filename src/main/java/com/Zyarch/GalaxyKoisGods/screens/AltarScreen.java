@@ -24,6 +24,7 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
 
     public AltarScreen(AltarContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
+        container.god = God.Amara;
     }
 
     protected void init() {
@@ -38,7 +39,7 @@ public class AltarScreen extends ContainerScreen<AltarContainer>
             if(!itemStack.isEmpty())
             {
                 //send packet to server
-                GalaxyKoisGods.packetHandler.sendToServer(new PacketUpdateContainer((short)this.container.windowId, (short)1));
+                GalaxyKoisGods.packetHandler.sendToServer(new PacketUpdateContainer((short)this.container.windowId, (short)1, container.god.getGodE().ordinal()));
 
                 //figure out which god is being offered to, set it here.
                 GGod currentGod = container.god;

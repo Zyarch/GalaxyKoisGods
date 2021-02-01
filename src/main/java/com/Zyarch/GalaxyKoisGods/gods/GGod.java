@@ -14,6 +14,7 @@ import java.util.Set;
 public class GGod
 {
     private String name;
+    private GodEnum godE;
     private String[] goodOfferResponse;
     private String[] neutralOfferResponse;
     private String[] badOfferResponse;
@@ -91,9 +92,16 @@ public class GGod
 
     public String[] getBadOfferResponse() { return badOfferResponse; }
 
-    public String goodOffer (ItemStack item) { return name+": "+goodOfferResponse[0] + item.getDisplayName().getString() + goodOfferResponse[1];}
+    public String goodOffer (ItemStack item) { return "<"+name+"> "+goodOfferResponse[0] + item.getDisplayName().getString() + goodOfferResponse[1];}
 
-    public String badOffer (ItemStack item) { return name+": "+badOfferResponse[0] + item.getDisplayName().getString() + badOfferResponse[1];}
+    public String badOffer (ItemStack item) { return "<"+name+"> "+badOfferResponse[0] + item.getDisplayName().getString() + badOfferResponse[1];}
 
-    public String neutralOffer (ItemStack item) { return name+": "+neutralOfferResponse[0] + item.getDisplayName().getString() + neutralOfferResponse[1];}
+    public String neutralOffer (ItemStack item) { return "<"+name+"> "+neutralOfferResponse[0] + item.getDisplayName().getString() + neutralOfferResponse[1];}
+
+    public GGod setGodE(GodEnum gEnum) {
+        godE = gEnum;
+        return this;
+    }
+
+    public GodEnum getGodE() { return godE; }
 }

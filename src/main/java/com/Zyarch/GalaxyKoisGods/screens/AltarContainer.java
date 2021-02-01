@@ -15,7 +15,7 @@ import net.minecraft.util.IWorldPosCallable;
 public class AltarContainer extends Container
 {
     private final AltarInventory altarInventory = new AltarInventory(this, 1);
-    public GGod god = God.Amara;
+    public GGod god;
 
     public AltarContainer(int windowId, PlayerInventory playerInventoryIn) {
         super(ModContainers.ALTAR_CONTAINER.get(), windowId);

@@ -21,10 +21,12 @@ public class PacketUpdateContainer
     //Note: windowId gets transferred over the network as an unsigned byte
     //protected final short windowId;
     protected final short property;
+    protected final int godEnum;
 
-    public PacketUpdateContainer(short windowId, short property) {
+    public PacketUpdateContainer(short windowId, short property, int godEnum) {
         //this.windowId = windowId;
         this.property = property;
+        this.godEnum = godEnum;
     }
 
     public static void handle(PacketUpdateContainer msg, Supplier<Context> ctx) {
@@ -33,13 +35,15 @@ public class PacketUpdateContainer
             PlayerEntity sender = ctx.get().getSender(); // the client that sent this packet
             if(sender != null && sender.openContainer instanceof AltarContainer) {
                 AltarContainer altarContainer = (AltarContainer) sender.openContainer;
-                GGod god = altarContainer.god;
+                GGod god = God.getGod(msg.godEnum);
                 ItemStack item = altarContainer.getInventory().get(0);
                 PlayerData playerData = DataHandler.playerDataList.get(sender.getUniqueID());
 
-                altarContainer.shrinkInventory(msg.property);
+                sender.sendMessage(new StringTextComponent(god.getName()+" Favor: " + god.getValue(item)), sender.getUniqueID());
 
                 playerData.addFavor(god.getName(), god.getValue(item));
+
+                altarContainer.shrinkInventory(msg.property);
 
                 try {
                     DataHandler.store(sender.getUniqueID(), new CompoundNBT(), playerData);
@@ -55,11 +59,13 @@ public class PacketUpdateContainer
     public static void encode(PacketUpdateContainer pkt, PacketBuffer buffer) {
         //buffer.writeByte(pkt.windowId);
         buffer.writeShort(pkt.property);
+        buffer.writeInt(pkt.godEnum);
     }
 
     public static PacketUpdateContainer decode(PacketBuffer buffer) {
         //short windowId = buffer.readUnsignedByte();
         short property = buffer.readShort();
-        return new PacketUpdateContainer((short)0, property);
+        int godEnum = buffer.readInt();
+        return new PacketUpdateContainer((short)0, property, godEnum);
     }
 }
