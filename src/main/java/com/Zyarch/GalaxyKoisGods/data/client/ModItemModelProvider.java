@@ -41,6 +41,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "healing_token");
         builder(itemGenerated, "lucky_coin");
         builder(itemGenerated, "storm_caller");
+        builder(itemGenerated, "teleporting_orb");
 
         //for items like tools
         ModelFile handheldGenerated = getExistingFile(mcLoc("item/handheld"));

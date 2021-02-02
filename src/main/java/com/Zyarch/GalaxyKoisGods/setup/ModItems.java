@@ -44,6 +44,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> HEALING_TOKEN = Registration.ITEMS.register("healing_token", HealingToken::new);
 
+    public static final RegistryObject<Item> TELEPORTING_ORB = Registration.ITEMS.register("teleporting_orb", TeleportingOrb::new);
+
     public static final RegistryObject<Item> LUCKY_COIN = Registration.ITEMS.register("lucky_coin", LuckyCoin::new);
 
     public static final RegistryObject<Item> STORM_BOW = Registration.ITEMS.register("storm_bow", StormBowItem::new);
