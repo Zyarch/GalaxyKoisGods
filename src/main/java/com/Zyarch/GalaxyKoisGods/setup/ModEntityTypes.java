@@ -2,6 +2,8 @@ package com.Zyarch.GalaxyKoisGods.setup;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import com.Zyarch.GalaxyKoisGods.entity.projectiles.StormBowBoltEntity;
+import com.Zyarch.GalaxyKoisGods.entity.projectiles.TeleportingOrbEntity;
+import com.Zyarch.GalaxyKoisGods.entity.projectiles.StormBowBoltEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
@@ -18,6 +20,11 @@ public class ModEntityTypes {
             .size(0.5F, 0.5F).trackingRange(4).func_233608_b_(20)
             .build(new ResourceLocation(GalaxyKoisGods.MOD_ID, "bolt").toString())
     );
+
+    public static final RegistryObject<EntityType<TeleportingOrbEntity>> TELEPORTING_ORB = register("teleporting_orb",
+            () -> EntityType.Builder.<TeleportingOrbEntity>create(TeleportingOrbEntity::new, EntityClassification.MISC)
+            .size(0.25F, 0.25F).trackingRange(4).func_233608_b_(10)
+            .build(new ResourceLocation(GalaxyKoisGods.MOD_ID, "teleporting_orb").toString()));
 
     static void register() { }
 

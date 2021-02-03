@@ -5,6 +5,7 @@ import com.Zyarch.GalaxyKoisGods.item.CultistRobeItem;
 import com.Zyarch.GalaxyKoisGods.item.StormBowItem;
 import com.Zyarch.GalaxyKoisGods.item.StormCaller;
 import com.Zyarch.GalaxyKoisGods.item.VoidDaggerItem;
+import com.Zyarch.GalaxyKoisGods.item.*;
 import net.minecraft.client.renderer.model.Model;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -42,6 +43,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> OFFER_AMALGUM = Registration.ITEMS.register("offer_amalgum", () ->
             new Item(new Item.Properties().group(GalaxyKoisGods.TAB)));
+
+    public static final RegistryObject<Item> HEALING_TOKEN = Registration.ITEMS.register("healing_token", HealingToken::new);
+
+    public static final RegistryObject<Item> TELEPORTING_ORB = Registration.ITEMS.register("teleporting_orb", TeleportingOrb::new);
+
+    public static final RegistryObject<Item> LUCKY_COIN = Registration.ITEMS.register("lucky_coin", LuckyCoin::new);
 
     public static final RegistryObject<Item> STORM_BOW = Registration.ITEMS.register("storm_bow", StormBowItem::new);
 

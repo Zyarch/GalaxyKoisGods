@@ -38,8 +38,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "ruby");
         builder(itemGenerated, "sapphire");
         builder(itemGenerated, "offer_amalgum");
+        builder(itemGenerated, "healing_token");
+        builder(itemGenerated, "lucky_coin");
         builder(itemGenerated, "storm_caller");
         builder(itemGenerated, "cult_robe");
+        builder(itemGenerated, "teleporting_orb");
 
         //for items like tools
         ModelFile handheldGenerated = getExistingFile(mcLoc("item/handheld"));

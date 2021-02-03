@@ -25,6 +25,8 @@ a8848ae7dd57d78be8708b53f0342688fce6420c assets/galasgods/models/block/thunder_s
 461a47a12e451c1269c73de2f313d0ae3e990c3e assets/galasgods/models/item/amethyst.json
 a8b3ab0b1e1802a37257427a7e70c72c3da66777 assets/galasgods/models/item/amethyst_block.json
 4d09f75fcd77140d4a76daa5fe9b42c3a0372710 assets/galasgods/models/item/amethyst_ore.json
+56bec5263c6beed527301c3c1176c99f287ceada assets/galasgods/models/item/healing_token.json
+e2756132b33113a457adfda56aed7242b5194d06 assets/galasgods/models/item/lucky_coin.json
 674c9e277428e6b56e89d5f1bc5aa9f2f8d72f72 assets/galasgods/models/item/offer_amalgum.json
 cacb931cae4dc733fb0520b46a59cde6570db00e assets/galasgods/models/item/ruby.json
 abd6597f12313d33226250786044e2a7d2018718 assets/galasgods/models/item/ruby_block.json
@@ -40,6 +42,7 @@ fdd90f2c38e4715a935774aadceb5adf40056026 assets/galasgods/models/item/silver_blo
 e02c07ea240338348eb72c2f016117a39190c18d assets/galasgods/models/item/silver_ingot.json
 eddb91b38a9a344db0e5917f12ec277fead1623d assets/galasgods/models/item/silver_ore.json
 27072687e360e7917fd46df48d59ecbe10491395 assets/galasgods/models/item/storm_caller.json
+e045260f4fb299afa75205d5d93ea6450c2d78f6 assets/galasgods/models/item/teleporting_orb.json
 197398ad483667e70232f87c483843cedb9a27a6 assets/galasgods/models/item/thunder_stone.json
 a882141c0da3f0323336a137d5be5940b58c2c5c assets/galasgods/models/item/thunder_stone_block.json
 0acb15dca92e94c3ccf8ff02f5f2991628adf632 assets/galasgods/models/item/thunder_stone_ore.json
