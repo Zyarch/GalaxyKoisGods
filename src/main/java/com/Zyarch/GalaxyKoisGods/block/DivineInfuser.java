@@ -40,9 +40,13 @@ public class DivineInfuser extends BaseHorizontalBlock{
     private static final ITextComponent CONTAINER_NAME = new TranslationTextComponent("container.galasgods.divine_infuser");
     private static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     private static final VoxelShape SHAPE = Stream.of(
-            Block.makeCuboidShape(-1, 0, 0, 17, 11, 16),
+            Block.makeCuboidShape(-1, 2, 0, 17, 11, 16),
             Block.makeCuboidShape(2, 11, 2, 14, 13, 14),
-            Block.makeCuboidShape(7, 13, 7, 9, 17, 9)
+            Block.makeCuboidShape(7, 13, 7, 9, 17, 9),
+            Block.makeCuboidShape(13, 0, 1, 15, 2, 3),
+            Block.makeCuboidShape(13, 0, 13, 15, 2, 15),
+            Block.makeCuboidShape(1, 0, 1, 3, 2, 3),
+            Block.makeCuboidShape(1, 0, 13, 3, 2, 15)
     ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
 
     public DivineInfuser() {
