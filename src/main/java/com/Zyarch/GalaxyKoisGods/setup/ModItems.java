@@ -6,17 +6,9 @@ import com.Zyarch.GalaxyKoisGods.item.StormBowItem;
 import com.Zyarch.GalaxyKoisGods.item.StormCaller;
 import com.Zyarch.GalaxyKoisGods.item.VoidDaggerItem;
 import com.Zyarch.GalaxyKoisGods.item.*;
-import net.minecraft.client.renderer.model.Model;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import static net.minecraft.item.ItemModelsProperties.registerProperty;
 
 public class ModItems {
     public static final RegistryObject<Item> SILVER_INGOT = Registration.ITEMS.register("silver_ingot", () ->
