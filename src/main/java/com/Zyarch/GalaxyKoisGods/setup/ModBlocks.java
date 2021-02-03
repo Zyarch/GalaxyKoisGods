@@ -2,6 +2,7 @@ package com.Zyarch.GalaxyKoisGods.setup;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import com.Zyarch.GalaxyKoisGods.block.Altar;
+import com.Zyarch.GalaxyKoisGods.block.DivineInfuser;
 import com.Zyarch.GalaxyKoisGods.block.RubyBlock;
 import com.Zyarch.GalaxyKoisGods.block.RubyOre;
 import net.minecraft.block.AbstractBlock;
@@ -50,6 +51,8 @@ public class ModBlocks {
             new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(3, 10).setRequiresTool().harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
 
     public static final RegistryObject<Block> ALTAR = registerStack1("altar", () -> new Altar());
+
+    public static final RegistryObject<Block> DIVINE_INFUSER = registerStack1("divine_infuser", () -> new DivineInfuser());
 
     static void register() { }
 

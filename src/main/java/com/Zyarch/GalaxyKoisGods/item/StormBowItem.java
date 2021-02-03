@@ -1,7 +1,7 @@
 package com.Zyarch.GalaxyKoisGods.item;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
-import com.Zyarch.entity.projectiles.StormBowBoltEntity;
+import com.Zyarch.GalaxyKoisGods.entity.projectiles.StormBowBoltEntity;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;

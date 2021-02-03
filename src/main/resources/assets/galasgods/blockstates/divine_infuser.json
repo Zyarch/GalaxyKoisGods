@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "galasgods:block/divine_infuser"
+        },
+        "facing=south": {
+            "model": "galasgods:block/divine_infuser",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "galasgods:block/divine_infuser",
+            "y": 270
+        },
+        "facing=east": {
+            "model": "galasgods:block/divine_infuser",
+            "y": 90
+        }
+    }
+}

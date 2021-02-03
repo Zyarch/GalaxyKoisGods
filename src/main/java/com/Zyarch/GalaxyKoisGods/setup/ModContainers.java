@@ -11,6 +11,8 @@ public class ModContainers
 {
     public static final RegistryObject<ContainerType<AltarContainer>> ALTAR_CONTAINER = register("altar_container",
             () -> IForgeContainerType.create(AltarContainer::new));
+    public static final RegistryObject<ContainerType<AltarContainer>> DIVINE_INFUSER_CONTAINER = register("divine_infuser",
+            () -> IForgeContainerType.create(AltarContainer::new));
 
     static void register() { }
 

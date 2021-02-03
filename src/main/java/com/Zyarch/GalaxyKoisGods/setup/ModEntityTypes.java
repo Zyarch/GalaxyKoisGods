@@ -1,7 +1,7 @@
 package com.Zyarch.GalaxyKoisGods.setup;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
-import com.Zyarch.entity.projectiles.StormBowBoltEntity;
+import com.Zyarch.GalaxyKoisGods.entity.projectiles.StormBowBoltEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;

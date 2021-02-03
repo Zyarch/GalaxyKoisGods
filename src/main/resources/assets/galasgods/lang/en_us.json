@@ -23,6 +23,8 @@
   "item.galasgods.silver_dagger": "Silver Dagger",
   "item.galasgods.void_dagger": "Kel-derash's Void Dagger",
   "block.galasgods.altar": "Altar",
+  "block.galasgods.divine_infuser": "Divine Infuser",
   "container.galasgods.altar": "Altar",
+  "container.galasgods.divine_infuser": "Divine Infuser",
   "itemGroup.galaxykoisgodstab": "Gala's Gods"
 }

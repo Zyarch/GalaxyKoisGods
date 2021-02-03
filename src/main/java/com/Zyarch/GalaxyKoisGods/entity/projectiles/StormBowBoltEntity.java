@@ -1,4 +1,4 @@
-package com.Zyarch.entity.projectiles;
+package com.Zyarch.GalaxyKoisGods.entity.projectiles;
 
 import com.Zyarch.GalaxyKoisGods.setup.ModEntityTypes;
 import net.minecraft.entity.EntityType;
