@@ -1,15 +1,14 @@
 package com.Zyarch.GalaxyKoisGods.screens;
 
-import com.Zyarch.GalaxyKoisGods.gods.GGod;
+import com.Zyarch.GalaxyKoisGods.block.DivineInfuserTileEntity;
 import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.Inventory;
+import net.minecraft.inventory.container.ClickType;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.PacketBuffer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IWorldPosCallable;
 import net.minecraft.util.math.BlockPos;
@@ -34,12 +33,12 @@ public class DivineInfuserContainer extends Container
         if(tileEntity != null)
         {
             this.tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
-                addSlot(new SlotItemHandler(h, 0, 64, 64));
-                addSlot(new SlotItemHandler(h, 1, 64, 64));
-                addSlot(new SlotItemHandler(h, 2, 64, 64));
-                addSlot(new SlotItemHandler(h, 3, 64, 64));
-                addSlot(new SlotItemHandler(h, 4, 64, 64));
-                addSlot(new SlotItemHandler(h, 5, 64, 64));
+                addSlot(new SlotHelperWithEvent(h, 0, 80, 10, (DivineInfuserTileEntity) tileEntity));
+                addSlot(new SlotHelperWithEvent(h, 1, 50, 39, (DivineInfuserTileEntity) tileEntity));
+                addSlot(new SlotHelperWithEvent(h, 2, 54, 59, (DivineInfuserTileEntity) tileEntity));
+                addSlot(new SlotHelperWithEvent(h, 3, 110, 39, (DivineInfuserTileEntity) tileEntity));
+                addSlot(new SlotHelperWithEvent(h, 4, 106, 59, (DivineInfuserTileEntity) tileEntity));
+                addSlot(new SlotHelperWithEvent(h, 5, 80, 50, (DivineInfuserTileEntity) tileEntity));
             });
         }
 
@@ -54,6 +53,20 @@ public class DivineInfuserContainer extends Container
         for (int k = 0; k < 9; ++k) {
             this.addSlot(new Slot(playerInventoryIn, k, 8 + k * 18, 142));
         }
+    }
+
+    @Override
+    public ItemStack slotClick(int slotId, int dragType, ClickType clickTypeIn, PlayerEntity player){
+        ItemStack itemStack = super.slotClick(slotId, dragType, clickTypeIn, player);
+
+        if(slotId >= 0 && slotId < 6)
+        if(getSlot(slotId) instanceof SlotHelperWithEvent)
+        {
+            DivineInfuserTileEntity di = (DivineInfuserTileEntity) this.tileEntity;
+            di.onSlotsChanged();
+        }
+
+        return itemStack;
     }
 
     public ItemStack transferStackInSlot(PlayerEntity playerIn, int index) {

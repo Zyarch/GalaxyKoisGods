@@ -4,6 +4,7 @@ import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import com.Zyarch.GalaxyKoisGods.client.StormBowBoltRenderer;
 import com.Zyarch.GalaxyKoisGods.gods.God;
 import com.Zyarch.GalaxyKoisGods.screens.AltarScreen;
+import com.Zyarch.GalaxyKoisGods.screens.DivineInfuserScreen;
 import com.Zyarch.GalaxyKoisGods.setup.ModContainers;
 import com.Zyarch.GalaxyKoisGods.setup.ModEntityTypes;
 import com.Zyarch.GalaxyKoisGods.setup.ModItems;
@@ -24,6 +25,7 @@ public class ClientEventBusSubscriber
     {
         //register the Altar Container with the Altar Screen
         ScreenManager.registerFactory(ModContainers.ALTAR_CONTAINER.get(), AltarScreen::new);
+        ScreenManager.registerFactory(ModContainers.DIVINE_INFUSER_CONTAINER.get(), DivineInfuserScreen::new);
 
         //Populate God list
         God.populateGodList();

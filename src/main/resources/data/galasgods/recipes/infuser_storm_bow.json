@@ -1,0 +1,13 @@
+{
+    "type": "galasgods:infuser",
+    "inputGem": {
+        "item": "galasgods:thunder_stone"
+    },
+    "input": {
+        "item": "minecraft:bow"
+    },
+    "result": {
+        "item": "galasgods:storm_bow",
+        "count": 1
+    }
+}

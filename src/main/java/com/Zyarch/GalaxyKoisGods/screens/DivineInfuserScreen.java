@@ -31,20 +31,6 @@ public class DivineInfuserScreen extends ContainerScreen<DivineInfuserContainer>
         super.init();
         this.guiLeft = (this.width - this.xSize) / 2;
         this.guiTop = (this.height - this.ySize) / 2;
-        this.addButton(new Button(this.guiLeft + 78, this.guiTop + 58, 90, 20, new StringTextComponent("Infuse"), (button) -> {
-            ItemStack itemStack = this.container.getSlot(0).getStack();
-            PlayerEntity player = this.playerInventory.player;
-            boolean isRemote = player.getEntityWorld().isRemote;
-
-            if(!itemStack.isEmpty())
-            {
-                //send packet to server
-                //GalaxyKoisGods.packetHandler.sendToServer(new PacketUpdateContainer((short)this.container.windowId, (short)1, container.god.getGodE().ordinal()));
-
-                //figure out which god is being offered to, set it here.
-                //GGod currentGod = container.god;
-            }
-        }));
     }
 
     @Override
@@ -61,6 +47,6 @@ public class DivineInfuserScreen extends ContainerScreen<DivineInfuserContainer>
 
     @Override
     protected void drawGuiContainerForegroundLayer(MatrixStack matrixStack, int x, int y) {
-        this.font.func_243248_b(matrixStack, this.title, (float)this.titleX + 74, (float)this.titleY, 4210752);
+        this.font.func_243248_b(matrixStack, this.title, (float)this.titleX - 4, (float)this.titleY, 4210752);
     }
 }
