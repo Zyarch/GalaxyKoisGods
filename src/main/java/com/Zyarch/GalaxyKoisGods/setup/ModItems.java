@@ -48,7 +48,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> VOID_DAGGER = Registration.ITEMS.register("void_dagger", VoidDaggerItem::new);
 
-    //public static final RegistryObject<Item> PORTABLE_CRAFTING_TABLE = Registration.ITEMS.register("portable_crafting_table", PortableCraftingTable::new);
+    public static final RegistryObject<Item> PORTABLE_CRAFTING_TABLE = Registration.ITEMS.register("portable_crafting_table", PortableCraftingTable::new);
 
     //Armor
     public static final RegistryObject<Item> CULT_ROBE = Registration.ITEMS.register("cult_robe", () ->
