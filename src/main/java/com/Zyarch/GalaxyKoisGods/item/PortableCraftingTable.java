@@ -16,7 +16,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-
+/*
 public class PortableCraftingTable extends Item {
     private static final ITextComponent CONTAINER_NAME = new TranslationTextComponent("container.crafting");
 
@@ -34,7 +34,7 @@ public class PortableCraftingTable extends Item {
         return ActionResult.resultPass(playerIn.getHeldItem(handIn));
     }
 
-    public INamedContainerProvider getContainer() {
+   public INamedContainerProvider getContainer() {
         return new SimpleNamedContainerProvider((id, inventory, player) -> new PortableCraftingTableContainer(inventory, id), CONTAINER_NAME);
-    }
-}
+   }
+}*/
