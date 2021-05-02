@@ -2,6 +2,7 @@ package com.Zyarch.GalaxyKoisGods.util;
 
 import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
 import com.Zyarch.GalaxyKoisGods.client.StormBowBoltRenderer;
+import com.Zyarch.GalaxyKoisGods.client.TeleportingOrbRenderer;
 import com.Zyarch.GalaxyKoisGods.gods.God;
 import com.Zyarch.GalaxyKoisGods.screens.AltarScreen;
 import com.Zyarch.GalaxyKoisGods.screens.DivineInfuserScreen;
@@ -44,6 +45,9 @@ public class ClientEventBusSubscriber
 
         //register the Storm Bow Bolt Entity Type with the Storm Bow Renderer
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.STORM_BOW_BOLT.get(), StormBowBoltRenderer::new);
+
+        //register the Teleporting Orb Entity Type with the Teleporting Orb Renderer
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.TELEPORTING_ORB.get(), TeleportingOrbRenderer::new);
     }
 
     //@SubscribeEvent

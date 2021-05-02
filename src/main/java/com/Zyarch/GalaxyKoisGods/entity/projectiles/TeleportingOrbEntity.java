@@ -2,16 +2,15 @@ package com.Zyarch.GalaxyKoisGods.entity.projectiles;
 
 import com.Zyarch.GalaxyKoisGods.setup.ModEntityTypes;
 import com.Zyarch.GalaxyKoisGods.setup.ModItems;
+import com.Zyarch.GalaxyKoisGods.events.TeleportingOrbEvent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.item.EnderPearlEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.projectile.ProjectileItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.particles.ParticleTypes;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -21,31 +20,23 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 
 //An ender peral entity but it does not deal damage on use, and cannot spawn ender mites.
-public class TeleportingOrbEntity extends EnderPearlEntity {
+public class TeleportingOrbEntity extends ProjectileItemEntity {
 
    public TeleportingOrbEntity(EntityType<? extends TeleportingOrbEntity> p_i50153_1_, World world) {
         super(p_i50153_1_, world);
     }
 
    public TeleportingOrbEntity(World worldIn, LivingEntity throwerIn) {
-        super(worldIn, throwerIn);
+        super(ModEntityTypes.TELEPORTING_ORB.get(), throwerIn, worldIn);
     }
 
    @OnlyIn(Dist.CLIENT)
    public TeleportingOrbEntity(World worldIn, double x, double y, double z) {
-        super(worldIn, x, y, z);
+        super(ModEntityTypes.TELEPORTING_ORB.get(), x, y, z, worldIn);
     }
 
         protected Item getDefaultItem() {
         return ModItems.TELEPORTING_ORB.get().asItem();
-    }
-
-        /**
-         * Called when the arrow hits an entity
-         */
-        protected void onEntityHit(EntityRayTraceResult p_213868_1_) {
-        super.onEntityHit(p_213868_1_);
-        p_213868_1_.getEntity().attackEntityFrom(DamageSource.causeThrownDamage(this, this.func_234616_v_()), 0.0F);
     }
 
     protected void onImpact(RayTraceResult result) {
@@ -60,7 +51,7 @@ public class TeleportingOrbEntity extends EnderPearlEntity {
                 if (entity instanceof ServerPlayerEntity) {
                     ServerPlayerEntity serverplayerentity = (ServerPlayerEntity)entity;
                     if (serverplayerentity.connection.getNetworkManager().isChannelOpen() && serverplayerentity.world == this.world && !serverplayerentity.isSleeping()) {
-                        net.minecraftforge.event.entity.living.EnderTeleportEvent event = new net.minecraftforge.event.entity.living.EnderTeleportEvent(serverplayerentity, this.getPosX(), this.getPosY(), this.getPosZ(), 0.0F);
+                        TeleportingOrbEvent event = new TeleportingOrbEvent(serverplayerentity, this.getPosX(), this.getPosY(), this.getPosZ());
                         if (!net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(event)) { // Don't indent to lower patch size
 
                             if (entity.isPassenger()) {
@@ -69,7 +60,6 @@ public class TeleportingOrbEntity extends EnderPearlEntity {
 
                             entity.setPositionAndUpdate(event.getTargetX(), event.getTargetY(), event.getTargetZ());
                             entity.fallDistance = 0.0F;
-                            entity.attackEntityFrom(DamageSource.FALL, event.getAttackDamage());
                         } //Forge: End
                     }
                 } else if (entity != null) {
