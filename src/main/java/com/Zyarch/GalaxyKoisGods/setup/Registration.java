@@ -1,43 +1,45 @@
-package com.Zyarch.GalaxyKoisGods.setup;
+package com.zyarch.galaxykoisgods.SetUp;
 
-import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
-import com.Zyarch.GalaxyKoisGods.crafting.recipe.DivineInfuserRecipe;
-import net.minecraft.block.Block;
-import net.minecraft.entity.EntityType;
-import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.item.Item;
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.item.crafting.IRecipeType;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
+import com.zyarch.galaxykoisgods.GalaxyKoisGods;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class Registration {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GalaxyKoisGods.MOD_ID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GalaxyKoisGods.MOD_ID);
-    public static final DeferredRegister<ContainerType<?>> CONTAINERS = DeferredRegister.create(ForgeRegistries.CONTAINERS, GalaxyKoisGods.MOD_ID);
-    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, GalaxyKoisGods.MOD_ID);
-    public static final DeferredRegister<TileEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, GalaxyKoisGods.MOD_ID);
-    public static final DeferredRegister<IRecipeSerializer<?>> RECIPES = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, GalaxyKoisGods.MOD_ID);
-    public static final IRecipeType<DivineInfuserRecipe> DIVINE_INFUSER_RECIPE_TYPE = IRecipeType.register("infuser");
 
-    public static void register() {
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GalaxyKoisGods.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GalaxyKoisGods.MODID);
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, GalaxyKoisGods.MODID);
+    public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, GalaxyKoisGods.MODID);
+    public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
+            DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, GalaxyKoisGods.MODID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GalaxyKoisGods.MODID);
+
+    public static void register()
+    {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        BLOCKS.register(modEventBus);
-        ITEMS.register(modEventBus);
-        CONTAINERS.register(modEventBus);
-        ENTITY_TYPES.register(modEventBus);
-        TILES.register(modEventBus);
-        RECIPES.register(modEventBus);
 
-        ModItems.register();
-        ModBlocks.register();
-        ModContainers.register();
-        ModEntityTypes.register();
-        ModTileEntityTypes.register();
-        ModRecipeSerializers.register();
+        ITEMS.register(modEventBus);
+        BLOCKS.register(modEventBus);
+        ENTITY_TYPES.register(modEventBus);
+        MENUS.register(modEventBus);
+        SOUND_EVENTS.register(modEventBus);
+        CREATIVE_MODE_TABS.register(modEventBus);
+
+        GalasBlocks.register();
+        GalasConfigs.register();
+        GalasItems.register();
+        GalasMenus.register();
+        GalasSounds.register();
+        GalasTabs.register();
     }
 }

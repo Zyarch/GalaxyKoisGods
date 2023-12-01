@@ -1,62 +1,70 @@
-package com.Zyarch.GalaxyKoisGods;
+package com.zyarch.galaxykoisgods;
 
-import com.Zyarch.GalaxyKoisGods.network.GalasGodsPacketHandler;
-import com.Zyarch.GalaxyKoisGods.setup.ModBlocks;
-import com.Zyarch.GalaxyKoisGods.setup.Registration;
-import com.Zyarch.GalaxyKoisGods.world.gen.ModOreGen;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.item.crafting.IRecipeType;
-import net.minecraft.item.crafting.RecipeManager;
-import net.minecraft.util.ResourceLocation;
+import com.mojang.logging.LogUtils;
+import com.zyarch.galaxykoisgods.SetUp.Registration;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.Map;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(GalaxyKoisGods.MOD_ID)
+@Mod(GalaxyKoisGods.MODID)
 public class GalaxyKoisGods
 {
-    // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
-    public static final String MOD_ID = "galasgods";
-    public static GalasGodsPacketHandler packetHandler;
+    public static final String MODID = "galasgods";
+    private static final Logger LOGGER = LogUtils.getLogger();
 
-    public GalaxyKoisGods() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+    public GalaxyKoisGods()
+    {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         Registration.register();
 
+        // Register the commonSetup method for modloading
+        modEventBus.addListener(this::commonSetup);
+
+        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
-        packetHandler = new GalasGodsPacketHandler();
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
-        ModOreGen.registerOre();
+    private void commonSetup(final FMLCommonSetupEvent event) { }
+
+    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event)
+    {
+        // Do something when the server starts
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
+    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents
+    {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event)
+        {
 
-    }
-
-    public static final ItemGroup TAB = new ItemGroup("galaxykoisgodstab") {
-        @Override
-        public ItemStack createIcon() { return new ItemStack(ModBlocks.ALTAR.get()); }
-    };
-
-    public static Map<ResourceLocation, IRecipe<?>> getRecipes(IRecipeType<?> recipeType, RecipeManager manager) {
-
-        final Map<IRecipeType<?>, Map<ResourceLocation, IRecipe<?>>> recipesMap = ObfuscationReflectionHelper.getPrivateValue(RecipeManager.class, manager, "field_199522_d");
-        return recipesMap.get(recipeType);
+        }
     }
 }
