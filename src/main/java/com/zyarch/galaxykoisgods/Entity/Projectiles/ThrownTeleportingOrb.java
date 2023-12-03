@@ -2,6 +2,7 @@ package com.zyarch.galaxykoisgods.entity.projectiles;
 
 import javax.annotation.Nullable;
 
+import com.zyarch.galaxykoisgods.setup.GalasEntityTypes;
 import com.zyarch.galaxykoisgods.setup.GalasItems;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -23,7 +24,7 @@ public class ThrownTeleportingOrb extends ThrowableItemProjectile {
     }
 
     public ThrownTeleportingOrb(Level level, LivingEntity livingEntity) {
-        super(com.zyarch.galaxykoisgods.setup.GalasEntityTypes.TELEPORTING_ORB.get(), livingEntity, level);
+        super(GalasEntityTypes.TELEPORTING_ORB.get(), livingEntity, level);
     }
 
     protected Item getDefaultItem() {

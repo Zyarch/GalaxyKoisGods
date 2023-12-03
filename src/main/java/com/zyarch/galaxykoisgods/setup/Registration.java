@@ -17,8 +17,7 @@ public class Registration {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GalaxyKoisGods.MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GalaxyKoisGods.MODID);
-    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, GalaxyKoisGods.MODID);
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, GalaxyKoisGods.MODID);
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, GalaxyKoisGods.MODID);
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, GalaxyKoisGods.MODID);

@@ -25,7 +25,7 @@ public class GalasEntityTypes {
 
     static void register() { }
 
-    private static RegistryObject<EntityType<?>> register(String name, Supplier<?> entityTypeSupplier) {
+    private static <T extends EntityType<?>> RegistryObject<T> register(String name, Supplier<T> entityTypeSupplier) {
         return Registration.ENTITY_TYPES.register(name, entityTypeSupplier);
     }
 }

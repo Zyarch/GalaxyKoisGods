@@ -1,6 +1,6 @@
 package com.zyarch.galaxykoisgods.event;
 
-import com.zyarch.galaxykoisgods.entity.Projectiles.ThrownTeleportingOrb;
+import com.zyarch.galaxykoisgods.entity.projectiles.ThrownTeleportingOrb;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.event.entity.EntityTeleportEvent;
 import net.minecraftforge.eventbus.api.Cancelable;
