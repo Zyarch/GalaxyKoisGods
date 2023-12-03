@@ -1,7 +1,7 @@
 package com.zyarch.galaxykoisgods.Item;
 
-import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
-import com.Zyarch.GalaxyKoisGods.client.CultistRobeRenderer;
+import com.zyarch.galaxykoisgods.GalaxyKoisGods;
+import com.zyarch.galaxykoisgods.client.CultistRobeRenderer;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

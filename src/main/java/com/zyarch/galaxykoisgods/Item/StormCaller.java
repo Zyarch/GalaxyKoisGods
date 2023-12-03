@@ -1,7 +1,6 @@
 package com.zyarch.galaxykoisgods.Item;
 
-import com.Zyarch.GalaxyKoisGods.GalaxyKoisGods;
-import com.Zyarch.GalaxyKoisGods.setup.ModItems;
+import com.zyarch.galaxykoisgods.SetUp.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
