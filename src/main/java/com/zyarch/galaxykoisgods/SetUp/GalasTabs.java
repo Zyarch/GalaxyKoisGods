@@ -6,8 +6,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.rmi.registry.Registry;
-
 import static com.zyarch.galaxykoisgods.SetUp.GalasBlocks.SILVER_ORE;
 import static com.zyarch.galaxykoisgods.SetUp.Registration.CREATIVE_MODE_TABS;
 import static com.zyarch.galaxykoisgods.SetUp.Registration.ITEMS;
