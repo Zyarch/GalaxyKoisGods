@@ -1,4 +1,4 @@
-package com.zyarch.galaxykoisgods.SetUp;
+package com.zyarch.galaxykoisgods.setup;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import net.minecraft.core.registries.Registries;

@@ -1,4 +1,4 @@
-package com.zyarch.galaxykoisgods.Item;
+package com.zyarch.galaxykoisgods.item;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import com.zyarch.galaxykoisgods.entity.projectiles.StormBowBoltEntity;
@@ -7,6 +7,7 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
+import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraft.item.*;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.ActionResult;
@@ -14,6 +15,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
+import org.antlr.v4.runtime.misc.NotNull;
 
 public class StormBowItem extends BowItem {
 
@@ -24,10 +26,11 @@ public class StormBowItem extends BowItem {
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         ItemStack itemstack = playerIn.getHeldItem(handIn);
-        boolean flag = true;//!playerIn.findAmmo(itemstack).isEmpty();
+        ActionResult<ItemStack> actionResult = ForgeEventFactory.onArrowNock(itemstack, worldIn, playerIn, handIn, true);
 
-        ActionResult<ItemStack> ret = net.minecraftforge.event.ForgeEventFactory.onArrowNock(itemstack, worldIn, playerIn, handIn, flag);
-        if (ret != null) return ret;
+        if (actionResult != null) {
+            return actionResult;
+        }
 
         playerIn.setActiveHand(handIn);
         return ActionResult.resultConsume(itemstack);
