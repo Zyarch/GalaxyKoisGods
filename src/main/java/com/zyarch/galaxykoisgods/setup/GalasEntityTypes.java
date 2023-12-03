@@ -14,7 +14,7 @@ public class GalasEntityTypes {
     public static final RegistryObject<EntityType<StormBowBolt>> STORM_BOW_BOLT = register(
             "bolt",
             () -> EntityType.Builder.<StormBowBolt>of(StormBowBolt::new, MobCategory.MISC)
-                    .size(0.5F, 0.5F).trackingRange(4).func_233608_b_(20)
+                    .sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20)
                     .build(new ResourceLocation(GalaxyKoisGods.MODID, "bolt").toString())
     );
 
