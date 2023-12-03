@@ -1,4 +1,4 @@
-package com.zyarch.galaxykoisgods.SetUp;
+package com.zyarch.galaxykoisgods.setup;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

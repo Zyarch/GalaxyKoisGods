@@ -1,7 +1,7 @@
-package com.zyarch.galaxykoisgods.Data;
+package com.zyarch.galaxykoisgods.data;
 
-import com.zyarch.galaxykoisgods.Data.Client.GalasBlockStateProvider;
-import com.zyarch.galaxykoisgods.Data.Client.GalasItemModelProvider;
+import com.zyarch.galaxykoisgods.data.client.GalasBlockStateProvider;
+import com.zyarch.galaxykoisgods.data.client.GalasItemModelProvider;
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;

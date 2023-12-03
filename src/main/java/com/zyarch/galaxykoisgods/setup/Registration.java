@@ -38,6 +38,7 @@ public class Registration {
         GalasBlocks.register();
         GalasConfigs.register();
         GalasItems.register();
+        GalasEntityTypes.register();
         GalasMenus.register();
         GalasSounds.register();
         GalasTabs.register();

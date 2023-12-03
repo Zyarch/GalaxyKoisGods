@@ -1,4 +1,4 @@
-package com.zyarch.galaxykoisgods.Item;
+package com.zyarch.galaxykoisgods.item;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

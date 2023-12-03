@@ -1,4 +1,4 @@
-package com.zyarch.galaxykoisgods.Data.Client;
+package com.zyarch.galaxykoisgods.data.client;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import net.minecraft.data.PackOutput;

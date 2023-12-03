@@ -1,7 +1,7 @@
-package com.zyarch.galaxykoisgods.Data;
+package com.zyarch.galaxykoisgods.data;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
-import com.zyarch.galaxykoisgods.SetUp.GalasBlocks;
+import com.zyarch.galaxykoisgods.setup.GalasBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.Tags;

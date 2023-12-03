@@ -1,10 +1,10 @@
-package com.zyarch.galaxykoisgods.SetUp;
+package com.zyarch.galaxykoisgods.setup;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.registries.RegistryObject;
-import com.zyarch.galaxykoisgods.Item.*;
+import com.zyarch.galaxykoisgods.item.*;
 
 public class GalasItems {
     //common item property declarations

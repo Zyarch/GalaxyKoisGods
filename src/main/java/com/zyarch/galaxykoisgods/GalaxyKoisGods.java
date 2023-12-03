@@ -1,7 +1,7 @@
 package com.zyarch.galaxykoisgods;
 
 import com.mojang.logging.LogUtils;
-import com.zyarch.galaxykoisgods.SetUp.Registration;
+import com.zyarch.galaxykoisgods.setup.Registration;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;

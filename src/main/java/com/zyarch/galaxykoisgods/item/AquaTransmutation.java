@@ -1,6 +1,6 @@
-package com.zyarch.galaxykoisgods.Item;
+package com.zyarch.galaxykoisgods.item;
 
-import com.zyarch.galaxykoisgods.GalaxyKoisGods;
+import com.zyarch.galaxykoisgods;
 import com.zyarch.galaxykoisgods.client.CultistRobeRenderer;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
@@ -12,8 +12,8 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nullable;
 
-public class CultistRobeItem extends ArmorItem {
-    public CultistRobeItem(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
+public class AquaTransmutation extends ArmorItem {
+    public AquaTransmutation(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
         super(materialIn, slot, builderIn);
     }
 

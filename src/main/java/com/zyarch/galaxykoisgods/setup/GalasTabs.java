@@ -1,4 +1,4 @@
-package com.zyarch.galaxykoisgods.SetUp;
+package com.zyarch.galaxykoisgods.setup;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -6,9 +6,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.zyarch.galaxykoisgods.SetUp.GalasBlocks.SILVER_ORE;
-import static com.zyarch.galaxykoisgods.SetUp.Registration.CREATIVE_MODE_TABS;
-import static com.zyarch.galaxykoisgods.SetUp.Registration.ITEMS;
+import static com.zyarch.galaxykoisgods.setup.GalasBlocks.SILVER_ORE;
+import static com.zyarch.galaxykoisgods.setup.Registration.CREATIVE_MODE_TABS;
+import static com.zyarch.galaxykoisgods.setup.Registration.ITEMS;
 
 public class GalasTabs {
     public static final RegistryObject<CreativeModeTab> GALA_TAB = CREATIVE_MODE_TABS.register("galas_tab", () -> CreativeModeTab.builder()

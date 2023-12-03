@@ -1,6 +1,6 @@
-package com.zyarch.galaxykoisgods.Data.Client;
+package com.zyarch.galaxykoisgods.data.client;
 
-import com.zyarch.galaxykoisgods.SetUp.GalasBlocks;
+import com.zyarch.galaxykoisgods.setup.GalasBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;

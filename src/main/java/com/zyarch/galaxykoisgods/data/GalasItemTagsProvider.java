@@ -1,4 +1,4 @@
-package com.zyarch.galaxykoisgods.Data;
+package com.zyarch.galaxykoisgods.data;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import net.minecraft.core.HolderLookup;
