@@ -4,8 +4,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.registries.RegistryObject;
-import com.zyarch.galaxykoisgods.Item.StormCaller;
-import com.zyarch.galaxykoisgods.Item.VoidDaggerItem;
+import com.zyarch.galaxykoisgods.Item.*;
 
 public class GalasItems {
     //common item property declarations
