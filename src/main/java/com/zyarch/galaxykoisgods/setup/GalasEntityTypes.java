@@ -1,7 +1,7 @@
 package com.zyarch.galaxykoisgods.setup;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
-import com.zyarch.galaxykoisgods.entity.projectiles.StormBowBoltEntity;
+import com.zyarch.galaxykoisgods.entity.projectiles.StormBowBolt;
 import com.zyarch.galaxykoisgods.entity.projectiles.ThrownTeleportingOrb;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -11,9 +11,9 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class GalasEntityTypes {
-    public static final RegistryObject<EntityType<StormBowBoltEntity>> STORM_BOW_BOLT = register(
+    public static final RegistryObject<EntityType<StormBowBolt>> STORM_BOW_BOLT = register(
             "bolt",
-            () -> EntityType.Builder.<StormBowBoltEntity>of(StormBowBoltEntity::new, MobCategory.MISC)
+            () -> EntityType.Builder.<StormBowBolt>of(StormBowBolt::new, MobCategory.MISC)
                     .size(0.5F, 0.5F).trackingRange(4).func_233608_b_(20)
                     .build(new ResourceLocation(GalaxyKoisGods.MODID, "bolt").toString())
     );

@@ -1,5 +1,6 @@
 package com.zyarch.galaxykoisgods.setup;
 
+import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
@@ -9,6 +10,7 @@ import com.zyarch.galaxykoisgods.item.*;
 public class GalasItems {
     //common item property declarations
     private static final Item.Properties commonProperties = new Item.Properties();
+    private static final Item.Properties stormBowProperties = new Item.Properties().durability(10);
     private static final Item.Properties stacksTo1Property = new Item.Properties().stacksTo(1);
     //default item declarations
     public static final RegistryObject<Item> SILVER_INGOT = Registration.ITEMS.register("silver_ingot", () -> new Item(commonProperties));
@@ -25,7 +27,7 @@ public class GalasItems {
     //tool declarations
     public static final RegistryObject<Item> SILVER_DAGGER = Registration.ITEMS.register("silver_dagger", () -> new SwordItem(Tiers.IRON, 2, -2.4F, commonProperties));
     public static final RegistryObject<Item> VOID_DAGGER = Registration.ITEMS.register("void_dagger", VoidDaggerItem::new);
-    public static final RegistryObject<Item> STORM_BOW = Registration.ITEMS.register("storm_bow", StormBowItem::new);
+    public static final RegistryObject<Item> STORM_BOW = Registration.ITEMS.register("storm_bow", () -> new StormBowItem(stormBowProperties));
     //armor declarations
     public static void register() {}
 }

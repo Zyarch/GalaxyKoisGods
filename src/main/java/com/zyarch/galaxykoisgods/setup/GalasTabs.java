@@ -15,8 +15,8 @@ public class GalasTabs {
             .title(Component.translatable("itemGroup.galaxykoisgodstab"))
             .icon(() -> new ItemStack(SILVER_ORE.get()))
             .displayItems((parameters, output) -> {
-                for (RegistryObject<Item> item : ITEMS.getEntries()){
-                output.accept(item.get());
+                for (RegistryObject<Item> item : ITEMS.getEntries()) {
+                    output.accept(item.get());
                 }
             }).build());
 
