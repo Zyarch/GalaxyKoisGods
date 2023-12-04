@@ -18,11 +18,11 @@ public class ClientEventBusSubscriber
     public static void onClientSetUp(FMLClientSetupEvent event)
     {
         //register the Altar Container with the Altar Screen
-        ScreenManager.registerFactory(ModContainers.ALTAR_CONTAINER.get(), AltarScreen::new);
-        ScreenManager.registerFactory(ModContainers.DIVINE_INFUSER_CONTAINER.get(), DivineInfuserScreen::new);
-
-        //Populate God list
-        God.populateGodList();
+//        ScreenManager.registerFactory(ModContainers.ALTAR_CONTAINER.get(), AltarScreen::new);
+//        ScreenManager.registerFactory(ModContainers.DIVINE_INFUSER_CONTAINER.get(), DivineInfuserScreen::new);
+//
+//        //Populate God list
+//        God.populateGodList();
 
         //Register item properties for Storm Bow animation
         event.enqueueWork(() -> {
@@ -45,5 +45,10 @@ public class ClientEventBusSubscriber
 
         //register the Teleporting Orb Entity Type with the Teleporting Orb Renderer
         event.registerEntityRenderer(GalasEntityTypes.TELEPORTING_ORB.get(), TeleportingOrbRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(CultistRobeModel.LAYER_LOCATION, CultistRobeModel::createBodyLayer);
     }
 }

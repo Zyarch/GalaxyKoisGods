@@ -17,7 +17,6 @@ import org.slf4j.Logger;
 public class GalaxyKoisGods
 {
     public static final String MODID = "galasgods";
-    private static final Logger LOGGER = LogUtils.getLogger();
 
     public GalaxyKoisGods()
     {

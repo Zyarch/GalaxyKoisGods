@@ -268,7 +268,7 @@
  - 43.1.60 Add supplier to FlowerBlock so it works with custom MobEffects (#9139)
  - 43.1.59 Fix some logical bugs related to the Grindstone Event (#9089)
  - 43.1.58 Call baked model's `getModelData` before `getRenderTypes` (#9163)
- - 43.1.57 Make Util.memoize thread-safe (#9155)
+ - 43.1.57 Make com.zyarch.galaxykoisgods.utility.memoize thread-safe (#9155)
  - 43.1.56 Rendering tweaks and fixes: Part 4 (#9065)
  - 43.1.55 Fix `Transformation` loading `PoseStack` (#9083)
  - 43.1.54 Add simple block appearance API (#9066)
