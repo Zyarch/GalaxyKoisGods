@@ -12,7 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class VoidDaggerItem extends SwordItem {
 
     public VoidDaggerItem() {
-        super(Tiers.NETHERITE, 2, -2f, new Item.Properties().setNoRepair().fireResistant());
+        super(Tiers.NETHERITE, 2, -2f, new Item.Properties().setNoRepair().fireResistant().durability(200));
     }
 
      @Override

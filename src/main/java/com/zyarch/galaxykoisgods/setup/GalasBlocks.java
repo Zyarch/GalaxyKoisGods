@@ -10,9 +10,10 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class GalasBlocks {
-    private static Item.Properties tab = new Item.Properties();
+    private static Item.Properties commonProperties = new Item.Properties();
 
-    public static final RegistryObject<Block> SILVER_ORE = register("silver_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)), tab);
+    public static final RegistryObject<Block> SILVER_ORE = register("silver_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)), commonProperties);
+
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, Item.Properties tab) {
         RegistryObject<T> newBlock = Registration.BLOCKS.register(name, block);
         registerBlockItem(name, newBlock, tab);
