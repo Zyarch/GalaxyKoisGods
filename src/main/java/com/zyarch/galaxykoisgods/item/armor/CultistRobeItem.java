@@ -13,6 +13,7 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.function.Consumer;
@@ -29,7 +30,8 @@ public class CultistRobeItem extends ArmorItem implements IClientItemExtensions 
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        return GalaxyKoisGods.MODID + CommonUtility.getPathToArmorTexture("cult_robe.png");
+        return GalaxyKoisGods.MODID + ":" + CommonUtility.getPathToArmorTexture(
+                "cult_robe_layer" + (slot != EquipmentSlot.LEGS ? 0 : 1) + ".png");
     }
 
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
@@ -38,7 +40,7 @@ public class CultistRobeItem extends ArmorItem implements IClientItemExtensions 
 
     static class ModelSupplier implements IClientItemExtensions {
         CultistRobeModel INSTANCE;
-        public HumanoidModel<?> getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlot armorSlot, HumanoidModel<?> _default) {
+        public @NotNull HumanoidModel<?> getHumanoidArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlot armorSlot, HumanoidModel<?> _default) {
             if (INSTANCE == null) {
                 INSTANCE = new CultistRobeModel(Minecraft.getInstance().getEntityModels().bakeLayer(CultistRobeModel.LAYER_LOCATION));
             }

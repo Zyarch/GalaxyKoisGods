@@ -1,6 +1,5 @@
 package com.zyarch.galaxykoisgods;
 
-import com.mojang.logging.LogUtils;
 import com.zyarch.galaxykoisgods.setup.Registration;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -11,7 +10,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
 
 @Mod(GalaxyKoisGods.MODID)
 public class GalaxyKoisGods
