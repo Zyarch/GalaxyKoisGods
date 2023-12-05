@@ -1,4 +1,5 @@
 {
+  "item.galasgods.raw_silver": "Raw Silver",
   "item.galasgods.silver_ingot": "Silver Ingot",
   "item.galasgods.thunder_stone": "Thunder Stone",
   "item.galasgods.amethyst": "Amethyst",
@@ -15,7 +16,12 @@
   "item.galasgods.silver_dagger": "Silver Dagger",
   "item.galasgods.void_dagger": "Kel-derash's Void Dagger",
   "item.galasgods.cult_robe": "Dev Cultist Robe",
+  "item.galasgods.cult_hood": "Cultist Hood",
+  "item.galasgods.cult_chest": "Cultist Robe",
+  "item.galasgods.cult_leggings": "Cultist Leggings",
+  "item.galasgods.cult_boots": "Cultist Boots",
   "block.galasgods.silver_ore": "Silver Ore",
+  "block.galasgods.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.galasgods.silver_block": "Silver Block",
   "block.galasgods.thunder_stone_ore": "Thunder Stone Ore",
   "block.galasgods.thunder_stone_block": "Thunder Stone Block",

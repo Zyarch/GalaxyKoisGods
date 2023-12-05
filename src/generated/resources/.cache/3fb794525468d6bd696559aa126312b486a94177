@@ -1,11 +1,13 @@
-// 1.20	2023-12-03T20:18:02.470383	Item Models: galasgods
+// 1.20	2023-12-04T13:02:28.7044887	Item Models: galasgods
 e6ee5659bb30aa7a446ff155f63e210fd6d9a92f assets/galasgods/models/item/cult_boots.json
 e5dd12cbf718f046c621ae23d8cadd35cb02525b assets/galasgods/models/item/cult_chest.json
 d078854c8486005f95fc3acfc8296bf4fa7d2a33 assets/galasgods/models/item/cult_hood.json
 21fa455cfaf56ed0ea3764f4426219dae13250ac assets/galasgods/models/item/cult_leggings.json
+d643464d5c792affd8fa7d62c575d74300c07b04 assets/galasgods/models/item/deepslate_silver_ore.json
 d010c565d3b6d54bdd551e6f12a0e6bf6e79623a assets/galasgods/models/item/healing_token.json
 c786e3147dd0223e1acdd8278bd699cf435de3ad assets/galasgods/models/item/lucky_coin.json
 da8deb4e694042bfc0df09d7a1172c14dae44c4d assets/galasgods/models/item/offer_amalgum.json
+3419dd95400ba0cbb704bb93c0da086457ec8707 assets/galasgods/models/item/raw_silver.json
 6e9b287419951827ef0c6eb2a308a3557d4d6727 assets/galasgods/models/item/ruby.json
 92d060fcdb986c8a30b57a5abc2e75fdf8932a89 assets/galasgods/models/item/sapphire.json
 c1f5acb2b87d498c2a78ea930291419958409430 assets/galasgods/models/item/selenium.json

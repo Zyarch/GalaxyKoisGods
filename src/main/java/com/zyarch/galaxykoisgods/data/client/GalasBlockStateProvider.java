@@ -14,5 +14,6 @@ public class GalasBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleBlock(GalasBlocks.SILVER_ORE.get());
+        simpleBlock(GalasBlocks.DEEPSLATE_SILVER_ORE.get());
     }
 }

@@ -1,2 +1,4 @@
-// 1.20	2023-12-03T20:18:02.468388	Tags for minecraft:block mod id galasgods
-41c73303a7ea9df587bbf55041f5a53385d2cd13 data/forge/tags/blocks/ores.json
+// 1.20	2023-12-04T16:15:28.8732226	Tags for minecraft:block mod id galasgods
+e2c1331f7e314a60a6bdd663af525129637d0d94 data/forge/tags/blocks/ores.json
+4733d79d289a31d5852ab432b19f23b283bd5371 data/forge/tags/blocks/ores_in_ground/deepslate.json
+41c73303a7ea9df587bbf55041f5a53385d2cd13 data/forge/tags/blocks/ores_in_ground/stone.json

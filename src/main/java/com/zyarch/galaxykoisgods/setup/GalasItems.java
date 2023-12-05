@@ -18,6 +18,7 @@ public class GalasItems {
     private static final Item.Properties stormBowProperties = new Item.Properties().durability(10);
     private static final Item.Properties stacksTo1Property = CommonUtility.getStacksToOneProperty();
     //default item declarations
+    public static final RegistryObject<Item> RAW_SILVER = Registration.ITEMS.register("raw_silver", () -> new Item(commonProperties));
     public static final RegistryObject<Item> SILVER_INGOT = Registration.ITEMS.register("silver_ingot", () -> new Item(commonProperties));
     public static final RegistryObject<Item> THUNDER_STONE = Registration.ITEMS.register("thunder_stone", () -> new Item(commonProperties));
     public static final RegistryObject<Item> SELENIUM = Registration.ITEMS.register("selenium", () -> new Item(commonProperties));
