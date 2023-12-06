@@ -29,6 +29,8 @@ public final class DataGenerators {
         gen.addProvider(run, new GalasBlockStateProvider(output, existingFileHelper));
         gen.addProvider(run, new GalasItemModelProvider(output, existingFileHelper));
 
+        gen.addProvider(event.includeServer(), GalasLootTableProvider.create(output));
+
         GalasBlockTagsProvider blockTagProvider = new GalasBlockTagsProvider(output, lookupProvider, existingFileHelper);
         gen.addProvider(run, blockTagProvider);
         gen.addProvider(run, new GalasItemTagsProvider(output, lookupProvider, blockTagProvider.contentsGetter(), existingFileHelper));

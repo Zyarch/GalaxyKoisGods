@@ -1,7 +1,4 @@
-// 1.20	2023-12-06T00:39:59.8459977	Item Models: galasgods
-9b922180878a9c3c31408b31b2c94fc46f155d91 assets/galasgods/models/item/amethyst.json
-a163c9ce1e63e428f3fa804b66e491b455f18540 assets/galasgods/models/item/amethyst_block.json
-a163c9ce1e63e428f3fa804b66e491b455f18540 assets/galasgods/models/item/amethyst_ore.json
+// 1.20	2023-12-06T11:22:28.3045943	Item Models: galasgods
 e6ee5659bb30aa7a446ff155f63e210fd6d9a92f assets/galasgods/models/item/cult_boots.json
 e5dd12cbf718f046c621ae23d8cadd35cb02525b assets/galasgods/models/item/cult_chest.json
 d078854c8486005f95fc3acfc8296bf4fa7d2a33 assets/galasgods/models/item/cult_hood.json
@@ -12,19 +9,19 @@ c786e3147dd0223e1acdd8278bd699cf435de3ad assets/galasgods/models/item/lucky_coin
 da8deb4e694042bfc0df09d7a1172c14dae44c4d assets/galasgods/models/item/offer_amalgum.json
 3419dd95400ba0cbb704bb93c0da086457ec8707 assets/galasgods/models/item/raw_silver.json
 6e9b287419951827ef0c6eb2a308a3557d4d6727 assets/galasgods/models/item/ruby.json
-a163c9ce1e63e428f3fa804b66e491b455f18540 assets/galasgods/models/item/ruby_block.json
-a163c9ce1e63e428f3fa804b66e491b455f18540 assets/galasgods/models/item/ruby_ore.json
+3fd21c149ff6b68082a92cd7e8cc1371c9fee52b assets/galasgods/models/item/ruby_block.json
+504f042a59fc02a0f508c0270251e1850662d417 assets/galasgods/models/item/ruby_ore.json
 92d060fcdb986c8a30b57a5abc2e75fdf8932a89 assets/galasgods/models/item/sapphire.json
 c1f5acb2b87d498c2a78ea930291419958409430 assets/galasgods/models/item/selenium.json
-a163c9ce1e63e428f3fa804b66e491b455f18540 assets/galasgods/models/item/selenium_block.json
-a163c9ce1e63e428f3fa804b66e491b455f18540 assets/galasgods/models/item/selenium_ore.json
-a163c9ce1e63e428f3fa804b66e491b455f18540 assets/galasgods/models/item/silver_block.json
+008185d67759fd6000e5d0735e49ac5df5a09dcb assets/galasgods/models/item/selenium_block.json
+31f5d9356c0fe28214cdef48e03907660951dfc2 assets/galasgods/models/item/selenium_ore.json
+1dc90ecf88decf6059bd592df6106f661404f9e3 assets/galasgods/models/item/silver_block.json
 7c21bcfab4fb968d54c6b8f3ffc2300202e5f9a7 assets/galasgods/models/item/silver_dagger.json
 9eeef15fe66489d7212ebb608b499ba2f9389d36 assets/galasgods/models/item/silver_ingot.json
 08b479add3e3eeac9be4260425ebf6b049faee2f assets/galasgods/models/item/silver_ore.json
 3fba99fd4612ad51eb1538ec469fbd7811bf0153 assets/galasgods/models/item/storm_caller.json
 f8b5bbdf84e0f929718add4b1c93d940048364d1 assets/galasgods/models/item/teleporting_orb.json
 eee2a6fcdf6d00d30ab7dc5026e05e4b252da11f assets/galasgods/models/item/thunder_stone.json
-a163c9ce1e63e428f3fa804b66e491b455f18540 assets/galasgods/models/item/thunder_stone_block.json
-a163c9ce1e63e428f3fa804b66e491b455f18540 assets/galasgods/models/item/thunder_stone_ore.json
+e9cbde2b822309a1014e81591d0689686394a7cb assets/galasgods/models/item/thunder_stone_block.json
+64c73fbf11c2bfd13a7ff18bf33419d1b140eb93 assets/galasgods/models/item/thunder_stone_ore.json
 7fcaf067c3b933fc6472a1f83019f53a960dbb03 assets/galasgods/models/item/void_dagger.json

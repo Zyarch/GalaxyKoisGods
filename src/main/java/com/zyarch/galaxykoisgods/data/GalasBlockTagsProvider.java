@@ -5,6 +5,7 @@ import com.zyarch.galaxykoisgods.setup.GalasBlocks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraftforge.common.Tags;
@@ -21,10 +22,35 @@ public class GalasBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider p_256380_) {
-        //adds the ore block tag to the block
-        tag(Tags.Blocks.ORES).add(GalasBlocks.SILVER_ORE.get());
-        tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(GalasBlocks.SILVER_ORE.get());
-        tag(Tags.Blocks.ORES).add(GalasBlocks.DEEPSLATE_SILVER_ORE.get());
+        //makes blocks require a tool level
+        tag(BlockTags.NEEDS_IRON_TOOL).add(GalasBlocks.SILVER_ORE.get())
+                .add(GalasBlocks.DEEPSLATE_SILVER_ORE.get())
+                .add(GalasBlocks.SELENIUM_ORE.get())
+                .add(GalasBlocks.RUBY_ORE.get())
+                .add(GalasBlocks.THUNDER_STONE_ORE.get())
+                .add(GalasBlocks.SILVER_BLOCK.get())
+                .add(GalasBlocks.SELENIUM_BLOCK.get())
+                .add(GalasBlocks.RUBY_BLOCK.get())
+                .add(GalasBlocks.THUNDER_STONE_BLOCK.get());
+        //makes blocks preferred tool pickaxe
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(GalasBlocks.SILVER_ORE.get())
+                .add(GalasBlocks.DEEPSLATE_SILVER_ORE.get())
+                .add(GalasBlocks.SELENIUM_ORE.get())
+                .add(GalasBlocks.RUBY_ORE.get())
+                .add(GalasBlocks.THUNDER_STONE_ORE.get())
+                .add(GalasBlocks.SILVER_BLOCK.get())
+                .add(GalasBlocks.SELENIUM_BLOCK.get())
+                .add(GalasBlocks.RUBY_BLOCK.get())
+                .add(GalasBlocks.THUNDER_STONE_BLOCK.get());
+        //adds the ore block tag to the ores
+        tag(Tags.Blocks.ORES).add(GalasBlocks.SILVER_ORE.get())
+                .add(GalasBlocks.DEEPSLATE_SILVER_ORE.get())
+                .add(GalasBlocks.SELENIUM_ORE.get())
+                .add(GalasBlocks.RUBY_ORE.get())
+                .add(GalasBlocks.THUNDER_STONE_ORE.get());
+        tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(GalasBlocks.SILVER_ORE.get())
+                .add(GalasBlocks.RUBY_ORE.get())
+                .add(GalasBlocks.THUNDER_STONE_ORE.get());
         tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(GalasBlocks.DEEPSLATE_SILVER_ORE.get());
     }
 }

@@ -15,5 +15,12 @@ public class GalasBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(GalasBlocks.SILVER_ORE.get());
         simpleBlock(GalasBlocks.DEEPSLATE_SILVER_ORE.get());
+        simpleBlock(GalasBlocks.SELENIUM_ORE.get());
+        simpleBlock(GalasBlocks.RUBY_ORE.get());
+        simpleBlock(GalasBlocks.THUNDER_STONE_ORE.get());
+        simpleBlock(GalasBlocks.SILVER_BLOCK.get());
+        simpleBlock(GalasBlocks.SELENIUM_BLOCK.get());
+        simpleBlock(GalasBlocks.RUBY_BLOCK.get());
+        simpleBlock(GalasBlocks.THUNDER_STONE_BLOCK.get());
     }
 }

@@ -70,7 +70,7 @@ public class OfferEntries {
                 Items.EMERALD, Items.GOLD_INGOT, Items.BREWING_STAND, Items.NAUTILUS_SHELL, Items.TRIDENT,
                 Items.IRON_AXE, Items.IRON_SHOVEL, Items.IRON_PICKAXE, Items.GOLDEN_CARROT, Items.EGG,
                 Items.SAND,
-                GalasItems.SILVER_INGOT.get(), GalasItems.RUBY.get(), GalasItems.AMETHYST.get(),
+                GalasItems.SILVER_INGOT.get(), GalasItems.RUBY.get(),
                 GalasItems.THUNDER_STONE.get(), GalasItems.SELENIUM.get());
         add(0.6f, Items.BONE_BLOCK, Items.BEETROOT_SOUP);
         add(0.8f, Items.GOLDEN_AXE, Items.GOLDEN_SHOVEL, Items.GOLDEN_PICKAXE);
@@ -83,7 +83,6 @@ public class OfferEntries {
                 Items.EMERALD_ORE, Items.GOLD_ORE, Items.NETHERRACK,
                 GalasBlocks.getBlockAsItem(GalasBlocks.SILVER_ORE),
                 GalasBlocks.getBlockAsItem(GalasBlocks.RUBY_ORE),
-                GalasBlocks.getBlockAsItem(GalasBlocks.AMETHYST_ORE),
                 GalasBlocks.getBlockAsItem(GalasBlocks.THUNDER_STONE_ORE),
                 GalasBlocks.getBlockAsItem(GalasBlocks.SELENIUM_ORE));
         add(2, Items.TOTEM_OF_UNDYING, Items.CHIPPED_ANVIL);
@@ -93,7 +92,6 @@ public class OfferEntries {
                 Items.EMERALD_BLOCK, Items.GOLD_BLOCK,
                 GalasBlocks.getBlockAsItem(GalasBlocks.SILVER_BLOCK),
                 GalasBlocks.getBlockAsItem(GalasBlocks.RUBY_BLOCK),
-                GalasBlocks.getBlockAsItem(GalasBlocks.AMETHYST_BLOCK),
                 GalasBlocks.getBlockAsItem(GalasBlocks.THUNDER_STONE_BLOCK),
                 GalasBlocks.getBlockAsItem(GalasBlocks.SELENIUM_BLOCK));
         add(7, Items.NETHER_STAR);

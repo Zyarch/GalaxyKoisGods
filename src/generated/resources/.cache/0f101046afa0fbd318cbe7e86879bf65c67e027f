@@ -1,5 +1,19 @@
-// 1.20	2023-12-04T12:58:46.8588807	Block States: galasgods
+// 1.20	2023-12-06T11:13:20.1795577	Block States: galasgods
 2c65c2156fbcacd197a447902ebf1ee004c7441d assets/galasgods/blockstates/deepslate_silver_ore.json
+839eda680a2cd53e567426b6889b765234164b7a assets/galasgods/blockstates/ruby_block.json
+a199137b39814b43503a49fcfafef099d779c14a assets/galasgods/blockstates/ruby_ore.json
+efeb9aad587735e0632d7a9ad5cbee37febe708a assets/galasgods/blockstates/selenium_block.json
+ff957eb79232b7c40567a3fa5245659da4b1b415 assets/galasgods/blockstates/selenium_ore.json
+e61e4ab22a33b5318917f6483c62a24fe7a14ca4 assets/galasgods/blockstates/silver_block.json
 19b7410417dfa2661cb2e17de0e26f1d807eb089 assets/galasgods/blockstates/silver_ore.json
+433711b96a690ad1bd677da3750e3d0ed9142160 assets/galasgods/blockstates/thunder_stone_block.json
+f0305626a65d1d732056919431e2db686f8fa851 assets/galasgods/blockstates/thunder_stone_ore.json
 0ee5db43a9f84611a12b549ed658776225072266 assets/galasgods/models/block/deepslate_silver_ore.json
+81dde008a61f2e80fb4334c3ece2bac6e6f2777e assets/galasgods/models/block/ruby_block.json
+d0e81b6ac8ed4d0f4efbc09f6b2cdd64d7799fa7 assets/galasgods/models/block/ruby_ore.json
+db13bfb5ea9d40ef3f908c27bc02e205bca41f81 assets/galasgods/models/block/selenium_block.json
+c0f54a1b80fbeeea4b1b32386ee67e2ee21c000c assets/galasgods/models/block/selenium_ore.json
+32299d0b570588fb0e9d8f5cadc5f62ea168314b assets/galasgods/models/block/silver_block.json
 162a5860f33b9f7ac61f8906bc16e86768e91547 assets/galasgods/models/block/silver_ore.json
+fb829dac242e4a9e9e3cfddbf3de9d9adc438579 assets/galasgods/models/block/thunder_stone_block.json
+b80e8c6ff70bac20b9772f7fe6fc0134d9b05e9b assets/galasgods/models/block/thunder_stone_ore.json
