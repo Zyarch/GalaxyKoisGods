@@ -1,6 +1,8 @@
 package com.zyarch.galaxykoisgods.client;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
+import com.zyarch.galaxykoisgods.gods.GalasGods;
+import com.zyarch.galaxykoisgods.gods.OfferEntries;
 import com.zyarch.galaxykoisgods.setup.GalasEntityTypes;
 import com.zyarch.galaxykoisgods.setup.GalasItems;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -21,8 +23,9 @@ public class ClientEventBusSubscriber
 //        ScreenManager.registerFactory(ModContainers.ALTAR_CONTAINER.get(), AltarScreen::new);
 //        ScreenManager.registerFactory(ModContainers.DIVINE_INFUSER_CONTAINER.get(), DivineInfuserScreen::new);
 //
-//        //Populate God list
-//        God.populateGodList();
+        //Populate God list
+        OfferEntries.initialize();
+        GalasGods.populateGodList();
 
         //Register item properties for Storm Bow animation
         event.enqueueWork(() -> {

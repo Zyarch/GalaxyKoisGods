@@ -3,6 +3,7 @@ package com.zyarch.galaxykoisgods.utility;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
@@ -10,6 +11,7 @@ import org.slf4j.Logger;
 public final class CommonUtility {
     private static final ResourceLocation emptyResourceLocation = new ResourceLocation("","");
     public static final Logger LOGGER = LogUtils.getLogger();
+
     public static ResourceLocation getResourceLocation(RegistryObject<Item> item) {
         LOGGER.error("getResourceLocation<RegistryObject<Item>> - " + getResourceLocation(item.get()));
         return getResourceLocation(item.get());

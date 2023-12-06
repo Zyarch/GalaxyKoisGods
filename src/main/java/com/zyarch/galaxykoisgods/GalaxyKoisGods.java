@@ -1,5 +1,6 @@
 package com.zyarch.galaxykoisgods;
 
+import com.zyarch.galaxykoisgods.network.GalasGodsPacketHandler;
 import com.zyarch.galaxykoisgods.setup.Registration;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class GalaxyKoisGods
 {
     public static final String MODID = "galasgods";
+    public static GalasGodsPacketHandler packetHandler;
 
     public GalaxyKoisGods()
     {
@@ -27,6 +29,8 @@ public class GalaxyKoisGods
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        packetHandler = new GalasGodsPacketHandler();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) { }
