@@ -3,8 +3,11 @@ package com.zyarch.galaxykoisgods.client;
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import com.zyarch.galaxykoisgods.gods.GalasGods;
 import com.zyarch.galaxykoisgods.gods.OfferEntries;
+import com.zyarch.galaxykoisgods.screens.AltarContainerScreen;
 import com.zyarch.galaxykoisgods.setup.GalasEntityTypes;
 import com.zyarch.galaxykoisgods.setup.GalasItems;
+import com.zyarch.galaxykoisgods.setup.GalasMenus;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -20,7 +23,7 @@ public class ClientEventBusSubscriber
     public static void onClientSetUp(FMLClientSetupEvent event)
     {
         //register the Altar Container with the Altar Screen
-//        ScreenManager.registerFactory(ModContainers.ALTAR_CONTAINER.get(), AltarScreen::new);
+        MenuScreens.register(GalasMenus.ALTAR.get(), AltarContainerScreen::new);
 //        ScreenManager.registerFactory(ModContainers.DIVINE_INFUSER_CONTAINER.get(), DivineInfuserScreen::new);
 //
         //Populate God list
