@@ -40,6 +40,7 @@ public class GalasBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(GalasBlocks.SELENIUM_BLOCK.get());
         this.dropSelf(GalasBlocks.RUBY_BLOCK.get());
         this.dropSelf(GalasBlocks.THUNDER_STONE_BLOCK.get());
+        this.dropSelf(GalasBlocks.ALTAR.get());
     }
 
     @Override

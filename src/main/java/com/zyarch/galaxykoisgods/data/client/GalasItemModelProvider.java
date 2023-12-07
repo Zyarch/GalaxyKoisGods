@@ -53,5 +53,6 @@ public class GalasItemModelProvider extends ItemModelProvider {
         withExistingParent("selenium_block", modLoc("block/selenium_block"));
         withExistingParent("thunder_stone_block", modLoc("block/thunder_stone_block"));
         withExistingParent("ruby_block", modLoc("block/ruby_block"));
+        withExistingParent("altar", modLoc("block/altar"));
     }
 }
