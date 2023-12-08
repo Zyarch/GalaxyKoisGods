@@ -4,6 +4,7 @@ import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import com.zyarch.galaxykoisgods.gods.GalasGods;
 import com.zyarch.galaxykoisgods.gods.OfferEntries;
 import com.zyarch.galaxykoisgods.screens.AltarContainerScreen;
+import com.zyarch.galaxykoisgods.screens.DivineInfuserScreen;
 import com.zyarch.galaxykoisgods.setup.GalasEntityTypes;
 import com.zyarch.galaxykoisgods.setup.GalasItems;
 import com.zyarch.galaxykoisgods.setup.GalasMenus;
@@ -22,10 +23,10 @@ public class ClientEventBusSubscriber
     @SubscribeEvent
     public static void onClientSetUp(FMLClientSetupEvent event)
     {
-        //register the Altar Container with the Altar Screen
+        //register the menus with screens
         MenuScreens.register(GalasMenus.ALTAR.get(), AltarContainerScreen::new);
-//        ScreenManager.registerFactory(ModContainers.DIVINE_INFUSER_CONTAINER.get(), DivineInfuserScreen::new);
-//
+        MenuScreens.register(GalasMenus.DIVINE_INFUSER_MENU.get(), DivineInfuserScreen::new);
+
         //Populate God list
         OfferEntries.initialize();
         GalasGods.populateGodList();

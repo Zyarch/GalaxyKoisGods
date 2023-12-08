@@ -30,6 +30,7 @@ public final class DataGenerators {
         gen.addProvider(run, new GalasItemModelProvider(output, existingFileHelper));
 
         gen.addProvider(event.includeServer(), GalasLootTableProvider.create(output));
+        gen.addProvider(event.includeServer(), new DivineInfuserRecipeProvider(output));
 
         GalasBlockTagsProvider blockTagProvider = new GalasBlockTagsProvider(output, lookupProvider, existingFileHelper);
         gen.addProvider(run, blockTagProvider);

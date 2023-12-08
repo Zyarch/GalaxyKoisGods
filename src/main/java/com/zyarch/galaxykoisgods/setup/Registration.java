@@ -31,6 +31,8 @@ public class Registration {
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        modEventBus.addListener(GalasDivineInfuserRecipes::registerRecipeSerializers);
+
         ITEMS.register(modEventBus);
         BLOCKS.register(modEventBus);
         ENTITY_TYPES.register(modEventBus);
