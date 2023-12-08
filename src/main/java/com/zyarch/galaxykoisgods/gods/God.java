@@ -62,9 +62,9 @@ public class God
         return this;
     }
 
-    public Boolean isInOfferList(ItemStack item) { return goodOfferMap.containsKey(item.getItem()); }
+    public Boolean isInOfferList(ItemStack item) { return goodOfferMap.containsKey(item.getItem().toString()); }
 
-    public Boolean isInBadList(ItemStack item) { return badOfferMap.containsKey(item.getItem()); }
+    public Boolean isInBadList(ItemStack item) { return badOfferMap.containsKey(item.getItem().toString()); }
 
     //returns the favor value for the item
     public float getValue(ItemStack item) {

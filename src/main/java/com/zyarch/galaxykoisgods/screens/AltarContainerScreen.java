@@ -4,9 +4,11 @@ import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import com.zyarch.galaxykoisgods.screens.menus.AltarMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.screens.inventory.FurnaceScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.level.block.AbstractFurnaceBlock;
 
 public class AltarContainerScreen extends AbstractContainerScreen<AltarMenu> {
     private static final ResourceLocation RES_LOC = new ResourceLocation(GalaxyKoisGods.MODID, "textures/gui/altar_screen.png");

@@ -1,6 +1,7 @@
 package com.zyarch.galaxykoisgods.setup;
 
 import com.zyarch.galaxykoisgods.blocks.Altar;
+import com.zyarch.galaxykoisgods.utility.CommonUtility;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -33,6 +34,7 @@ public class GalasBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, Item.Properties itemProperties) {
+        CommonUtility.LOGGER.debug("Registering block: " + name);
         return Registration.ITEMS.register(name, () -> new BlockItem(block.get(), itemProperties));
     }
     public static void register() {}

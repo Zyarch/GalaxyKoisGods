@@ -1,5 +1,8 @@
 package com.zyarch.galaxykoisgods.screens.menus;
 
+import com.zyarch.galaxykoisgods.GalaxyKoisGods;
+import com.zyarch.galaxykoisgods.blocks.AltarBlockEntity;
+import com.zyarch.galaxykoisgods.network.packets.FavorUpdatedFromAltarPacket;
 import com.zyarch.galaxykoisgods.setup.GalasBlocks;
 import com.zyarch.galaxykoisgods.setup.GalasMenus;
 import net.minecraft.network.FriendlyByteBuf;
@@ -7,35 +10,36 @@ import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 
 public class AltarMenu extends AbstractContainerMenu {
-    protected final ContainerLevelAccess context;
-    protected final Player player;
-    protected final Container input = new SimpleContainer(3)
-    {
-        public void setChanged() {
-            super.setChanged();
-            AltarMenu.this.slotsChanged(this);
-        }
-    };
+    protected ContainerLevelAccess context = ContainerLevelAccess.NULL;
+    protected Player player;
 
-    private final Level level;
+    private Level level;
+    private  ContainerData data;
+    private Container container;
 
-    public AltarMenu(int i, Inventory playerInventory, FriendlyByteBuf packetBuffer) {
-        this(i, playerInventory, ContainerLevelAccess.NULL);
-    }
-    public AltarMenu(int i, Inventory playerInventory, ContainerLevelAccess containerLevelAccess) {
+    public AltarMenu(int i, Inventory playerInventory, Container container, ContainerData containerData) {
         super(GalasMenus.ALTAR.get(), i);
-        this.context = containerLevelAccess;
+        checkContainerSize(container, 1);
+        checkContainerDataCount(containerData, 2);
+        this.container = container;
+        this.data = containerData;
         this.player = playerInventory.player;
         this.level = this.player.level();
 
-        this.addSlot(new Slot(this.input, 0, 115, 32));
+        int[] uuid = new int[4];
+        uuid[0] = (int)(this.player.getUUID().getMostSignificantBits() & 0xFFFFFFFF_00000000L >> 32);
+        uuid[1] = (int)(this.player.getUUID().getMostSignificantBits() & 0x00000000_FFFFFFFFL);
+        uuid[2] = (int)(this.player.getUUID().getLeastSignificantBits() & 0xFFFFFFFF_00000000L >> 32);
+        uuid[3] = (int)(this.player.getUUID().getMostSignificantBits() & 0x00000000_FFFFFFFFL);
+
+
+        this.addSlot(new Slot(container, 0, 115, 32));
 
         //inventory
         for(int k = 0; k < 3; ++k) {
@@ -47,6 +51,32 @@ public class AltarMenu extends AbstractContainerMenu {
         for(int l = 0; l < 9; ++l) {
             this.addSlot(new Slot(playerInventory, l, 8 + l * 18, 142));
         }
+
+        this.addSlotListener(new ContainerListener() {
+            @Override
+            public void slotChanged(AbstractContainerMenu containerMenu, int index, ItemStack itemStack) {
+                if(itemStack.isEmpty() || index != 0) {
+                    return;
+                }
+
+                if(!(containerMenu instanceof AltarMenu altarMenu)) {
+                    return;
+                }
+
+                altarMenu.getContainer().offeringPlayer =  altarMenu.getPlayer();
+            }
+
+            @Override
+            public void dataChanged(AbstractContainerMenu containerMenu, int p_150525_, int p_150526_) { }
+        });
+    }
+    public AltarMenu(int i, Inventory playerInventory, ContainerLevelAccess containerLevelAccess) {
+        this(i, playerInventory, new SimpleContainer(1), new SimpleContainerData(2));
+        this.context = containerLevelAccess;
+    }
+
+    public AltarMenu(int i, Inventory inventory, FriendlyByteBuf friendlyByteBuf) {
+        this(i, inventory, ContainerLevelAccess.NULL);
     }
 
     @Override
@@ -86,10 +116,11 @@ public class AltarMenu extends AbstractContainerMenu {
         return stillValid(this.context, player, GalasBlocks.ALTAR.get());
     }
 
-    public void removed(Player p_39790_) {
-        super.removed(p_39790_);
-        this.context.execute((p_39796_, p_39797_) -> {
-            this.clearContainer(p_39790_, this.input);
-        });
+    public Player getPlayer() {
+        return this.player;
+    }
+
+    public AltarBlockEntity getContainer() {
+        return this.container instanceof AltarBlockEntity ? (AltarBlockEntity)this.container : null;
     }
 }
