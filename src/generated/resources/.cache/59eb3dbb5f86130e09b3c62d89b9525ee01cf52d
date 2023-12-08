@@ -1,6 +1,7 @@
-// 1.20	2023-12-06T21:35:25.4831699	Loot Tables
+// 1.20	2023-12-07T16:36:45.5739496	Loot Tables
 b0849dad1a0a2e093f7d2ae5357c3c6db6e8d3fc data/galasgods/loot_tables/blocks/altar.json
 97f999265c1514ab99cb23f2db888331d87c559f data/galasgods/loot_tables/blocks/deepslate_silver_ore.json
+5c0e2e85da501c92b297914483b10ca676eb3729 data/galasgods/loot_tables/blocks/divine_infuser.json
 d2a7296b7610f1d7de136bf5c802b2075a1141a5 data/galasgods/loot_tables/blocks/ruby_block.json
 e4a19467db799b2a374a5bc09cf72e55b5717301 data/galasgods/loot_tables/blocks/ruby_ore.json
 4c3084e24a44185e16f58af6e44cf5baba1892df data/galasgods/loot_tables/blocks/selenium_block.json

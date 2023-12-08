@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.zyarch.galaxykoisgods.setup.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "guildedarrows.refmap.json",
+  "mixins": [
+    "RecipeManagerMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

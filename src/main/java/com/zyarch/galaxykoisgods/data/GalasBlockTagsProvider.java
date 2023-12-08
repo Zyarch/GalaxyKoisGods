@@ -41,7 +41,9 @@ public class GalasBlockTagsProvider extends BlockTagsProvider {
                 .add(GalasBlocks.SILVER_BLOCK.get())
                 .add(GalasBlocks.SELENIUM_BLOCK.get())
                 .add(GalasBlocks.RUBY_BLOCK.get())
-                .add(GalasBlocks.THUNDER_STONE_BLOCK.get());
+                .add(GalasBlocks.THUNDER_STONE_BLOCK.get())
+                .add(GalasBlocks.ALTAR.get())
+                .add(GalasBlocks.DIVINE_INFUSER.get());
         //adds the ore block tag to the ores
         tag(Tags.Blocks.ORES).add(GalasBlocks.SILVER_ORE.get())
                 .add(GalasBlocks.DEEPSLATE_SILVER_ORE.get())

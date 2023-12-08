@@ -1,6 +1,7 @@
 package com.zyarch.galaxykoisgods.setup;
 
 import com.zyarch.galaxykoisgods.blocks.Altar;
+import com.zyarch.galaxykoisgods.blocks.DivineInfuser;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -26,6 +27,7 @@ public class GalasBlocks {
     public static final RegistryObject<Block> RUBY_BLOCK = register("ruby_block", () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().mapColor(MapColor.DEEPSLATE).strength(4.0f, 4.0f)), commonProperties);
     public static final RegistryObject<Block> THUNDER_STONE_BLOCK = register("thunder_stone_block", () -> new DropExperienceBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().mapColor(MapColor.DEEPSLATE).strength(4.0f, 4.0f)), commonProperties);
     public static final RegistryObject<Block> ALTAR = register("altar", () -> new Altar(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).mapColor(MapColor.STONE).strength(3.0f, 100.0f)), commonProperties);
+    public static final RegistryObject<Block> DIVINE_INFUSER = register("divine_infuser", () -> new DivineInfuser(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).mapColor(MapColor.STONE).strength(3.0f, 100.0f)), commonProperties);
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, Item.Properties tab) {
         RegistryObject<T> newBlock = Registration.BLOCKS.register(name, block);
         registerBlockItem(name, newBlock, tab);

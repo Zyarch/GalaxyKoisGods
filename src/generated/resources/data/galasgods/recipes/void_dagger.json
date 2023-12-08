@@ -1,0 +1,18 @@
+{
+  "type": "galasgods:divine_infuser",
+  "i1": {
+    "item": "minecraft:wither_rose"
+  },
+  "i2": {
+    "item": "minecraft:dead_bush"
+  },
+  "i3": {
+    "item": "galasgods:silver_dagger"
+  },
+  "i4": [],
+  "i5": [],
+  "result": {
+    "count": 1,
+    "item": "galasgods:void_dagger"
+  }
+}
