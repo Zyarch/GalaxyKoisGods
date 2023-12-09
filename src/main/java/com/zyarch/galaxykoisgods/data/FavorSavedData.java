@@ -19,6 +19,7 @@ public class FavorSavedData extends SavedData {
         God god;
 
         this.puuid = player.getUUID().toString();
+        this.listTag.clear();
         for(int i = 0; i < GalasGods.getGodListSize(); i++)
         {
             god = GalasGods.getGod(i);
@@ -36,7 +37,6 @@ public class FavorSavedData extends SavedData {
         FavorSavedData data = create();
         data.puuid = tag.getString(uuidTag);
         data.listTag = tag.getList(favorTag, Tag.TAG_STRING);
-        data.setDirty();
         return data;
     }
 
@@ -49,5 +49,16 @@ public class FavorSavedData extends SavedData {
 
     public static FavorSavedData load(MinecraftServer server, String uuid) {
         return server.overworld().getDataStorage().computeIfAbsent(FavorSavedData::load, FavorSavedData::create, uuid + "_GGods");
+    }
+
+    public void loadToPlayerData(PlayerData playerData) {
+        playerData.clearFavor();
+
+        String[] data;
+
+        for(int i = 0; i < this.listTag.size(); i++) {
+            data = this.listTag.getString(i).split(":");
+            playerData.addFavor(data[0], Float.valueOf(data[1]));
+        }
     }
 }

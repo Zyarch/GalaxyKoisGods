@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class PlayerData
 {
-    private HashMap<String, Float> playerFavor = new HashMap<String, Float>();
+    private HashMap<String, Float> playerFavor = new HashMap<>();
 
     public PlayerData()
     {
@@ -35,7 +35,10 @@ public class PlayerData
 
     public void clearFavor()
     {
-        this.playerFavor.clear();
+        for(int i = 0; i < GalasGods.getGodListSize(); i++)
+        {
+            this.playerFavor.replace(GalasGods.getGod(i).getName(), 0f);
+        }
     }
 
     public void add(String string, float _float)

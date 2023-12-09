@@ -10,23 +10,25 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = GalaxyKoisGods.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class ModClientEvents {
     @SubscribeEvent
-    public static void onJoinWorld(PlayerEvent.PlayerLoggedInEvent event) throws Exception {
+    public static void onJoinWorld(PlayerEvent.PlayerLoggedInEvent event) {
         Player player = event.getEntity();
         Level level = player.level();
-        PlayerData pd = new PlayerData();
 
         System.out.println("Player joined: " + player.getDisplayName().getString());
 
         //Server will save references to player data for later
         if(!level.isClientSide) {
-            DataHandler.playerDataList.put(player.getUUID(), pd);
-            DataHandler.favorDataList.put(player.getUUID(), FavorSavedData.load(event.getEntity().getServer(), player.getUUID().toString()));
+            PlayerData playerData = new PlayerData();
+            DataHandler.playerDataList.put(player.getUUID(), playerData);
+            FavorSavedData loadedData = FavorSavedData.load(player.getServer(), player.getUUID().toString());
+            DataHandler.favorDataList.put(player.getUUID(), loadedData);
+
+            loadedData.loadToPlayerData(playerData);
         }
     }
 
