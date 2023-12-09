@@ -12,7 +12,6 @@ import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
 
 public class DivineInfuserRecipe implements Recipe<Container> {
@@ -31,12 +30,12 @@ public class DivineInfuserRecipe implements Recipe<Container> {
         this.result = itemStack;
     }
     @Override
-    public boolean matches(Container p_44002_, Level p_44003_) {
-        return this.ingredients[0].test(p_44002_.getItem(0))
-                && this.ingredients[1].test(p_44002_.getItem(1))
-                && this.ingredients[2].test(p_44002_.getItem(2))
-                && this.ingredients[3].test(p_44002_.getItem(3))
-                && this.ingredients[4].test(p_44002_.getItem(4));
+    public boolean matches(Container container, Level level) {
+        return this.ingredients[0].test(container.getItem(0))
+                && this.ingredients[1].test(container.getItem(1))
+                && this.ingredients[2].test(container.getItem(2))
+                && this.ingredients[3].test(container.getItem(3))
+                && this.ingredients[4].test(container.getItem(4));
     }
 
     @Override

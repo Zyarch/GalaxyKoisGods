@@ -2,13 +2,9 @@ package com.zyarch.galaxykoisgods.setup;
 
 import com.zyarch.galaxykoisgods.recipe.divineinfuser.DivineInfuserRecipe;
 import com.zyarch.galaxykoisgods.recipe.divineinfuser.DivineInfuserRecipeType;
-import com.zyarch.galaxykoisgods.setup.mixin.RecipeManagerMixin;
 import com.zyarch.galaxykoisgods.utility.CommonUtility;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.Container;
-import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.level.Level;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 
@@ -31,10 +27,6 @@ public class GalasDivineInfuserRecipes {
             CommonUtility.LOGGER.debug("Recipe Serializer: " + DivineInfuserRecipe.SERIALIZER.toString());
             CommonUtility.LOGGER.debug("Recipe as String: " + DIVINE_INFUSER_RECIPE.toString());
         }
-    }
-
-    public static <C extends Container, T extends Recipe<C>> Map<ResourceLocation, T> getRecipes(Level level, RecipeType<T> type) {
-        return ((RecipeManagerMixin) level.getRecipeManager()).galaxykoisgods_getRecipes(type);
     }
 }
 

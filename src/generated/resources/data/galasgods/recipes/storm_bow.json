@@ -1,14 +1,20 @@
 {
   "type": "galasgods:divine_infuser",
   "i1": {
-    "item": "minecraft:bow"
+    "item": "galasgods:thunder_stone"
   },
   "i2": {
     "item": "galasgods:thunder_stone"
   },
-  "i3": [],
-  "i4": [],
-  "i5": [],
+  "i3": {
+    "item": "minecraft:bow"
+  },
+  "i4": {
+    "item": "galasgods:thunder_stone"
+  },
+  "i5": {
+    "item": "galasgods:thunder_stone"
+  },
   "result": {
     "count": 1,
     "item": "galasgods:storm_bow"
