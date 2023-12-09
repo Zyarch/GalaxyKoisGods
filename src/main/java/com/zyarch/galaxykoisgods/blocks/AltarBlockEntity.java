@@ -1,6 +1,7 @@
 package com.zyarch.galaxykoisgods.blocks;
 
 import com.zyarch.galaxykoisgods.data.DataHandler;
+import com.zyarch.galaxykoisgods.data.FavorSavedData;
 import com.zyarch.galaxykoisgods.data.PlayerData;
 import com.zyarch.galaxykoisgods.gods.GalasGods;
 import com.zyarch.galaxykoisgods.gods.God;
@@ -154,7 +155,9 @@ public class AltarBlockEntity extends BaseContainerBlockEntity implements Tickab
                         new OutgoingChatMessage.Player(chatMessage), false, ChatType.bind(GalasChatTypes.CONTENT_ONLY_KEY, this.offeringPlayer));
 
                 try {
-                    DataHandler.store(playerUUID, new CompoundTag(), playerData);
+                    FavorSavedData favorSavedData = new FavorSavedData();
+                    favorSavedData.setPlayerData(this.offeringPlayer, playerData);
+                    favorSavedData.save(new CompoundTag());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

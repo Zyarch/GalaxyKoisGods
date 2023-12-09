@@ -4,13 +4,17 @@ import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import com.zyarch.galaxykoisgods.gods.God;
 import com.zyarch.galaxykoisgods.gods.GalasGods;
 import com.zyarch.galaxykoisgods.utility.CommonUtility;
+import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtIo;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.TickTask;
+import net.minecraft.server.WorldLoader;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.thread.BlockableEventLoop;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.util.LogicalSidedProvider;
@@ -44,7 +48,7 @@ public class DataHandler {
         }
     }
 
-    public static void store(UUID pUI, CompoundTag compound, PlayerData pData) throws Exception {
+    public static void store(Level level, UUID pUI, CompoundTag compound, PlayerData pData) throws Exception {
         ListTag favorList = new ListTag();
         God god;
 
@@ -56,7 +60,8 @@ public class DataHandler {
 
         compound.put("currentFavor", favorList);
 
-        File playerFile = new File(getPlayerDirectory(), pUI.toString() + ".GGods");
+        File playerFile = new File(getPlayerDirectory(level), pUI.toString() + ".GGods");
+        CommonUtility.LOGGER.error("getGGDirectory - " + playerFile.getPath());
         NbtIo.writeCompressed(compound, playerFile);
     }
 
@@ -68,15 +73,15 @@ public class DataHandler {
 
     private static void getProgressServer(ServerPlayer player, PlayerData pData) throws Exception {
         UUID ui = player.getUUID();
-        File playerFile = getPlayerFile(ui, pData);
+        File playerFile = getPlayerFile(player.level(), ui, pData);
         load(ui, NbtIo.readCompressed(playerFile), pData);
     }
 
-    private static File getPlayerFile(UUID pUI, PlayerData pData){
-        File f = new File(getPlayerDirectory(), pUI.toString() + ".GGods");
+    private static File getPlayerFile(Level level, UUID pUI, PlayerData pData){
+        File f = new File(getPlayerDirectory(level), pUI.toString() + ".GGods");
         if (!f.exists()) {
             try {
-                store(pUI, new CompoundTag(), pData);
+                store(level, pUI, new CompoundTag(), pData);
             } catch (IOException ignored) {} //Will be created later anyway... just as fail-safe.
             catch (Exception e) {
                 e.printStackTrace();
@@ -85,8 +90,8 @@ public class DataHandler {
         return f;
     }
 
-    private static File getPlayerDirectory() {
-        File pDir = new File(getGGDirectory(), "playerdata");
+    private static File getPlayerDirectory(Level level) {
+        File pDir = new File(getGGDirectory(level), "playerdata");
 
         if (!pDir.exists()) {
             pDir.mkdirs();
@@ -94,27 +99,29 @@ public class DataHandler {
         return pDir;
     }
 
-    private static File getGGDirectory()
+    private static File getGGDirectory(Level level)
     {
-        Optional<Level> optionalLevel = LogicalSidedProvider.CLIENTWORLD.get(LogicalSide.SERVER);
-
-        if(optionalLevel.isEmpty()) {
-            return null;
-        }
-
-        MinecraftServer server = optionalLevel.get().getServer();
-
-        if (server == null) {
-            return null;
-        }
-
-        File asDataDir = server.getFile(GalaxyKoisGods.MODID);
-
-        if (!asDataDir.exists()) {
-            if(!asDataDir.mkdirs()) {
-                CommonUtility.LOGGER.error("Failed to create all directories!");
-            }
-        }
-        return asDataDir;
+        return null;
+//        if(level == null) {
+//            CommonUtility.LOGGER.error("getGGDirectory - no level!");
+//            return null;
+//        }
+//
+//        MinecraftServer server = level.getServer();
+//
+//        if (server == null) {
+//            CommonUtility.LOGGER.error("getGGDirectory - no server!");
+//            return null;
+//        }
+//
+//        //File asDataDir = server.getLevel(level.dimension()).noSave    Minecraft.getInstance().getLevelSource().createAccess(); //server.getLevel(level.dimension()).getDa    save(GalaxyKoisGods.MODID);
+////        File asDataDir = server.getLevel(level.dimension()).getDa    save(GalaxyKoisGods.MODID);
+//
+//        if (!asDataDir.exists()) {
+//            if(!asDataDir.mkdirs()) {
+//                CommonUtility.LOGGER.error("getGGDirectory - Failed to create all directories!");
+//            }
+//        }
+//        return asDataDir;
     }
 }

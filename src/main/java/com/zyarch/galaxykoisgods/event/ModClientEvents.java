@@ -2,6 +2,7 @@ package com.zyarch.galaxykoisgods.event;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import com.zyarch.galaxykoisgods.data.DataHandler;
+import com.zyarch.galaxykoisgods.data.FavorSavedData;
 import com.zyarch.galaxykoisgods.data.PlayerData;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -27,6 +28,7 @@ public class ModClientEvents {
         //Server will save references to player data for later
         if(!level.isClientSide) {
             DataHandler.playerDataList.put(player.getUUID(), pd);
+            FavorSavedData.load(event.getEntity().getServer(), player.getUUID().toString());
         }
     }
 
