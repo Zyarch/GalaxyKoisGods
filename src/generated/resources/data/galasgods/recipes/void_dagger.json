@@ -9,8 +9,12 @@
   "i3": {
     "item": "galasgods:silver_dagger"
   },
-  "i4": [],
-  "i5": [],
+  "i4": {
+    "item": "minecraft:cactus"
+  },
+  "i5": {
+    "item": "minecraft:tnt"
+  },
   "result": {
     "count": 1,
     "item": "galasgods:void_dagger"

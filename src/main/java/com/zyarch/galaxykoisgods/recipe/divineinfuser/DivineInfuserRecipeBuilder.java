@@ -118,11 +118,11 @@ public class DivineInfuserRecipeBuilder implements RecipeBuilder {
             if (!this.group.isEmpty()) {
                 json.addProperty("group", this.group);
             }
-            json.add("i1", ingredients[0].toJson());
-            json.add("i2", ingredients[1].toJson());
-            json.add("i3", ingredients[2].toJson());
-            json.add("i4", ingredients[3].toJson());
-            json.add("i5", ingredients[4].toJson());
+            for(int i = 0; i < 5; i++)
+            {
+                if(ingredients[i] != Ingredient.EMPTY)
+                    json.add("i" + (i+1), ingredients[i].toJson());
+            }
 
             JsonObject jsonobject = new JsonObject();
             jsonobject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());

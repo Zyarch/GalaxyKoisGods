@@ -23,7 +23,7 @@ public class DivineInfuserRecipeCategory implements IRecipeCategory<DivineInfuse
     private static final ResourceLocation DIVINE_INFUSER_JEI_TEXTURE = new ResourceLocation(GalaxyKoisGods.MODID, "textures/gui/divine_infuser_screen.png");
 
     public DivineInfuserRecipeCategory(IGuiHelper guiHelper) {
-        this.background = guiHelper.createDrawable(DIVINE_INFUSER_JEI_TEXTURE, 48, 9, 79, 67);
+        this.background = guiHelper.createDrawable(DIVINE_INFUSER_JEI_TEXTURE, 48, 8, 81, 69);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(GalasBlocks.DIVINE_INFUSER.get()));
     }
 
@@ -50,17 +50,17 @@ public class DivineInfuserRecipeCategory implements IRecipeCategory<DivineInfuse
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, DivineInfuserRecipe recipe, IFocusGroup focuses) {
 
-        builder.addSlot(RecipeIngredientRole.INPUT, 50, 39)
+        builder.addSlot(RecipeIngredientRole.INPUT, 2, 31)
                 .addIngredients(recipe.ingredients[0]);
-        builder.addSlot(RecipeIngredientRole.INPUT, 54, 59)
+        builder.addSlot(RecipeIngredientRole.INPUT, 6, 51)
                 .addIngredients(recipe.ingredients[1]);
-        builder.addSlot(RecipeIngredientRole.INPUT, 80, 50)
+        builder.addSlot(RecipeIngredientRole.INPUT, 32, 42)
                 .addIngredients(recipe.ingredients[2]);
-        builder.addSlot(RecipeIngredientRole.INPUT, 110, 39)
+        builder.addSlot(RecipeIngredientRole.INPUT, 62, 31)
                 .addIngredients(recipe.ingredients[3]);
-        builder.addSlot(RecipeIngredientRole.INPUT, 106, 59)
+        builder.addSlot(RecipeIngredientRole.INPUT, 58, 51)
                 .addIngredients(recipe.ingredients[4]);
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 10)
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 32, 2)
                 .addItemStack(recipe.result);
     }
 }

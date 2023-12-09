@@ -10,9 +10,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
+
+import javax.annotation.Nullable;
 
 public class DivineInfuserRecipe implements Recipe<Container> {
     public static final Serializer SERIALIZER = new Serializer();
@@ -20,13 +23,12 @@ public class DivineInfuserRecipe implements Recipe<Container> {
     public final ItemStack result;
     private final ResourceLocation id;
 
-    public DivineInfuserRecipe(ResourceLocation resLoc, Ingredient i1, Ingredient i2, Ingredient i3, Ingredient i4, Ingredient i5, ItemStack itemStack) {
+    public DivineInfuserRecipe(ResourceLocation resLoc, Ingredient[] ingredients, ItemStack itemStack) {
         this.id = resLoc;
-        this.ingredients[0] = i1;
-        this.ingredients[1] = i2;
-        this.ingredients[2] = i3;
-        this.ingredients[3] = i4;
-        this.ingredients[4] = i5;
+        for(int i = 0; i < 5; i++)
+            this.ingredients[i] = Ingredient.of(Items.AIR);
+        for(int i = 0; i < ingredients.length; i++)
+            this.ingredients[i] = ingredients[i];
         this.result = itemStack;
     }
     @Override
@@ -82,24 +84,22 @@ public class DivineInfuserRecipe implements Recipe<Container> {
         }
 
         public DivineInfuserRecipe fromJson(ResourceLocation resLoc, JsonObject json) {
-            Ingredient i1 = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "i1"));
-            Ingredient i2 = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "i2"));
-            Ingredient i3 = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "i3"));
-            Ingredient i4 = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "i4"));
-            Ingredient i5 = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "i5"));
+            Ingredient[] ingredients = new Ingredient[5];
             ItemStack itemstack = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "result"));
-            return new DivineInfuserRecipe(resLoc, i1, i2, i3, i4, i5, itemstack);
+            for(int i=0; i < 5; i++)
+                ingredients[i] = checkIngredient(Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "i" + (i+1))));
+
+            return new DivineInfuserRecipe(resLoc, ingredients, itemstack);
         }
 
         @Override
         public DivineInfuserRecipe fromNetwork(ResourceLocation resLoc, FriendlyByteBuf byteBuf) {
-            Ingredient i1 = Ingredient.fromNetwork(byteBuf);
-            Ingredient i2 = Ingredient.fromNetwork(byteBuf);
-            Ingredient i3 = Ingredient.fromNetwork(byteBuf);
-            Ingredient i4 = Ingredient.fromNetwork(byteBuf);
-            Ingredient i5 = Ingredient.fromNetwork(byteBuf);
+            Ingredient[] ingredients = new Ingredient[5];
+            for(int i=0; i < 5; i++)
+                ingredients[i] = checkIngredient(Ingredient.fromNetwork(byteBuf));
+
             ItemStack itemstack = byteBuf.readItem();
-            return new DivineInfuserRecipe(resLoc, i1, i2, i3, i4, i5, itemstack);
+            return new DivineInfuserRecipe(resLoc, ingredients, itemstack);
         }
 
         @Override
@@ -110,6 +110,14 @@ public class DivineInfuserRecipe implements Recipe<Container> {
             recipe.ingredients[3].toNetwork(byteBuf);
             recipe.ingredients[4].toNetwork(byteBuf);
             byteBuf.writeItem(recipe.result);
+        }
+
+        private Ingredient checkIngredient(Ingredient i)
+        {
+            Ingredient out = Ingredient.of(Items.AIR);
+            if(!i.isEmpty())
+                out = i;
+            return out;
         }
     }
 }

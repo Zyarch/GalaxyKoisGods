@@ -46,6 +46,6 @@ public class JeiCompat implements IModPlugin {
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration)
     {
-        registration.addRecipeClickArea(DivineInfuserScreen.class, 60, 30,20,30, DivineInfuserRecipeCategory.DIVINE_INFUSER_TYPE);
+        //registration.addRecipeClickArea(DivineInfuserScreen.class, 99, 10,20,30, DivineInfuserRecipeCategory.DIVINE_INFUSER_TYPE);
     }
 }
