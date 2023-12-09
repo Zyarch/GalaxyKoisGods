@@ -1,6 +1,7 @@
 package com.zyarch.galaxykoisgods.recipe.divineinfuser;
 
 import com.google.gson.JsonObject;
+import com.zyarch.galaxykoisgods.setup.GalasBlocks;
 import com.zyarch.galaxykoisgods.setup.GalasDivineInfuserRecipes;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.nbt.CompoundTag;
@@ -16,7 +17,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class DivineInfuserRecipe implements Recipe<Container> {
     public static final Serializer SERIALIZER = new Serializer();
-
     public final Ingredient[] ingredients = new Ingredient[5];
     public final ItemStack result;
     private final ResourceLocation id;
@@ -53,7 +53,7 @@ public class DivineInfuserRecipe implements Recipe<Container> {
 
     @NotNull
     public  ItemStack getToastSymbol() {
-        return new ItemStack(Blocks.FLETCHING_TABLE);
+        return new ItemStack(GalasBlocks.DIVINE_INFUSER.get());
     }
 
     public boolean canCraftInDimensions(int p_44528_, int p_44529_) {

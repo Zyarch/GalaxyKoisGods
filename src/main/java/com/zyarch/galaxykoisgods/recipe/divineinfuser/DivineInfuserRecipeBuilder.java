@@ -35,7 +35,8 @@ public class DivineInfuserRecipeBuilder implements RecipeBuilder {
 
     public static DivineInfuserRecipeBuilder build(ItemLike[] itemLikes, ItemLike itemLike, int iCount) {
         int j=0;
-        Ingredient[] ingredients = new Ingredient[5];
+        //fill an ingredient list with empty ingredients
+        Ingredient[] ingredients = new Ingredient[] {Ingredient.EMPTY,Ingredient.EMPTY,Ingredient.EMPTY,Ingredient.EMPTY,Ingredient.EMPTY};
         for(ItemLike i : itemLikes)
         {
             ingredients[j] = Ingredient.of(i);

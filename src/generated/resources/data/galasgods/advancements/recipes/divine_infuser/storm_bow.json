@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "galasgods:storm_caller"
+        "recipe": "galasgods:storm_bow"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "galasgods:storm_caller"
+      "galasgods:storm_bow"
     ]
   },
   "sends_telemetry_event": true

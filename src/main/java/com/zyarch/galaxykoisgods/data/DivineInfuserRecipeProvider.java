@@ -16,7 +16,7 @@ public class DivineInfuserRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer)
     {
-        DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.BOW, GalasItems.THUNDER_STONE.get(), Items.AIR, Items.AIR, Items.AIR}, GalasItems.STORM_CALLER.get(), 1).unlockedByItem(GalasItems.THUNDER_STONE.get()).save(consumer);
-        DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.WITHER_ROSE, Items.DEAD_BUSH, GalasItems.SILVER_DAGGER.get(), Items.AIR, Items.AIR}, GalasItems.VOID_DAGGER.get(), 1).unlockedByItem(GalasItems.SILVER_DAGGER.get()).save(consumer);
+        DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.BOW, GalasItems.THUNDER_STONE.get()}, GalasItems.STORM_BOW.get(), 1).unlockedByItem(GalasItems.THUNDER_STONE.get()).save(consumer);
+        DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.WITHER_ROSE, Items.DEAD_BUSH, GalasItems.SILVER_DAGGER.get()}, GalasItems.VOID_DAGGER.get(), 1).unlockedByItem(GalasItems.SILVER_DAGGER.get()).save(consumer);
     }
 }
