@@ -23,12 +23,10 @@ public class ModClientEvents {
 
         System.out.println("Player joined: " + player.getDisplayName().getString());
 
-        DataHandler.loadPlayerData(player, LogicalSide.SERVER, pd);
-
         //Server will save references to player data for later
         if(!level.isClientSide) {
             DataHandler.playerDataList.put(player.getUUID(), pd);
-            FavorSavedData.load(event.getEntity().getServer(), player.getUUID().toString());
+            DataHandler.favorDataList.put(player.getUUID(), FavorSavedData.load(event.getEntity().getServer(), player.getUUID().toString()));
         }
     }
 

@@ -2,7 +2,6 @@ package com.zyarch.galaxykoisgods.data;
 
 import com.zyarch.galaxykoisgods.gods.GalasGods;
 import com.zyarch.galaxykoisgods.gods.God;
-import com.zyarch.galaxykoisgods.utility.CommonUtility;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
@@ -10,8 +9,6 @@ import net.minecraft.nbt.Tag;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.saveddata.SavedData;
-
-import java.io.File;
 
 public class FavorSavedData extends SavedData {
     private static final String uuidTag = "id";
@@ -39,6 +36,7 @@ public class FavorSavedData extends SavedData {
         FavorSavedData data = create();
         data.puuid = tag.getString(uuidTag);
         data.listTag = tag.getList(favorTag, Tag.TAG_STRING);
+        data.setDirty();
         return data;
     }
 
@@ -49,15 +47,7 @@ public class FavorSavedData extends SavedData {
         return compoundTag;
     }
 
-    @Override
-    public void save(File file) {
-        super.save(file);
-        CommonUtility.LOGGER.debug("FavorSavedData - Save attempted");
-    }
-
-    public static void load(MinecraftServer server, String uuid) {
-        //server.getLevel().
-        server.overworld().getDataStorage().computeIfAbsent(FavorSavedData::load, FavorSavedData::create, uuid + ".GGods");
-        server.overworld().getDataStorage().save();
+    public static FavorSavedData load(MinecraftServer server, String uuid) {
+        return server.overworld().getDataStorage().computeIfAbsent(FavorSavedData::load, FavorSavedData::create, uuid + "_GGods");
     }
 }

@@ -42,5 +42,4 @@ public class PlayerData
     {
         this.playerFavor.put(string, _float);
     }
-
 }
