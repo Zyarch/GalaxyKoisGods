@@ -1,6 +1,5 @@
 package com.zyarch.galaxykoisgods.blocks;
 
-import com.zyarch.galaxykoisgods.screens.menus.AltarMenu;
 import com.zyarch.galaxykoisgods.screens.menus.DivineInfuserMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -48,7 +47,7 @@ public class DivineInfuser extends BaseHorizontalBlock{
         return InteractionResult.SUCCESS;
     }
 
-    public MenuProvider getMenuProvider(BlockState p_52240_, Level p_52241_, BlockPos p_52242_) {
-        return new SimpleMenuProvider((p_52229_, p_52230_, p_52231_) -> new DivineInfuserMenu(p_52229_, p_52230_, ContainerLevelAccess.create(p_52241_, p_52242_)), CONTAINER_NAME);
+    public MenuProvider getMenuProvider(BlockState blockState, Level level, BlockPos blockPos) {
+        return new SimpleMenuProvider((i1, inventory, player) -> new DivineInfuserMenu(i1, inventory, ContainerLevelAccess.create(level, blockPos)), CONTAINER_NAME);
     }
 }
