@@ -37,5 +37,6 @@
   "block.galasgods.divine_infuser": "Divine Infuser",
   "container.galasgods.altar": "Altar",
   "container.galasgods.divine_infuser": "Divine Infuser",
-  "itemGroup.galaxykoisgodstab": "Galaxy Koi's Gods"
+  "itemGroup.galaxykoisgodstab": "Galaxy Koi's Gods",
+  "chat.type.noplayertag": "%s"
 }

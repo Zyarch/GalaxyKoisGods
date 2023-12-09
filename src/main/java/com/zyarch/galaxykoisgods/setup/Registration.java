@@ -1,8 +1,8 @@
 package com.zyarch.galaxykoisgods.setup;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
-import com.zyarch.galaxykoisgods.utility.CommonUtility;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.ChatType;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.inventory.MenuType;
@@ -26,6 +26,7 @@ public class Registration {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GalaxyKoisGods.MODID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, GalaxyKoisGods.MODID);
+    public static final DeferredRegister<ChatType> CHAT_TYPES = DeferredRegister.create(Registries.CHAT_TYPE, GalaxyKoisGods.MODID);
 
     public static void register()
     {
@@ -40,6 +41,7 @@ public class Registration {
         MENUS.register(modEventBus);
         SOUND_EVENTS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+        CHAT_TYPES.register(modEventBus);
 
         GalasBlocks.register();
         GalasConfigs.register();
@@ -49,5 +51,6 @@ public class Registration {
         GalasMenus.register();
         GalasSounds.register();
         GalasTabs.register();
+        GalasChatTypes.register();
     }
 }

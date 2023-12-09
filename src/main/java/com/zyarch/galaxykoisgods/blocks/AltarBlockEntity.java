@@ -6,7 +6,7 @@ import com.zyarch.galaxykoisgods.gods.GalasGods;
 import com.zyarch.galaxykoisgods.gods.God;
 import com.zyarch.galaxykoisgods.screens.menus.AltarMenu;
 import com.zyarch.galaxykoisgods.setup.GalasBlockEntityTypes;
-import com.zyarch.galaxykoisgods.utility.CommonUtility;
+import com.zyarch.galaxykoisgods.setup.GalasChatTypes;
 import com.zyarch.galaxykoisgods.utility.TickableBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -15,14 +15,12 @@ import net.minecraft.network.chat.ChatType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.OutgoingChatMessage;
 import net.minecraft.network.chat.PlayerChatMessage;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -104,7 +102,6 @@ public class AltarBlockEntity extends BaseContainerBlockEntity implements Tickab
 
     @Override
     public void setItem(int index, ItemStack itemStack) {
-        CommonUtility.LOGGER.debug("setItem - [" + index + ", " + itemStack + "]");
         if (index >= 0 && index < this.getContainerSize()) {
             this.items.set(index, itemStack);
         }
@@ -142,7 +139,6 @@ public class AltarBlockEntity extends BaseContainerBlockEntity implements Tickab
 
                 playerData.addFavor(selectedGod.getName(), selectedGod.getValue(item));
 
-
                 String message;
 
                 if (selectedGod.isInOfferList(item)) {
@@ -155,11 +151,10 @@ public class AltarBlockEntity extends BaseContainerBlockEntity implements Tickab
 
                 PlayerChatMessage chatMessage = PlayerChatMessage.unsigned(playerUUID, message);
                 this.offeringPlayer.createCommandSourceStack().sendChatMessage(
-                        new OutgoingChatMessage.Player(chatMessage), false, ChatType.bind(ChatType.CHAT, this.offeringPlayer));
+                        new OutgoingChatMessage.Player(chatMessage), false, ChatType.bind(GalasChatTypes.CONTENT_ONLY_KEY, this.offeringPlayer));
 
                 try {
                     DataHandler.store(playerUUID, new CompoundTag(), playerData);
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

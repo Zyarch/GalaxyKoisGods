@@ -1,6 +1,5 @@
 package com.zyarch.galaxykoisgods.gods;
 
-import com.zyarch.galaxykoisgods.utility.CommonUtility;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -87,11 +86,15 @@ public class God
 
     public String getBadOfferResponse() { return badOfferResponse; }
 
-    public String goodOffer (ItemStack item) { return MessageFormat.format("<{1}> " + goodOfferResponse, item.getDisplayName().getString(), name); }
+    public String goodOffer (ItemStack item) { return MessageFormat.format("<{1}> " + goodOfferResponse, getItemName(item), name); }
 
-    public String badOffer (ItemStack item) { return MessageFormat.format("<{1}> " + badOfferResponse, item.getDisplayName().getString(), name);}
+    public String badOffer (ItemStack item) { return MessageFormat.format("<{1}> " + badOfferResponse, getItemName(item), name);}
 
-    public String neutralOffer (ItemStack item) { return MessageFormat.format("<{1}> " + neutralOfferResponse, item.getDisplayName().getString(), name);}
+    public String neutralOffer (ItemStack item) { return MessageFormat.format("<{1}> " + neutralOfferResponse, getItemName(item), name);}
+
+    private String getItemName(ItemStack itemStack) {
+        return itemStack.getHoverName().getString();
+    }
 
     public God setGodE(GalaGods gEnum) {
         godE = gEnum;

@@ -1,8 +1,6 @@
 package com.zyarch.galaxykoisgods.screens.menus;
 
-import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import com.zyarch.galaxykoisgods.blocks.AltarBlockEntity;
-import com.zyarch.galaxykoisgods.network.packets.FavorUpdatedFromAltarPacket;
 import com.zyarch.galaxykoisgods.setup.GalasBlocks;
 import com.zyarch.galaxykoisgods.setup.GalasMenus;
 import net.minecraft.network.FriendlyByteBuf;
@@ -13,7 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
+import org.jetbrains.annotations.NotNull;
 
 public class AltarMenu extends AbstractContainerMenu {
     protected ContainerLevelAccess context = ContainerLevelAccess.NULL;
@@ -31,13 +29,6 @@ public class AltarMenu extends AbstractContainerMenu {
         this.data = containerData;
         this.player = playerInventory.player;
         this.level = this.player.level();
-
-        int[] uuid = new int[4];
-        uuid[0] = (int)(this.player.getUUID().getMostSignificantBits() & 0xFFFFFFFF_00000000L >> 32);
-        uuid[1] = (int)(this.player.getUUID().getMostSignificantBits() & 0x00000000_FFFFFFFFL);
-        uuid[2] = (int)(this.player.getUUID().getLeastSignificantBits() & 0xFFFFFFFF_00000000L >> 32);
-        uuid[3] = (int)(this.player.getUUID().getMostSignificantBits() & 0x00000000_FFFFFFFFL);
-
 
         this.addSlot(new Slot(container, 0, 115, 32));
 
@@ -63,7 +54,7 @@ public class AltarMenu extends AbstractContainerMenu {
                     return;
                 }
 
-                altarMenu.getContainer().offeringPlayer =  altarMenu.getPlayer();
+                altarMenu.getContainer().offeringPlayer = altarMenu.getPlayer();
             }
 
             @Override
@@ -80,32 +71,32 @@ public class AltarMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public ItemStack quickMoveStack(Player player, int index) {
+    public @NotNull ItemStack quickMoveStack(Player player, int index) {
         ItemStack itemstack = ItemStack.EMPTY;
         Slot slot = this.slots.get(index);
-        if (slot != null && slot.hasItem()) {
-            ItemStack itemstack1 = slot.getItem();
-            itemstack = itemstack1.copy();
+        if (slot.hasItem()) {
+            ItemStack slotItemStack = slot.getItem();
+            itemstack = slotItemStack.copy();
 
             if (index == 0) {
-                if (!this.moveItemStackTo(itemstack1, 0, 36, false)) {
+                if (!this.moveItemStackTo(slotItemStack, 1, 36, true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.moveItemStackTo(itemstack1, 0, 1, false)) {
+            } else if (!this.moveItemStackTo(slotItemStack, 0, 1, true)) {
                 return ItemStack.EMPTY;
             }
 
-            if (itemstack1.isEmpty()) {
-                slot.set(ItemStack.EMPTY);
+            if (slotItemStack.isEmpty()) {
+                slot.setByPlayer(ItemStack.EMPTY);
             } else {
                 slot.setChanged();
             }
 
-            if (itemstack1.getCount() == itemstack.getCount()) {
+            if (slotItemStack.getCount() == itemstack.getCount()) {
                 return ItemStack.EMPTY;
             }
 
-            slot.onTake(player, itemstack1);
+            slot.onTake(player, slotItemStack);
         }
 
         return itemstack;
