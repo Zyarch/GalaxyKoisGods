@@ -1,5 +1,15 @@
-// 1.20	2023-12-09T01:15:39.3887172	Recipes
+// 1.20	2023-12-10T00:59:49.2070104	Recipes
 3b41ffbd89a37d5a2ba1e3364bddaed14cfbb2a6 data/galasgods/advancements/recipes/divine_infuser/storm_bow.json
 683e9f77f7397797420c6ed4bcd070e92b579ac3 data/galasgods/advancements/recipes/divine_infuser/void_dagger.json
+7ca02d3e543e0b87d19c26e994f21d7ee7a57838 data/galasgods/advancements/recipes/misc/ruby.json
+f38239af382e0875414b995a099f6856189e6df9 data/galasgods/advancements/recipes/misc/sapphire.json
+e7dfaa8b740ac5b5773cb8dafa9e2eee31ad0d13 data/galasgods/advancements/recipes/misc/selenium.json
+28c1d744fbd154cd03afcf3f6f3f4be6a0d9c37d data/galasgods/advancements/recipes/misc/silver_ingot.json
+b7c9e1485e95c5b2a707f180de0d43c98b111547 data/galasgods/advancements/recipes/misc/thunder_stone.json
+3964bd020132f7a2f2a1ed3f53d998d3ddad3073 data/galasgods/recipes/ruby.json
+5e6ccd6070ddafbaa5076ba2fa07b1e7e31c9394 data/galasgods/recipes/sapphire.json
+cab17296a26c65544418c70a084c973d17c6c4f6 data/galasgods/recipes/selenium.json
+211db6fcd4d9380102b5fca93abc9ddc92121efd data/galasgods/recipes/silver_ingot.json
 c419f4448691b30cfa72102e7d207e9d8264fe21 data/galasgods/recipes/storm_bow.json
+cc24eef77ef26c7f968a3d6674702cc29d3d3bce data/galasgods/recipes/thunder_stone.json
 c7be07e44afe709b6ac471a6d1187a34b07956ba data/galasgods/recipes/void_dagger.json

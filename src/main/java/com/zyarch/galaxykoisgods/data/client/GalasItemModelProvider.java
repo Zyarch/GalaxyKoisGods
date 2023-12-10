@@ -49,10 +49,12 @@ public class GalasItemModelProvider extends ItemModelProvider {
         withExistingParent("selenium_ore", modLoc("block/selenium_ore"));
         withExistingParent("thunder_stone_ore", modLoc("block/thunder_stone_ore"));
         withExistingParent("ruby_ore", modLoc("block/ruby_ore"));
+        withExistingParent("sapphire_ore", modLoc("block/sapphire_ore"));
         withExistingParent("silver_block", modLoc("block/silver_block"));
         withExistingParent("selenium_block", modLoc("block/selenium_block"));
         withExistingParent("thunder_stone_block", modLoc("block/thunder_stone_block"));
         withExistingParent("ruby_block", modLoc("block/ruby_block"));
+        withExistingParent("sapphire_block", modLoc("block/sapphire_block"));
         withExistingParent("altar", modLoc("block/altar"));
         withExistingParent("divine_infuser", modLoc("block/divine_infuser"));
     }

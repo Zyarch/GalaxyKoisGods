@@ -33,6 +33,8 @@ public class GalasBlockLootTables extends BlockLootSubProvider {
                 block -> createOreDrop(GalasBlocks.SELENIUM_ORE.get(), GalasItems.SELENIUM.get()));
         this.add(GalasBlocks.RUBY_ORE.get(),
                 block -> createOreDrop(GalasBlocks.RUBY_ORE.get(), GalasItems.RUBY.get()));
+        this.add(GalasBlocks.SAPPHIRE_ORE.get(),
+                block -> createOreDrop(GalasBlocks.SAPPHIRE_ORE.get(), GalasItems.RUBY.get()));
         this.add(GalasBlocks.THUNDER_STONE_ORE.get(),
                 block -> createOreDrop(GalasBlocks.THUNDER_STONE_ORE.get(), GalasItems.THUNDER_STONE.get()));
 
@@ -40,6 +42,7 @@ public class GalasBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(GalasBlocks.SILVER_BLOCK.get());
         this.dropSelf(GalasBlocks.SELENIUM_BLOCK.get());
         this.dropSelf(GalasBlocks.RUBY_BLOCK.get());
+        this.dropSelf(GalasBlocks.SAPPHIRE_BLOCK.get());
         this.dropSelf(GalasBlocks.THUNDER_STONE_BLOCK.get());
         this.dropSelf(GalasBlocks.ALTAR.get());
         this.dropSelf(GalasBlocks.DIVINE_INFUSER.get());

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "g": {
+      "item": "galasgods:ruby"
+    }
+  },
+  "result": {
+    "item": "galasgods:ruby_block",
+    "count": 1
+  }
+}

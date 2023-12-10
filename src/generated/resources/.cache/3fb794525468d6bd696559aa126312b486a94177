@@ -1,4 +1,4 @@
-// 1.20	2023-12-07T16:50:22.3159236	Item Models: galasgods
+// 1.20	2023-12-10T00:59:49.2040186	Item Models: galasgods
 2bb4521aff4f9699b08aeda0368a76293121bbbc assets/galasgods/models/item/altar.json
 e6ee5659bb30aa7a446ff155f63e210fd6d9a92f assets/galasgods/models/item/cult_boots.json
 e5dd12cbf718f046c621ae23d8cadd35cb02525b assets/galasgods/models/item/cult_chest.json
@@ -14,6 +14,8 @@ da8deb4e694042bfc0df09d7a1172c14dae44c4d assets/galasgods/models/item/offer_amal
 3fd21c149ff6b68082a92cd7e8cc1371c9fee52b assets/galasgods/models/item/ruby_block.json
 504f042a59fc02a0f508c0270251e1850662d417 assets/galasgods/models/item/ruby_ore.json
 92d060fcdb986c8a30b57a5abc2e75fdf8932a89 assets/galasgods/models/item/sapphire.json
+f1e94280f49743986e62c62a5f373a8e09d7f55e assets/galasgods/models/item/sapphire_block.json
+0648911c2a57157bd8a4c35d7b4b40ce4da856e1 assets/galasgods/models/item/sapphire_ore.json
 c1f5acb2b87d498c2a78ea930291419958409430 assets/galasgods/models/item/selenium.json
 008185d67759fd6000e5d0735e49ac5df5a09dcb assets/galasgods/models/item/selenium_block.json
 31f5d9356c0fe28214cdef48e03907660951dfc2 assets/galasgods/models/item/selenium_ore.json
