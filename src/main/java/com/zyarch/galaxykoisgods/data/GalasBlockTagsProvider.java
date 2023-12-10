@@ -2,12 +2,9 @@ package com.zyarch.galaxykoisgods.data;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import com.zyarch.galaxykoisgods.setup.GalasBlocks;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;

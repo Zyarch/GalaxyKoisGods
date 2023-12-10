@@ -15,8 +15,6 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
-
 public class DivineInfuserRecipe implements Recipe<Container> {
     public static final Serializer SERIALIZER = new Serializer();
     public final Ingredient[] ingredients = new Ingredient[5];

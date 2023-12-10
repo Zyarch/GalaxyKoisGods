@@ -1,6 +1,5 @@
 package com.zyarch.galaxykoisgods.item;
 
-import com.zyarch.galaxykoisgods.GalaxyKoisGods;
 import com.zyarch.galaxykoisgods.setup.GalasItems;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;

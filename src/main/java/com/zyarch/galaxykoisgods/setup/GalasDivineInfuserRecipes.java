@@ -8,8 +8,6 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 
-import java.util.Map;
-
 public class GalasDivineInfuserRecipes {
     public static final RecipeType<DivineInfuserRecipe> DIVINE_INFUSER_RECIPE = new DivineInfuserRecipeType();
 

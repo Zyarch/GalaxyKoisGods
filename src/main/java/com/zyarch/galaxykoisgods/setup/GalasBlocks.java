@@ -6,7 +6,6 @@ import com.zyarch.galaxykoisgods.utility.CommonUtility;
 import com.zyarch.galaxykoisgods.blocks.DivineInfuser;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
