@@ -1,0 +1,13 @@
+{
+  "type": "galasgods:divine_infuser",
+  "i1": {
+    "item": "minecraft:cactus"
+  },
+  "i2": {
+    "item": "minecraft:cactus"
+  },
+  "result": {
+    "count": 1,
+    "item": "galasgods:storm_caller"
+  }
+}

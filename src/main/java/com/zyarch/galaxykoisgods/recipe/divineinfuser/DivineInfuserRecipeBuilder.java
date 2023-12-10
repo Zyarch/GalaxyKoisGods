@@ -77,16 +77,16 @@ public class DivineInfuserRecipeBuilder implements RecipeBuilder {
         return this.result;
     }
 
-    public void save(Consumer<FinishedRecipe> p_126205_, ResourceLocation p_126206_) {
-        this.ensureValid(p_126206_);
-        this.advancement.parent(ROOT_RECIPE_ADVANCEMENT).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(p_126206_)).rewards(AdvancementRewards.Builder.recipe(p_126206_)).requirements(RequirementsStrategy.OR);
-        p_126205_.accept(new DivineInfuserRecipeBuilder.Result(p_126206_,
+    public void save(Consumer<FinishedRecipe> recipe, ResourceLocation resLoc) {
+        this.ensureValid(resLoc);
+        this.advancement.parent(ROOT_RECIPE_ADVANCEMENT).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(resLoc)).rewards(AdvancementRewards.Builder.recipe(resLoc)).requirements(RequirementsStrategy.OR);
+        recipe.accept(new DivineInfuserRecipeBuilder.Result(resLoc,
                 this.result,
                 this.count,
                 this.group == null ? "" : this.group,
                 this.ingredients,
                 this.advancement,
-                new ResourceLocation(p_126206_.getNamespace(), "recipes/" + this.category + "/" + p_126206_.getPath())));
+                new ResourceLocation(resLoc.getNamespace(), "recipes/" + this.category + "/" + resLoc.getPath())));
     }
 
     private void ensureValid(ResourceLocation p_126208_) {

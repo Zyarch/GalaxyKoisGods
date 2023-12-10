@@ -21,6 +21,10 @@ public class DivineInfuserRecipeProvider extends RecipeProvider {
     {
         DivineInfuserRecipeBuilder.build(new ItemLike[] {GalasItems.THUNDER_STONE.get(), GalasItems.THUNDER_STONE.get(), Items.BOW, GalasItems.THUNDER_STONE.get(), GalasItems.THUNDER_STONE.get()}, GalasItems.STORM_BOW.get(), 1).unlockedByItem(GalasItems.THUNDER_STONE.get()).save(consumer);
         DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.WITHER_ROSE, Items.DEAD_BUSH, GalasItems.SILVER_DAGGER.get(), Items.CACTUS, Items.TNT}, GalasItems.VOID_DAGGER.get(), 1).unlockedByItem(GalasItems.SILVER_DAGGER.get()).save(consumer);
+        DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.CACTUS}, GalasItems.HEALING_TOKEN.get(), 1).unlockedByItem(Items.CACTUS).save(consumer);
+        DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.CACTUS, Items.CACTUS}, GalasItems.STORM_CALLER.get(), 1).unlockedByItem(Items.CACTUS).save(consumer);
+        DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.CACTUS, Items.CACTUS, Items.CACTUS}, GalasItems.LUCKY_COIN.get(), 1).unlockedByItem(Items.CACTUS).save(consumer);
+        DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.CACTUS, Items.CACTUS, Items.CACTUS, Items.CACTUS}, GalasItems.TELEPORTING_ORB.get(), 1).unlockedByItem(Items.CACTUS).save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 9).requires(GalasBlocks.getBlockAsItem(GalasBlocks.SILVER_BLOCK)).unlockedBy("has_silver", has(GalasItems.SILVER_INGOT.get())).save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, GalasItems.RUBY.get(), 9).requires(GalasBlocks.getBlockAsItem(GalasBlocks.RUBY_BLOCK)).unlockedBy("has_ruby", has(GalasItems.RUBY.get())).save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, GalasItems.THUNDER_STONE.get(), 9).requires(GalasBlocks.getBlockAsItem(GalasBlocks.THUNDER_STONE_BLOCK)).unlockedBy("has_thunder_stone", has(GalasItems.THUNDER_STONE.get())).save(consumer);

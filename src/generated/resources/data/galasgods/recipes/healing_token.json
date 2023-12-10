@@ -1,0 +1,10 @@
+{
+  "type": "galasgods:divine_infuser",
+  "i1": {
+    "item": "minecraft:cactus"
+  },
+  "result": {
+    "count": 1,
+    "item": "galasgods:healing_token"
+  }
+}
