@@ -35,5 +35,7 @@ public final class DataGenerators {
         GalasBlockTagsProvider blockTagProvider = new GalasBlockTagsProvider(output, lookupProvider, existingFileHelper);
         gen.addProvider(run, blockTagProvider);
         gen.addProvider(run, new GalasItemTagsProvider(output, lookupProvider, blockTagProvider.contentsGetter(), existingFileHelper));
+
+        gen.addProvider(event.includeServer(), new GalasWorldGenProvider(output, lookupProvider));
     }
 }
