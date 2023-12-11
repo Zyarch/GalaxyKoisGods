@@ -64,7 +64,7 @@ public class CultistRobeModel<T extends LivingEntity> extends HumanoidModel<T> {
 
         PartDefinition BackFlap_r1 = body.addOrReplaceChild("BackFlap_r1", CubeListBuilder.create(), PartPose.offset(0.0F, 11.0F, 2.0F));
 
-        BackFlap_r1.addOrReplaceChild("cube_r9", CubeListBuilder.create().texOffs(0, 32).addBox(-3.0F, 1.0F, -1.0F, 6.0F, 9.0F, 1.0F, new CubeDeformation(scale + 0.25F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.3054F, 0.0F, 0.0F));
+        BackFlap_r1.addOrReplaceChild("cube_r9", CubeListBuilder.create().texOffs(0, 32).addBox(-3.0F, 1.0F, 1.0F, 6.0F, 9.0F, 1.0F, new CubeDeformation(scale + 0.25F)), PartPose.offsetAndRotation(0.0F, 0.0F, -2.0F, 0.3054F, 0.0F, 0.0F));
 
         partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create().texOffs(48, 16).addBox(-2.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(scale)), PartPose.offset(-6.0F, 2.0F, 0.0F));
 
