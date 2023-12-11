@@ -14,6 +14,9 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.function.Consumer;
 
 public class DivineInfuserRecipeProvider extends RecipeProvider {
+    private static Ingredient SILVER_SMELTABLES =
+            Ingredient.of(GalasBlocks.SILVER_ORE.get().asItem(), GalasBlocks.DEEPSLATE_SILVER_ORE.get().asItem(), GalasItems.RAW_SILVER.get().asItem());
+
     public DivineInfuserRecipeProvider(PackOutput packOutput) { super(packOutput); }
 
     @Override
@@ -65,11 +68,11 @@ public class DivineInfuserRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_silver", has(GalasItems.SILVER_INGOT.get()))
                 .save(consumer);
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(GalasBlocks.SILVER_ORE.get().asItem(), GalasItems.RAW_SILVER.get().asItem()), RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 0.1f, 200)
+        SimpleCookingRecipeBuilder.smelting(SILVER_SMELTABLES, RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 0.1f, 200)
                 .unlockedBy("has_silver_ore", has(GalasBlocks.SILVER_ORE.get()))
                 .unlockedBy("has_raw_silver", has(GalasItems.RAW_SILVER.get()))
                 .save(consumer, getItemName(GalasItems.SILVER_INGOT.get()) + "_from_smelting");
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(GalasBlocks.SILVER_ORE.get().asItem(), GalasItems.RAW_SILVER.get().asItem()), RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 0.1f, 100)
+        SimpleCookingRecipeBuilder.blasting(SILVER_SMELTABLES, RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 0.1f, 100)
                 .unlockedBy("has_silver_ore", has(GalasBlocks.SILVER_ORE.get()))
                 .unlockedBy("has_raw_silver", has(GalasItems.RAW_SILVER.get()))
                 .save(consumer, getItemName(GalasItems.SILVER_INGOT.get()) + "_from_blasting");

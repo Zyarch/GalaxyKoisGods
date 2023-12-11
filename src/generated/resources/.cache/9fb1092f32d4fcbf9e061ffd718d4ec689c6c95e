@@ -1,4 +1,4 @@
-// 1.20	2023-12-11T00:40:35.4615135	Recipes
+// 1.20	2023-12-11T00:43:40.4303072	Recipes
 5f2c214c4704ad55ec98ce8ff6e71803cedcfcfe data/galasgods/advancements/recipes/divine_infuser/healing_token.json
 c712aae63e6be3ba5289d2f8001c964a085050c9 data/galasgods/advancements/recipes/divine_infuser/lucky_coin.json
 3b41ffbd89a37d5a2ba1e3364bddaed14cfbb2a6 data/galasgods/advancements/recipes/divine_infuser/storm_bow.json
@@ -41,5 +41,5 @@ cc24eef77ef26c7f968a3d6674702cc29d3d3bce data/galasgods/recipes/thunder_stone.js
 c7be07e44afe709b6ac471a6d1187a34b07956ba data/galasgods/recipes/void_dagger.json
 723d5a9993b93ac1b81df494775d3402a1195c11 data/minecraft/advancements/recipes/misc/silver_ingot_from_blasting.json
 2e57961e470317b1c272d31f1c7aae895ac4afb5 data/minecraft/advancements/recipes/misc/silver_ingot_from_smelting.json
-e0ada667356f34f08412da285bbf2d6182072229 data/minecraft/recipes/silver_ingot_from_blasting.json
-0eaf461ddb7a67482e130760355978352a14ed97 data/minecraft/recipes/silver_ingot_from_smelting.json
+7a56eb3d4130a27d757d82ccf24a852f41da72cd data/minecraft/recipes/silver_ingot_from_blasting.json
+ed47b1ee6aedd57334d35eaf1a547e231473664e data/minecraft/recipes/silver_ingot_from_smelting.json
