@@ -1,9 +1,9 @@
 package com.zyarch.galaxykoisgods.gods;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,18 +46,11 @@ public class God
         return this;
     }
 
-    public God setGoodOfferResponse(String goodOfferResponse) {
-        this.goodOfferResponse = goodOfferResponse;
-        return this;
-    }
-
-    public God setNeutralOfferResponse(String neutralOfferResponse) {
-        this.neutralOfferResponse = neutralOfferResponse;
-        return this;
-    }
-
-    public God setBadOfferResponse(String badOfferResponse) {
-        this.badOfferResponse = badOfferResponse;
+    public God setOfferResponses(String name) {
+        String keyPart1 = "god." + name + ".";
+        this.goodOfferResponse = keyPart1 + "good_response";
+        this.neutralOfferResponse = keyPart1 + "neutral_response";
+        this.badOfferResponse = keyPart1 + "bad_response";
         return this;
     }
 
@@ -80,17 +73,20 @@ public class God
 
     public String getName() { return name; }
 
-    public String getGoodOfferResponse() { return goodOfferResponse; }
+    public Component goodOffer (ItemStack item) {
+        return Component.literal("<" + name + "> ").append(
+                        Component.translatable(goodOfferResponse, getItemName(item)));
+    }
 
-    public String getNeutralOfferResponse() { return neutralOfferResponse; }
+    public Component badOffer (ItemStack item) {
+        return Component.literal("<" + name + "> ").append(
+                Component.translatable(badOfferResponse, getItemName(item)));
+    }
 
-    public String getBadOfferResponse() { return badOfferResponse; }
-
-    public String goodOffer (ItemStack item) { return MessageFormat.format("<{1}> " + goodOfferResponse, getItemName(item), name); }
-
-    public String badOffer (ItemStack item) { return MessageFormat.format("<{1}> " + badOfferResponse, getItemName(item), name);}
-
-    public String neutralOffer (ItemStack item) { return MessageFormat.format("<{1}> " + neutralOfferResponse, getItemName(item), name);}
+    public Component neutralOffer (ItemStack item) {
+        return Component.literal("<" + name + "> ").append(
+                Component.translatable(neutralOfferResponse, getItemName(item)));
+    }
 
     private String getItemName(ItemStack itemStack) {
         return itemStack.getHoverName().getString();

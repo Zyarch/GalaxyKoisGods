@@ -18,9 +18,7 @@ public class GalasGods {
                     Items.EMERALD_BLOCK,
                     Items.EMERALD_ORE)
             .setBadItemList(Items.WITHER_ROSE)
-            .setGoodOfferResponse("{0} is lovely!")
-            .setNeutralOfferResponse("I guess {0} is acceptable.")
-            .setBadOfferResponse("How could you! I hate {0}!")
+            .setOfferResponses("amara")
             .setGodE(GalaGods.Amara);
 
     public static God KelDerash = new God("Kel-derash")
@@ -57,9 +55,7 @@ public class GalasGods {
                     Items.OXEYE_DAISY,
                     Items.LILAC,
                     Items.PEONY)
-            .setGoodOfferResponse("Hmmmm... this '{0}' is acceptable.")
-            .setNeutralOfferResponse("I care not for {0}.")
-            .setBadOfferResponse("...... {0}. Unacceptable.")
+            .setOfferResponses("kel_derash")
             .setGodE(GalaGods.KelDerash);
 
     public static God Lithaga = new God("Lithaga")
@@ -78,9 +74,7 @@ public class GalasGods {
                     Items.ICE,
                     Items.BLUE_ICE,
                     Items.PACKED_ICE)
-            .setGoodOfferResponse("{0}. This pleases me.")
-            .setNeutralOfferResponse("I suppose you won't mind if I burn {0}?")
-            .setBadOfferResponse("{0}. Mistake.")
+            .setOfferResponses("lithaga")
             .setGodE(GalaGods.Lithaga);
 
     public static God Ygthravil = new God("Ygthravil")
@@ -100,9 +94,7 @@ public class GalasGods {
                     Items.DAMAGED_ANVIL,
                     Items.PISTON,
                     Items.STICKY_PISTON)
-            .setGoodOfferResponse("{0}. A worthy offering.")
-            .setNeutralOfferResponse("{0}? I suppose I could use it....")
-            .setBadOfferResponse("{0}. You disappoint me.")
+            .setOfferResponses("ygthravil")
             .setGodE(GalaGods.Ygthravil);
     //</editor-fold>
 
@@ -129,9 +121,7 @@ public class GalasGods {
                     Items.SPRUCE_TRAPDOOR,
                     Items.WARPED_TRAPDOOR)
             .setBadItemList(Items.NETHERRACK, Items.EGG)
-            .setGoodOfferResponse("A {0}? I mean, I guess I'll take it....")
-            .setNeutralOfferResponse("A {0}? Meh. I have many.")
-            .setBadOfferResponse("A {0}!? Ye dare disrespect Ygthravil's daughter?")
+            .setOfferResponses("lovahn")
             .setGodE(GalaGods.Lovahn);
 
     public static God Eldus = new God("Eldus")
@@ -153,9 +143,7 @@ public class GalasGods {
                     Items.JUNGLE_BOAT,
                     Items.SPRUCE_BOAT)
             .setBadItemList(Items.LAVA_BUCKET)
-            .setGoodOfferResponse("{0}! Wonderful!")
-            .setNeutralOfferResponse("{0}. A trinket of little worth.")
-            .setBadOfferResponse("A {0}! Awful.")
+            .setOfferResponses("eldus")
             .setGodE(GalaGods.Eldus);
 
     public static God Tyrin = new God("Tyrin")
@@ -166,9 +154,7 @@ public class GalasGods {
                     Items.CRACKED_STONE_BRICKS,
                     Items.TRIDENT)
             .setBadItemList(Items.SPONGE, Items.WET_SPONGE)
-            .setGoodOfferResponse("Ah, perfect! A {0}! My thanks.")
-            .setNeutralOfferResponse("{0}. Of little value, but of value all the same.")
-            .setBadOfferResponse("I have no use for {0}! Begone!")
+            .setOfferResponses("tyrin")
             .setGodE(GalaGods.Tyrin);
 
     public static God Xyrthas = new God("Xyarthas")
@@ -185,9 +171,7 @@ public class GalasGods {
                     Items.FLINT_AND_STEEL,
                     Items.STONE_BRICKS)
             .setBadItemList(Items.TNT, Items.SAND)
-            .setGoodOfferResponse("{0}? A fine addition to my collection!")
-            .setNeutralOfferResponse("{0}? Just throw it on the pile, I guess.")
-            .setBadOfferResponse("{0}! Terrible. Leave me!")
+            .setOfferResponses("xyarthas")
             .setGodE(GalaGods.Xyrthas);
 
     public static God Reptak = new God("Reptak")
@@ -204,9 +188,7 @@ public class GalasGods {
                     Items.ICE,
                     Items.PACKED_ICE,
                     Items.BLUE_ICE)
-            .setGoodOfferResponse("Good. {0}. The flames accept your offering.")
-            .setNeutralOfferResponse("{0}.... as long as it burns.")
-            .setBadOfferResponse("Gah! {0}! Trying to douse the flames?")
+            .setOfferResponses("reptak")
             .setGodE(GalaGods.Reptak);
 
     public static God Jaspren = new God("Jaspren")
@@ -232,9 +214,7 @@ public class GalasGods {
                     Items.FLINT_AND_STEEL,
                     Items.GUNPOWDER,
                     Items.MILK_BUCKET)
-            .setGoodOfferResponse("Haha! Thanks for the {0}!")
-            .setNeutralOfferResponse("{0}? Maybe something shiny or tasty next time?")
-            .setBadOfferResponse("How dare you! Giving me {0} is just rude!")
+            .setOfferResponses("jaspren")
             .setGodE(GalaGods.Jaspren);
     //</editor-fold>
 

@@ -14,7 +14,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.ChatType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.OutgoingChatMessage;
-import net.minecraft.network.chat.PlayerChatMessage;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
@@ -139,7 +138,7 @@ public class AltarBlockEntity extends BaseContainerBlockEntity implements Tickab
 
                 playerData.addFavor(selectedGod.getName(), selectedGod.getValue(item));
 
-                String message;
+                Component message;
 
                 if (selectedGod.isInOfferList(item)) {
                     message = selectedGod.goodOffer(item);
@@ -149,9 +148,8 @@ public class AltarBlockEntity extends BaseContainerBlockEntity implements Tickab
                     message = selectedGod.neutralOffer(item);
                 }
 
-                PlayerChatMessage chatMessage = PlayerChatMessage.unsigned(playerUUID, message);
                 this.offeringPlayer.createCommandSourceStack().sendChatMessage(
-                        new OutgoingChatMessage.Player(chatMessage), false, ChatType.bind(GalasChatTypes.CONTENT_ONLY_KEY, this.offeringPlayer));
+                        new OutgoingChatMessage.Disguised(message), false, ChatType.bind(GalasChatTypes.CONTENT_ONLY_KEY, this.offeringPlayer));
 
                 try {
                     DataHandler.favorDataList.get(playerUUID).setPlayerData(this.offeringPlayer, playerData);
