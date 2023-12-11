@@ -1,24 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_silver": {
+    "has_selenium_ore": {
       "conditions": {
         "items": [
           {
             "items": [
-              "galasgods:raw_silver"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_silver_ore": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "galasgods:silver_ore"
+              "galasgods:selenium_ore"
             ]
           }
         ]
@@ -27,21 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:silver_ingot_from_blasting"
+        "recipe": "minecraft:selenium_from_smelting_selenium_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_silver_ore",
-      "has_raw_silver",
+      "has_selenium_ore",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:silver_ingot_from_blasting"
+      "minecraft:selenium_from_smelting_selenium_ore"
     ]
   },
   "sends_telemetry_event": false

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "thunder_stone",
+  "ingredient": {
+    "item": "galasgods:thunder_stone_ore"
+  },
+  "result": "galasgods:thunder_stone"
+}

@@ -1,21 +1,28 @@
 package com.zyarch.galaxykoisgods.data;
 
+import com.google.common.collect.ImmutableList;
 import com.zyarch.galaxykoisgods.recipe.divineinfuser.DivineInfuserRecipeBuilder;
 import com.zyarch.galaxykoisgods.setup.GalasBlocks;
 import com.zyarch.galaxykoisgods.setup.GalasItems;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.function.Consumer;
 
 public class DivineInfuserRecipeProvider extends RecipeProvider {
-    private static Ingredient SILVER_SMELTABLES =
-            Ingredient.of(GalasBlocks.SILVER_ORE.get().asItem(), GalasBlocks.DEEPSLATE_SILVER_ORE.get().asItem(), GalasItems.RAW_SILVER.get().asItem());
+    private static final ImmutableList<ItemLike> SILVER_SMELTABLES =
+            ImmutableList.of(GalasBlocks.SILVER_ORE.get().asItem(), GalasBlocks.DEEPSLATE_SILVER_ORE.get().asItem(), GalasItems.RAW_SILVER.get().asItem());
+    private static final ImmutableList<ItemLike> RUBY_SMELTABLES =
+            ImmutableList.of(GalasBlocks.RUBY_ORE.get().asItem());
+    private static final ImmutableList<ItemLike> SAPPHIRE_SMELTABLES =
+            ImmutableList.of(GalasBlocks.SAPPHIRE_ORE.get().asItem());
+    private static final ImmutableList<ItemLike> SELENIUM_SMELTABLES =
+            ImmutableList.of(GalasBlocks.SELENIUM_ORE.get().asItem());
+    private static final ImmutableList<ItemLike> THUNDER_STONE_SMELTABLES =
+            ImmutableList.of(GalasBlocks.THUNDER_STONE_ORE.get().asItem());
 
     public DivineInfuserRecipeProvider(PackOutput packOutput) { super(packOutput); }
 
@@ -68,13 +75,16 @@ public class DivineInfuserRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_silver", has(GalasItems.SILVER_INGOT.get()))
                 .save(consumer);
 
-        SimpleCookingRecipeBuilder.smelting(SILVER_SMELTABLES, RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 0.1f, 200)
-                .unlockedBy("has_silver_ore", has(GalasBlocks.SILVER_ORE.get()))
-                .unlockedBy("has_raw_silver", has(GalasItems.RAW_SILVER.get()))
-                .save(consumer, getItemName(GalasItems.SILVER_INGOT.get()) + "_from_smelting");
-        SimpleCookingRecipeBuilder.blasting(SILVER_SMELTABLES, RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 0.1f, 100)
-                .unlockedBy("has_silver_ore", has(GalasBlocks.SILVER_ORE.get()))
-                .unlockedBy("has_raw_silver", has(GalasItems.RAW_SILVER.get()))
-                .save(consumer, getItemName(GalasItems.SILVER_INGOT.get()) + "_from_blasting");
+        oreSmelting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 0.1f, 200, "silver");
+        oreSmelting(consumer, RUBY_SMELTABLES, RecipeCategory.MISC, GalasItems.RUBY.get(), 0.25f, 200, "ruby");
+        oreSmelting(consumer, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, GalasItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
+        oreSmelting(consumer, SELENIUM_SMELTABLES, RecipeCategory.MISC, GalasItems.SELENIUM.get(), 0.25f, 200, "selenium");
+        oreSmelting(consumer, THUNDER_STONE_SMELTABLES, RecipeCategory.MISC, GalasItems.THUNDER_STONE.get(), 0.25f, 200, "thunder_stone");
+
+        oreBlasting(consumer, SILVER_SMELTABLES, RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 0.1f, 100, "silver");
+        oreBlasting(consumer, RUBY_SMELTABLES, RecipeCategory.MISC, GalasItems.RUBY.get(), 0.25f, 100, "ruby");
+        oreBlasting(consumer, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, GalasItems.SAPPHIRE.get(), 0.25f, 100, "sapphire");
+        oreBlasting(consumer, SELENIUM_SMELTABLES, RecipeCategory.MISC, GalasItems.SELENIUM.get(), 0.25f, 100, "selenium");
+        oreBlasting(consumer, THUNDER_STONE_SMELTABLES, RecipeCategory.MISC, GalasItems.THUNDER_STONE.get(), 0.25f, 100, "thunder_stone");
     }
 }
