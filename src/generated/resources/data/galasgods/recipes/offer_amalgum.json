@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "galasgods:selenium"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "galasgods:thunder_stone"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "item": "galasgods:offer_amalgum"
+  }
+}

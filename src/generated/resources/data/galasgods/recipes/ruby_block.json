@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "galasgods:ruby"
+    },
+    {
+      "item": "galasgods:ruby"
+    },
+    {
+      "item": "galasgods:ruby"
+    },
+    {
+      "item": "galasgods:ruby"
+    },
+    {
+      "item": "galasgods:ruby"
+    },
+    {
+      "item": "galasgods:ruby"
+    },
+    {
+      "item": "galasgods:ruby"
+    },
+    {
+      "item": "galasgods:ruby"
+    },
+    {
+      "item": "galasgods:ruby"
+    }
+  ],
+  "result": {
+    "item": "galasgods:ruby_block"
+  }
+}

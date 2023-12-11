@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:smooth_stone"
+    },
+    "_": {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  },
+  "pattern": [
+    "_ _",
+    " S ",
+    "___"
+  ],
+  "result": {
+    "item": "galasgods:altar"
+  },
+  "show_notification": true
+}

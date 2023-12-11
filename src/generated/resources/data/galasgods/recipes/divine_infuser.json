@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    },
+    "q": {
+      "item": "minecraft:smooth_quartz"
+    },
+    "s": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "gdg",
+    "qqq",
+    "s s"
+  ],
+  "result": {
+    "item": "galasgods:divine_infuser"
+  },
+  "show_notification": true
+}

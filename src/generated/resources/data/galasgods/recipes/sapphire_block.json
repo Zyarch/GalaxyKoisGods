@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "galasgods:sapphire"
+    },
+    {
+      "item": "galasgods:sapphire"
+    },
+    {
+      "item": "galasgods:sapphire"
+    },
+    {
+      "item": "galasgods:sapphire"
+    },
+    {
+      "item": "galasgods:sapphire"
+    },
+    {
+      "item": "galasgods:sapphire"
+    },
+    {
+      "item": "galasgods:sapphire"
+    },
+    {
+      "item": "galasgods:sapphire"
+    },
+    {
+      "item": "galasgods:sapphire"
+    }
+  ],
+  "result": {
+    "item": "galasgods:sapphire_block"
+  }
+}

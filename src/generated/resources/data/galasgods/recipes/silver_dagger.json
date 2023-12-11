@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "galasgods:silver_ingot"
+    }
+  },
+  "pattern": [
+    "s",
+    "s",
+    "/"
+  ],
+  "result": {
+    "item": "galasgods:silver_dagger"
+  },
+  "show_notification": true
+}

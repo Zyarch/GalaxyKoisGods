@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "galasgods:selenium"
+    },
+    {
+      "item": "galasgods:selenium"
+    },
+    {
+      "item": "galasgods:selenium"
+    },
+    {
+      "item": "galasgods:selenium"
+    },
+    {
+      "item": "galasgods:selenium"
+    },
+    {
+      "item": "galasgods:selenium"
+    },
+    {
+      "item": "galasgods:selenium"
+    },
+    {
+      "item": "galasgods:selenium"
+    },
+    {
+      "item": "galasgods:selenium"
+    }
+  ],
+  "result": {
+    "item": "galasgods:selenium_block"
+  }
+}
