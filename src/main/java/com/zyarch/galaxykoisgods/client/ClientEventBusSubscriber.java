@@ -9,8 +9,11 @@ import com.zyarch.galaxykoisgods.setup.GalasEntityTypes;
 import com.zyarch.galaxykoisgods.setup.GalasItems;
 import com.zyarch.galaxykoisgods.setup.GalasMenus;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.model.geom.EntityModelSet;
+import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -57,5 +60,18 @@ public class ClientEventBusSubscriber
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(CultistRobeModel.LAYER_LOCATION, CultistRobeModel::createBodyLayer);
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.AddLayers event) {
+        EntityModelSet set = event.getEntityModels();
+
+        //To Player
+        LivingEntityRenderer renderer = event.getRenderer(EntityType.PLAYER);
+        if (renderer != null) renderer.addLayer(new CultistRobeLayer<>(renderer, set));
+        renderer = event.getSkin("default");
+        if (renderer != null) renderer.addLayer(new CultistRobeLayer<>(renderer, set));
+        renderer = event.getSkin("slim");
+        if (renderer != null) renderer.addLayer(new CultistRobeLayer<>(renderer, set));
     }
 }
