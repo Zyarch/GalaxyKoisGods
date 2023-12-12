@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "galasgods:sapphire_ore"
+              "name": "galasgods:deepslate_thunder_stone_ore"
             },
             {
               "type": "minecraft:item",
@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "galasgods:sapphire"
+              "name": "galasgods:thunder_stone"
             }
           ]
         }
@@ -46,5 +46,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "galasgods:blocks/sapphire_ore"
+  "random_sequence": "galasgods:blocks/deepslate_thunder_stone_ore"
 }

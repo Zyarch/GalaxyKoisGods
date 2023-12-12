@@ -1,5 +1,9 @@
 {
   "values": [
-    "galasgods:deepslate_silver_ore"
+    "galasgods:deepslate_silver_ore",
+    "galasgods:deepslate_selenium_ore",
+    "galasgods:deepslate_ruby_ore",
+    "galasgods:deepslate_sapphire_ore",
+    "galasgods:deepslate_thunder_stone_ore"
   ]
 }
