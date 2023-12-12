@@ -14,15 +14,15 @@ import java.util.function.Consumer;
 
 public class DivineInfuserRecipeProvider extends RecipeProvider {
     private static final ImmutableList<ItemLike> SILVER_SMELTABLES =
-            ImmutableList.of(GalasBlocks.SILVER_ORE.get().asItem(), GalasBlocks.DEEPSLATE_SILVER_ORE.get().asItem(), GalasItems.RAW_SILVER.get().asItem());
+            ImmutableList.of(GalasBlocks.SILVER_ORE.get(), GalasBlocks.DEEPSLATE_SILVER_ORE.get(), GalasItems.RAW_SILVER.get());
     private static final ImmutableList<ItemLike> RUBY_SMELTABLES =
-            ImmutableList.of(GalasBlocks.RUBY_ORE.get().asItem());
+            ImmutableList.of(GalasBlocks.RUBY_ORE.get(), GalasBlocks.DEEPSLATE_RUBY_ORE.get());
     private static final ImmutableList<ItemLike> SAPPHIRE_SMELTABLES =
-            ImmutableList.of(GalasBlocks.SAPPHIRE_ORE.get().asItem());
+            ImmutableList.of(GalasBlocks.SAPPHIRE_ORE.get(), GalasBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
     private static final ImmutableList<ItemLike> SELENIUM_SMELTABLES =
-            ImmutableList.of(GalasBlocks.SELENIUM_ORE.get().asItem());
+            ImmutableList.of(GalasBlocks.SELENIUM_ORE.get(), GalasBlocks.DEEPSLATE_SELENIUM_ORE.get());
     private static final ImmutableList<ItemLike> THUNDER_STONE_SMELTABLES =
-            ImmutableList.of(GalasBlocks.THUNDER_STONE_ORE.get().asItem());
+            ImmutableList.of(GalasBlocks.THUNDER_STONE_ORE.get(), GalasBlocks.DEEPSLATE_THUNDER_STONE_ORE.get());
 
     public DivineInfuserRecipeProvider(PackOutput packOutput) { super(packOutput); }
 

@@ -1,10 +1,14 @@
-// 1.20	2023-12-10T00:59:49.2040186	Item Models: galasgods
+// 1.20	2023-12-11T23:04:53.3190207	Item Models: galasgods
 2bb4521aff4f9699b08aeda0368a76293121bbbc assets/galasgods/models/item/altar.json
 e6ee5659bb30aa7a446ff155f63e210fd6d9a92f assets/galasgods/models/item/cult_boots.json
 e5dd12cbf718f046c621ae23d8cadd35cb02525b assets/galasgods/models/item/cult_chest.json
 d078854c8486005f95fc3acfc8296bf4fa7d2a33 assets/galasgods/models/item/cult_hood.json
 21fa455cfaf56ed0ea3764f4426219dae13250ac assets/galasgods/models/item/cult_leggings.json
+0cc3dadc864cd5c459ab4c18b0f9271357210348 assets/galasgods/models/item/deepslate_ruby_ore.json
+90ecd411da3d780f35adc203ee6e115f635d1c65 assets/galasgods/models/item/deepslate_sapphire_ore.json
+9636c09e27b490402d66e03cff331e1720b5a8f7 assets/galasgods/models/item/deepslate_selenium_ore.json
 d643464d5c792affd8fa7d62c575d74300c07b04 assets/galasgods/models/item/deepslate_silver_ore.json
+48f3ef5bf472b7693849cc3abaa714136d944339 assets/galasgods/models/item/deepslate_thunder_stone_ore.json
 d13b411334230e867d204a62f3f8a10982ad9e4e assets/galasgods/models/item/divine_infuser.json
 d010c565d3b6d54bdd551e6f12a0e6bf6e79623a assets/galasgods/models/item/healing_token.json
 c786e3147dd0223e1acdd8278bd699cf435de3ad assets/galasgods/models/item/lucky_coin.json

@@ -1,13 +1,19 @@
 {
   "values": [
+    "galasgods:ruby_ore",
+    "galasgods:deepslate_ruby_ore",
+    "galasgods:ruby_block",
+    "galasgods:sapphire_ore",
+    "galasgods:deepslate_sapphire_ore",
+    "galasgods:sapphire_block",
     "galasgods:silver_ore",
     "galasgods:deepslate_silver_ore",
-    "galasgods:selenium_ore",
-    "galasgods:ruby_ore",
-    "galasgods:thunder_stone_ore",
     "galasgods:silver_block",
+    "galasgods:selenium_ore",
+    "galasgods:deepslate_selenium_ore",
     "galasgods:selenium_block",
-    "galasgods:ruby_block",
+    "galasgods:thunder_stone_ore",
+    "galasgods:deepslate_thunder_stone_ore",
     "galasgods:thunder_stone_block"
   ]
 }

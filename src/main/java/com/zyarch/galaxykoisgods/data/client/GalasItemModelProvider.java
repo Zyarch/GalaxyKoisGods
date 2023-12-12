@@ -46,6 +46,10 @@ public class GalasItemModelProvider extends ItemModelProvider {
         //creating item models for block items
         withExistingParent("silver_ore", modLoc("block/silver_ore"));
         withExistingParent("deepslate_silver_ore", modLoc("block/deepslate_silver_ore"));
+        withExistingParent("deepslate_selenium_ore", modLoc("block/deepslate_selenium_ore"));
+        withExistingParent("deepslate_ruby_ore", modLoc("block/deepslate_ruby_ore"));
+        withExistingParent("deepslate_sapphire_ore", modLoc("block/deepslate_sapphire_ore"));
+        withExistingParent("deepslate_thunder_stone_ore", modLoc("block/deepslate_thunder_stone_ore"));
         withExistingParent("selenium_ore", modLoc("block/selenium_ore"));
         withExistingParent("thunder_stone_ore", modLoc("block/thunder_stone_ore"));
         withExistingParent("ruby_ore", modLoc("block/ruby_ore"));

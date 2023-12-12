@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "galasgods:sapphire_ore"
+              "name": "galasgods:deepslate_sapphire_ore"
             },
             {
               "type": "minecraft:item",
@@ -46,5 +46,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "galasgods:blocks/sapphire_ore"
+  "random_sequence": "galasgods:blocks/deepslate_sapphire_ore"
 }

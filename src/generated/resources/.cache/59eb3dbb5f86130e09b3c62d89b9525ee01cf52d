@@ -1,11 +1,15 @@
-// 1.20	2023-12-10T00:53:55.7367936	Loot Tables
+// 1.20	2023-12-11T23:04:53.321015	Loot Tables
 b0849dad1a0a2e093f7d2ae5357c3c6db6e8d3fc data/galasgods/loot_tables/blocks/altar.json
+d918d7044d3769491dd7ce2cb281127036bc9bea data/galasgods/loot_tables/blocks/deepslate_ruby_ore.json
+e234d7e9798e329337890dc73ac6d0ef7ba266f8 data/galasgods/loot_tables/blocks/deepslate_sapphire_ore.json
+ac2c5a6dd50d36948865a72e1363fe1270d0cc41 data/galasgods/loot_tables/blocks/deepslate_selenium_ore.json
 97f999265c1514ab99cb23f2db888331d87c559f data/galasgods/loot_tables/blocks/deepslate_silver_ore.json
+58a3d32cfd14b4cc934c038220dc55d5f2ed61fc data/galasgods/loot_tables/blocks/deepslate_thunder_stone_ore.json
 5c0e2e85da501c92b297914483b10ca676eb3729 data/galasgods/loot_tables/blocks/divine_infuser.json
 d2a7296b7610f1d7de136bf5c802b2075a1141a5 data/galasgods/loot_tables/blocks/ruby_block.json
 e4a19467db799b2a374a5bc09cf72e55b5717301 data/galasgods/loot_tables/blocks/ruby_ore.json
 e2a75ad283b999614251f767656d1aba9e6d55c3 data/galasgods/loot_tables/blocks/sapphire_block.json
-2ed48f6eb102d3b999a1c0760a022482d0d6c82c data/galasgods/loot_tables/blocks/sapphire_ore.json
+63b76e28f910d49ab519f3277f3a42adf30fc52c data/galasgods/loot_tables/blocks/sapphire_ore.json
 4c3084e24a44185e16f58af6e44cf5baba1892df data/galasgods/loot_tables/blocks/selenium_block.json
 3d1c3c53aed72b5566c3736d7280fb9d89555ea1 data/galasgods/loot_tables/blocks/selenium_ore.json
 5b5c5dc248d2c76ab032ffb47e0aaba1d2686870 data/galasgods/loot_tables/blocks/silver_block.json

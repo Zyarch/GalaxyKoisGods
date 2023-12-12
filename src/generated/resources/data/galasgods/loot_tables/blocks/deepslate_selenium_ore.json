@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "galasgods:sapphire_ore"
+              "name": "galasgods:deepslate_selenium_ore"
             },
             {
               "type": "minecraft:item",
@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "galasgods:sapphire"
+              "name": "galasgods:selenium"
             }
           ]
         }
@@ -46,5 +46,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "galasgods:blocks/sapphire_ore"
+  "random_sequence": "galasgods:blocks/deepslate_selenium_ore"
 }
