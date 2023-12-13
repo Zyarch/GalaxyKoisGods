@@ -1,4 +1,4 @@
-package com.zyarch.galaxykoisgods.client;
+package com.zyarch.galaxykoisgods.client.models;
 
 // Made with Blockbench 4.9.0
 // Exported for Minecraft version 1.17 or later with Mojang mappings

@@ -44,6 +44,8 @@ public class GalasItems {
             registerItem("cult_leggings", () -> new CultistRobeItem(GalasArmorMaterials.CULT_ROBES, ArmorItem.Type.LEGGINGS));
     public static final RegistryObject<Item> CULT_ROBE_BOOTS =
             registerItem("cult_boots", () -> new CultistRobeItem(GalasArmorMaterials.CULT_ROBES, ArmorItem.Type.BOOTS));
+    public static final RegistryObject<Item> CHARM_OF_SEA_TREADER =
+            registerItem("charm_of_sea_treader", () -> new CharmOfSeaTreader(stacksTo1Property));
     //</editor-fold>
 
     private static <T extends Item> RegistryObject<Item> registerItem(String name, Supplier<T> supplier) {

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.zyarch.galaxykoisgods.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "galasgods.refmap.json",
+  "mixins": [
+    "HumanoidModelMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

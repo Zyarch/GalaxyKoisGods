@@ -1,6 +1,10 @@
 package com.zyarch.galaxykoisgods.client;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
+import com.zyarch.galaxykoisgods.client.models.CultistRobeLayer;
+import com.zyarch.galaxykoisgods.client.models.CultistRobeModel;
+import com.zyarch.galaxykoisgods.client.models.MermaidBottomLayer;
+import com.zyarch.galaxykoisgods.client.models.MermaidBottomModel;
 import com.zyarch.galaxykoisgods.gods.GalasGods;
 import com.zyarch.galaxykoisgods.gods.OfferEntries;
 import com.zyarch.galaxykoisgods.screens.AltarContainerScreen;
@@ -60,6 +64,7 @@ public class ClientEventBusSubscriber
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(CultistRobeModel.LAYER_LOCATION, CultistRobeModel::createBodyLayer);
+        event.registerLayerDefinition(MermaidBottomModel.LAYER_LOCATION, MermaidBottomModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -73,5 +78,12 @@ public class ClientEventBusSubscriber
         if (renderer != null) renderer.addLayer(new CultistRobeLayer<>(renderer, set));
         renderer = event.getSkin("slim");
         if (renderer != null) renderer.addLayer(new CultistRobeLayer<>(renderer, set));
+
+        renderer = event.getRenderer(EntityType.PLAYER);
+        if (renderer != null) renderer.addLayer(new MermaidBottomLayer<>(renderer, set));
+        renderer = event.getSkin("default");
+        if (renderer != null) renderer.addLayer(new MermaidBottomLayer<>(renderer, set));
+        renderer = event.getSkin("slim");
+        if (renderer != null) renderer.addLayer(new MermaidBottomLayer<>(renderer, set));
     }
 }
