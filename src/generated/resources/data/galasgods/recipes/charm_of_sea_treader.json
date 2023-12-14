@@ -1,0 +1,22 @@
+{
+  "type": "galasgods:divine_infuser",
+  "i1": {
+    "item": "minecraft:string"
+  },
+  "i2": {
+    "item": "galasgods:moon_stone"
+  },
+  "i3": {
+    "item": "galasgods:aquamarine"
+  },
+  "i4": {
+    "item": "minecraft:tropical_fish"
+  },
+  "i5": {
+    "item": "minecraft:gold_nugget"
+  },
+  "result": {
+    "count": 1,
+    "item": "galasgods:charm_of_sea_treader"
+  }
+}

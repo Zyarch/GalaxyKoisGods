@@ -1,4 +1,5 @@
-// 1.20	2023-12-11T23:04:53.3220122	Recipes
+// 1.20	2023-12-13T19:40:01.6659069	Recipes
+24f1f32a158b55bb3aba609dfcdcc45f3794692b data/galasgods/advancements/recipes/divine_infuser/charm_of_sea_treader.json
 5f2c214c4704ad55ec98ce8ff6e71803cedcfcfe data/galasgods/advancements/recipes/divine_infuser/healing_token.json
 c712aae63e6be3ba5289d2f8001c964a085050c9 data/galasgods/advancements/recipes/divine_infuser/lucky_coin.json
 3b41ffbd89a37d5a2ba1e3364bddaed14cfbb2a6 data/galasgods/advancements/recipes/divine_infuser/storm_bow.json
@@ -20,6 +21,7 @@ a33817bc1f81eca5aa2bbbaffaf6490076c43829 data/galasgods/advancements/recipes/mis
 b7c9e1485e95c5b2a707f180de0d43c98b111547 data/galasgods/advancements/recipes/misc/thunder_stone.json
 591263b57128dc770b0964d3fab66a7fda42a2cd data/galasgods/advancements/recipes/misc/thunder_stone_block.json
 c331f35873cb597ce1ba5721ba3d64eecc250a10 data/galasgods/recipes/altar.json
+9b95a04bf5e718b55638dbe7cd07a608324180eb data/galasgods/recipes/charm_of_sea_treader.json
 7f0a2d8c292663f3fdd9e6131d28b9ea5ae69e40 data/galasgods/recipes/divine_infuser.json
 2b19d05274fb43e488b9c40a1ba77ec8f1517b3c data/galasgods/recipes/healing_token.json
 d968ebad82e581dfbf3f5cfa924be78ec80f7cf6 data/galasgods/recipes/lucky_coin.json

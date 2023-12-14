@@ -24,6 +24,8 @@ public class GalasItems {
     public static final RegistryObject<Item> SELENIUM = Registration.ITEMS.register("selenium", () -> new Item(commonProperties));
     public static final RegistryObject<Item> RUBY = Registration.ITEMS.register("ruby", () -> new Item(commonProperties));
     public static final RegistryObject<Item> SAPPHIRE = Registration.ITEMS.register("sapphire", () -> new Item(commonProperties));
+    public static final RegistryObject<Item> AQUAMARINE = Registration.ITEMS.register("aquamarine", () -> new Item(commonProperties));
+    public static final RegistryObject<Item> MOON_STONE = Registration.ITEMS.register("moon_stone", () -> new Item(commonProperties));
     public static final RegistryObject<Item> OFFER_AMALGUM = Registration.ITEMS.register("offer_amalgum", () -> new Item(commonProperties));
     //effect item declarations
     public static final RegistryObject<Item> STORM_CALLER = Registration.ITEMS.register("storm_caller", StormCaller::new);

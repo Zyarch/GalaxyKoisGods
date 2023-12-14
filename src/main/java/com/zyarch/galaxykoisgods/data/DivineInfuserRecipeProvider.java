@@ -6,6 +6,7 @@ import com.zyarch.galaxykoisgods.setup.GalasBlocks;
 import com.zyarch.galaxykoisgods.setup.GalasItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
@@ -35,6 +36,7 @@ public class DivineInfuserRecipeProvider extends RecipeProvider {
         DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.CACTUS, Items.CACTUS}, GalasItems.STORM_CALLER.get(), 1).unlockedByItem(Items.CACTUS).save(consumer);
         DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.CACTUS, Items.CACTUS, Items.CACTUS}, GalasItems.LUCKY_COIN.get(), 1).unlockedByItem(Items.CACTUS).save(consumer);
         DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.CACTUS, Items.CACTUS, Items.CACTUS, Items.CACTUS}, GalasItems.TELEPORTING_ORB.get(), 1).unlockedByItem(Items.CACTUS).save(consumer);
+        DivineInfuserRecipeBuilder.build(new ItemLike[] {Items.STRING, GalasItems.MOON_STONE.get(), GalasItems.AQUAMARINE.get(), Items.TROPICAL_FISH, Items.GOLD_NUGGET}, GalasItems.CHARM_OF_SEA_TREADER.get(), 1).unlockedByItem(GalasItems.AQUAMARINE.get()).save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, GalasItems.SILVER_INGOT.get(), 9).requires(GalasBlocks.getBlockAsItem(GalasBlocks.SILVER_BLOCK)).unlockedBy("has_silver", has(GalasItems.SILVER_INGOT.get())).save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, GalasItems.RUBY.get(), 9).requires(GalasBlocks.getBlockAsItem(GalasBlocks.RUBY_BLOCK)).unlockedBy("has_ruby", has(GalasItems.RUBY.get())).save(consumer);
