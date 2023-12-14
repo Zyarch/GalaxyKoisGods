@@ -1,5 +1,6 @@
-// 1.20	2023-12-12T20:37:22.9521151	Item Models: galasgods
+// 1.20	2023-12-13T19:34:39.5859874	Item Models: galasgods
 2bb4521aff4f9699b08aeda0368a76293121bbbc assets/galasgods/models/item/altar.json
+39b27aad1d38168f034cde54e535a9b5a4487dc3 assets/galasgods/models/item/aquamarine.json
 be53d240a1cbeb672adaf5f239feca37e99a2109 assets/galasgods/models/item/charm_of_sea_treader.json
 e6ee5659bb30aa7a446ff155f63e210fd6d9a92f assets/galasgods/models/item/cult_boots.json
 e5dd12cbf718f046c621ae23d8cadd35cb02525b assets/galasgods/models/item/cult_chest.json
@@ -13,6 +14,7 @@ d643464d5c792affd8fa7d62c575d74300c07b04 assets/galasgods/models/item/deepslate_
 d13b411334230e867d204a62f3f8a10982ad9e4e assets/galasgods/models/item/divine_infuser.json
 d010c565d3b6d54bdd551e6f12a0e6bf6e79623a assets/galasgods/models/item/healing_token.json
 c786e3147dd0223e1acdd8278bd699cf435de3ad assets/galasgods/models/item/lucky_coin.json
+6ece208c1f0a035006103cc9bb9b28e4b368fb29 assets/galasgods/models/item/moon_stone.json
 da8deb4e694042bfc0df09d7a1172c14dae44c4d assets/galasgods/models/item/offer_amalgum.json
 3419dd95400ba0cbb704bb93c0da086457ec8707 assets/galasgods/models/item/raw_silver.json
 6e9b287419951827ef0c6eb2a308a3557d4d6727 assets/galasgods/models/item/ruby.json
