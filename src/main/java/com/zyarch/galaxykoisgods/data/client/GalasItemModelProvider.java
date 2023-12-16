@@ -15,6 +15,9 @@ public class GalasItemModelProvider extends ItemModelProvider {
     private static final ArrayList<String> blackList = new ArrayList<>() {
         {
             add("storm_bow");
+            add("silver_dagger");
+            add("void_dagger");
+            add("cultist_spawn_egg");
         }
     };
 
@@ -61,5 +64,8 @@ public class GalasItemModelProvider extends ItemModelProvider {
         withExistingParent("sapphire_block", modLoc("block/sapphire_block"));
         withExistingParent("altar", modLoc("block/altar"));
         withExistingParent("divine_infuser", modLoc("block/divine_infuser"));
+        withExistingParent("silver_dagger", "item/handheld").texture("layer0", "item/silver_dagger");
+        withExistingParent("void_dagger", "item/handheld").texture("layer0", "item/void_dagger");
+        withExistingParent("cultist_spawn_egg", "item/template_spawn_egg");
     }
 }

@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber
-public class EventBusSubscriber {
+public class CommonEvents {
     @SubscribeEvent
     public static void LivingEquipmentChangeEventHandler(final LivingEquipmentChangeEvent event) {
         LivingEntity livingEntity = event.getEntity();AttributeInstance attributeInstance =

@@ -1,7 +1,8 @@
-// 1.20	2023-12-13T19:34:39.5859874	Item Models: galasgods
+// 1.20	2023-12-15T23:17:57.3915403	Item Models: galasgods
 2bb4521aff4f9699b08aeda0368a76293121bbbc assets/galasgods/models/item/altar.json
 39b27aad1d38168f034cde54e535a9b5a4487dc3 assets/galasgods/models/item/aquamarine.json
 be53d240a1cbeb672adaf5f239feca37e99a2109 assets/galasgods/models/item/charm_of_sea_treader.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/galasgods/models/item/cultist_spawn_egg.json
 e6ee5659bb30aa7a446ff155f63e210fd6d9a92f assets/galasgods/models/item/cult_boots.json
 e5dd12cbf718f046c621ae23d8cadd35cb02525b assets/galasgods/models/item/cult_chest.json
 d078854c8486005f95fc3acfc8296bf4fa7d2a33 assets/galasgods/models/item/cult_hood.json
@@ -27,7 +28,7 @@ c1f5acb2b87d498c2a78ea930291419958409430 assets/galasgods/models/item/selenium.j
 008185d67759fd6000e5d0735e49ac5df5a09dcb assets/galasgods/models/item/selenium_block.json
 31f5d9356c0fe28214cdef48e03907660951dfc2 assets/galasgods/models/item/selenium_ore.json
 1dc90ecf88decf6059bd592df6106f661404f9e3 assets/galasgods/models/item/silver_block.json
-7c21bcfab4fb968d54c6b8f3ffc2300202e5f9a7 assets/galasgods/models/item/silver_dagger.json
+263fd0b5d1088d551b4087f2f0bf2bfc38fdb38d assets/galasgods/models/item/silver_dagger.json
 9eeef15fe66489d7212ebb608b499ba2f9389d36 assets/galasgods/models/item/silver_ingot.json
 08b479add3e3eeac9be4260425ebf6b049faee2f assets/galasgods/models/item/silver_ore.json
 3fba99fd4612ad51eb1538ec469fbd7811bf0153 assets/galasgods/models/item/storm_caller.json
@@ -35,4 +36,4 @@ f8b5bbdf84e0f929718add4b1c93d940048364d1 assets/galasgods/models/item/teleportin
 eee2a6fcdf6d00d30ab7dc5026e05e4b252da11f assets/galasgods/models/item/thunder_stone.json
 e9cbde2b822309a1014e81591d0689686394a7cb assets/galasgods/models/item/thunder_stone_block.json
 64c73fbf11c2bfd13a7ff18bf33419d1b140eb93 assets/galasgods/models/item/thunder_stone_ore.json
-7fcaf067c3b933fc6472a1f83019f53a960dbb03 assets/galasgods/models/item/void_dagger.json
+5aff3c17116b49d4f69b7ecee44add4eea362dc6 assets/galasgods/models/item/void_dagger.json

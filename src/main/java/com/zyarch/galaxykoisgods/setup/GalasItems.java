@@ -3,10 +3,8 @@ package com.zyarch.galaxykoisgods.setup;
 import com.zyarch.galaxykoisgods.item.armor.CultistRobeItem;
 import com.zyarch.galaxykoisgods.item.armor.GalasArmorMaterials;
 import com.zyarch.galaxykoisgods.utility.CommonUtility;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.RegistryObject;
 import com.zyarch.galaxykoisgods.item.*;
 
@@ -27,6 +25,8 @@ public class GalasItems {
     public static final RegistryObject<Item> AQUAMARINE = Registration.ITEMS.register("aquamarine", () -> new Item(commonProperties));
     public static final RegistryObject<Item> MOON_STONE = Registration.ITEMS.register("moon_stone", () -> new Item(commonProperties));
     public static final RegistryObject<Item> OFFER_AMALGUM = Registration.ITEMS.register("offer_amalgum", () -> new Item(commonProperties));
+    public static final RegistryObject<ForgeSpawnEggItem> CULTIST_SPAWN_EGG = Registration.ITEMS.register("cultist_spawn_egg", () ->
+            new ForgeSpawnEggItem(GalasEntityTypes.CULTIST, 0x232323, 0x181818, commonProperties));
     //effect item declarations
     public static final RegistryObject<Item> STORM_CALLER = Registration.ITEMS.register("storm_caller", StormCaller::new);
     public static final RegistryObject<Item> HEALING_TOKEN = Registration.ITEMS.register("healing_token", HealingToken::new);
