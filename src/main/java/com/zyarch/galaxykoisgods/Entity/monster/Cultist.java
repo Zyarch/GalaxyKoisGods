@@ -29,6 +29,10 @@ public class Cultist extends Pillager {
         super(p_33262_, p_33263_);
     }
 
+    protected float getWaterSlowDown() {
+        return 0.96F;
+    }
+
     @Override
     protected SoundEvent getAmbientSound() {
         return SoundEvents.EMPTY;
@@ -55,7 +59,7 @@ public class Cultist extends Pillager {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MOVEMENT_SPEED, 0.35F)
+                .add(Attributes.MOVEMENT_SPEED, 0.28F)
                 .add(Attributes.MAX_HEALTH, 24.0D)
                 .add(Attributes.ATTACK_DAMAGE, 5.0D)
                 .add(Attributes.FOLLOW_RANGE, 32.0D);
@@ -66,15 +70,15 @@ public class Cultist extends Pillager {
     }
 
     protected void registerGoals() {
+        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, Raider.class)).setAlertOthers());
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(2, new Raider.HoldGroundAttackGoal(this, 10.0F));
-        this.goalSelector.addGoal(3, new RangedCrossbowAttackGoal<>(this, 1.0D, 8.0F));
         this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0D, true));
+        this.goalSelector.addGoal(3, new RangedCrossbowAttackGoal<>(this, 1.0D, 8.0F));
         this.goalSelector.addGoal(3, new RangedBowAttackGoal<>(this, 1.0D, 20, 15.0F));
         this.goalSelector.addGoal(8, new RandomStrollGoal(this, 0.6D));
         this.goalSelector.addGoal(9, new LookAtPlayerGoal(this, Player.class, 15.0F, 1.0F));
         this.goalSelector.addGoal(10, new LookAtPlayerGoal(this, Mob.class, 15.0F));
-        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, Raider.class)).setAlertOthers());
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 }
