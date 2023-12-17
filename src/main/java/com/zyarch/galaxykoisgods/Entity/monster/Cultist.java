@@ -55,6 +55,10 @@ public class Cultist extends Pillager {
         this.equipItemIfPossible(new ItemStack(GalasItems.CULT_ROBE_CHEST.get()));
         this.equipItemIfPossible(new ItemStack(GalasItems.CULT_ROBE_LEGGINGS.get()));
         this.equipItemIfPossible(new ItemStack(GalasItems.CULT_ROBE_BOOTS.get()));
+        this.setDropChance(EquipmentSlot.HEAD, 0.155f);
+        this.setDropChance(EquipmentSlot.CHEST, 0.155f);
+        this.setDropChance(EquipmentSlot.LEGS, 0.155f);
+        this.setDropChance(EquipmentSlot.FEET, 0.155f);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
