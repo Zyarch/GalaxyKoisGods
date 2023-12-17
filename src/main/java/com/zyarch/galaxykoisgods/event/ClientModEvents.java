@@ -1,6 +1,9 @@
-package com.zyarch.galaxykoisgods.client;
+package com.zyarch.galaxykoisgods.event;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
+import com.zyarch.galaxykoisgods.client.CultistRenderer;
+import com.zyarch.galaxykoisgods.client.StormBowBoltRenderer;
+import com.zyarch.galaxykoisgods.client.TeleportingOrbRenderer;
 import com.zyarch.galaxykoisgods.client.models.CultistRobeLayer;
 import com.zyarch.galaxykoisgods.client.models.CultistRobeModel;
 import com.zyarch.galaxykoisgods.client.models.MermaidBottomLayer;
@@ -25,7 +28,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = GalaxyKoisGods.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class ClientEventBusSubscriber
+public class ClientModEvents
 {
     @SubscribeEvent
     public static void onClientSetUp(FMLClientSetupEvent event)
@@ -59,6 +62,7 @@ public class ClientEventBusSubscriber
 
         //register the Teleporting Orb Entity Type with the Teleporting Orb Renderer
         event.registerEntityRenderer(GalasEntityTypes.TELEPORTING_ORB.get(), TeleportingOrbRenderer::new);
+        event.registerEntityRenderer(GalasEntityTypes.CULTIST.get(), CultistRenderer::new);
     }
 
     @SubscribeEvent

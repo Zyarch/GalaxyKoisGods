@@ -1,6 +1,7 @@
 package com.zyarch.galaxykoisgods.setup;
 
 import com.zyarch.galaxykoisgods.GalaxyKoisGods;
+import com.zyarch.galaxykoisgods.entity.monster.Cultist;
 import com.zyarch.galaxykoisgods.entity.projectiles.StormBowBolt;
 import com.zyarch.galaxykoisgods.entity.projectiles.ThrownTeleportingOrb;
 import net.minecraft.resources.ResourceLocation;
@@ -22,6 +23,11 @@ public class GalasEntityTypes {
             () -> EntityType.Builder.<ThrownTeleportingOrb>of(ThrownTeleportingOrb::new, MobCategory.MISC)
                     .sized(0.25F, 0.25F).clientTrackingRange(4).updateInterval(10)
                     .build(new ResourceLocation(GalaxyKoisGods.MODID, "teleporting_orb").toString()));
+
+    public static final RegistryObject<EntityType<Cultist>> CULTIST = register("cultist",
+            () -> EntityType.Builder.of(Cultist::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.8F).clientTrackingRange(8)
+                    .build(new ResourceLocation(GalaxyKoisGods.MODID, "cultist").toString()));
 
     static void register() { }
 
